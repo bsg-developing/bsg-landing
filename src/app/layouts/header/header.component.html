@@ -1,105 +1,10 @@
-<!--
-<nav class="navbar">
-  <h3 routerLink="/" class="navbar__logo">{{ logo }}</h3>
-  <ul class="navbar__menu">
-    <li (click)="router.navigate(['/home'], { fragment: 'activity' })"
-        routerLinkActive="active">{{ 'aboutUs' | transloco }}
-    </li>
-    <li (click)="router.navigate(['/home'], { fragment: 'features' })"
-        routerLinkActive="active">{{ 'careers' | transloco }}
-    </li>
-    <li (click)="router.navigate(['/home'], { fragment: 'technologies' })"
-        routerLinkActive="active">{{ 'technologies' | transloco }}
-    </li>
-    <li (click)="router.navigate(['/home'], { fragment: 'footer' })"
-        routerLinkActive="active">{{ 'contactUs' | transloco }}
-    </li>
-    <li (click)="router.navigate(['/home'], { fragment: 'projects' })"
-        routerLinkActive="active">{{ 'products' | transloco }}
-    </li>
-  </ul>
-
-  <div class="navbar__actions">
-    <button class="navbar__button" (click)="toggleTheme()">
-      <i class="bx" [ngClass]="isDarkTheme ? 'bx-moon' : 'bx-sun'"></i>
-    </button>
-    <div class="language-container">
-      <button class="navbar__button" (click)="toggleLanguageDropdown()">
-        <i class="bx bx-globe"></i>
-        <span class="language-text">{{ selectedLanguage | uppercase }}</span>
-      </button>
-      @if (dropdownVisible) {
-        <div class="language-options">
-          @for (language of languages; track languages) {
-            <button (click)="changeLang(language.code)">
-              <img [src]="language.flag" alt="{{ language.name }}" class="flag-icon">
-              {{ language.name }}
-            </button>
-          }
-        </div>
-      }
-    </div>
-  </div>
-</nav>
-
-
 <nav class="navbar" [class.open]="mobileMenuVisible">
-  &lt;!&ndash;
-    <h3 routerLink="/" class="navbar__logo">{{ logo }}</h3>
-  &ndash;&gt;
+  <h3 routerLink="/" class="navbar__logo">{{ logo }}</h3>
 
-  &lt;!&ndash; Бургер-кнопка &ndash;&gt;
   <button class="navbar__burger" (click)="toggleMobileMenu()">
     <i class="bx" [ngClass]="mobileMenuVisible ? 'bx-x' : 'bx-menu'"></i>
   </button>
 
-  &lt;!&ndash; Скрываемое меню &ndash;&gt;
-  <div class="navbar__collapse" [class.open]="mobileMenuVisible">
-    <ul class="navbar__menu">
-      <li (click)="router.navigate(['/home'], { fragment: 'features' })" routerLinkActive="active">
-        {{ 'careers' | transloco }}
-      </li>
-      <li (click)="router.navigate(['/home'], { fragment: 'technologies' })" routerLinkActive="active">
-        {{ 'aboutUs' | transloco }}
-      </li>
-      <li (click)="router.navigate(['/home'], { fragment: 'footer' })" routerLinkActive="active">
-        {{ 'contactUs' | transloco }}
-      </li>
-      <li (click)="router.navigate(['/home'], { fragment: 'projects' })" routerLinkActive="active">
-        {{ 'products' | transloco }}
-      </li>
-    </ul>
-
-    <div class="navbar__actions">
-      <button class="navbar__button" (click)="toggleTheme()">
-        <i class="bx" [ngClass]="isDarkTheme ? 'bx-moon' : 'bx-sun'"></i>
-      </button>
-      <div class="language-container">
-        <button class="navbar__button" (click)="toggleLanguageDropdown()">
-          <i class="bx bx-globe"></i>
-          <span class="language-text">{{ selectedLanguage | uppercase }}</span>
-        </button>
-        <div class="language-options" *ngIf="dropdownVisible">
-          <button *ngFor="let language of languages" (click)="changeLang(language.code)">
-            <img [src]="language.flag" alt="{{ language.name }}" class="flag-icon">
-            {{ language.name }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
--->
-<nav class="navbar" [class.open]="mobileMenuVisible">
-  <!-- Логотип слева -->
-  <h3 routerLink="/" class="navbar__logo">{{ logo }}</h3>
-
-  <!-- Бургер-кнопка справа -->
-  <button class="navbar__burger" (click)="toggleMobileMenu()">
-    <i class="bx" [ngClass]="mobileMenuVisible ? 'bx-x' : 'bx-menu'"></i>
-  </button>
-
-  <!-- Меню + кнопки — на десктопе видно всегда, на мобилке только внутри .open -->
   <div class="navbar__collapse" [class.open]="mobileMenuVisible">
     <ul class="navbar__menu">
       <li (click)="router.navigate(['/home'], { fragment: 'activity' })" routerLinkActive="active">
