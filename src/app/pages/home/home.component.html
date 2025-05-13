@@ -1,0 +1,50 @@
+<div class="services" [@fadeIn]>
+  <div class="textContainer">
+    <p>
+      We focus on helping your brand grow
+      <br />
+      and move forward
+    </p>
+    <hr />
+  </div>
+  <div class="titleContainer">
+    <div class="title">
+      <h1>
+        <b class="hover" [ngStyle]="{ color: 'orange' }">{{ 'unique' | transloco}}</b> {{'ideas'|transloco}}
+      </h1>
+    </div>
+    <div class="title">
+      <h1>
+        <b class="hover" [ngStyle]="{ color: 'orange' }">{{'for' | transloco}}</b> {{'business'| transloco}}
+      </h1>
+    </div>
+  </div>
+  <app-ide></app-ide>
+  <section class="stats">
+    <div
+      class="stat"
+      *ngFor="let stat of stats; let i = index"
+      [@fadeIn]
+    [@hoverEffect]
+    >
+      <h2
+        [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
+        (@countUp.start)="onCountStart($any($event), stat.end, i)"
+      >
+        {{ values[i] }}+
+      </h2>
+    <span>{{ stat.label }}</span>
+</div>
+</section>
+
+<section style="margin-bottom: 5vh"></section>
+  <app-activity id="activity"/>
+
+  <app-about-us id="features"></app-about-us>
+  <section style="margin-bottom: 5vh"></section>
+  <app-stack id="technologies"></app-stack>
+  <section style="margin-bottom: 5vh"></section>
+  <app-products id="projects"/>
+</div>
+
+

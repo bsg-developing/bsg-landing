@@ -1,0 +1,23 @@
+<div class="services">
+  <div class="textContainer">
+    <hr />
+    <h2 class="heading">Наш подход</h2>
+  </div>
+<section class="header">
+
+<section class="education">
+  <div class="timeline-items">
+    @for (item of educationList; track item){
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">{{ item.year }}</div>
+        <div class="timeline-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+</section>
+</div>

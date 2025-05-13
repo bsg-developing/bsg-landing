@@ -1,0 +1,29 @@
+<div class="services">
+  <div class="textContainer">
+    <div class="header__title">
+      <h1>{{ 'technologies' | transloco }}</h1>
+    </div>
+    <hr />
+  </div>
+<section class="header">
+  <div class="content">
+    <div class="separator"></div>
+    <div class="courses">
+      @for ( tech of technologies; track tech) {
+        <div class="item">
+          <div class="top">
+            <img [src]="tech.img" alt="{{ tech.title }}">
+            <div class="info">
+              <a href="#">{{ tech.title }}</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+</div>
+
+
+
+

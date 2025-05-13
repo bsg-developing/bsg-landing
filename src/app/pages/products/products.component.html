@@ -1,0 +1,24 @@
+<div class="services">
+  <div class="textContainer">
+    <hr />
+    <h2 class="heading">{{ 'success' | transloco}}</h2>
+  </div>
+
+  <div class="carousel-container">
+    <owl-carousel-o [options]="carouselOptions">
+      <ng-container *ngFor="let slide of slidesStore">
+        <ng-template carouselSlide>
+          <div class="slide-container">
+            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" class="carousel-img" />
+            <div class="slide-overlay">
+              <div class="overlay-content">
+                <h3>{{ slide.title }}</h3>
+                <p>{{ slide.description }}</p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>

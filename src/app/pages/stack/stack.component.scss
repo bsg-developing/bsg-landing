@@ -1,0 +1,208 @@
+.content .separator{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+.content .courses,
+.content .podcasts{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  margin-bottom: 100px;
+}
+
+.content .courses .item,
+.content .podcasts .item{
+  width: 30%;
+}
+
+.content .courses .item .top,
+.content .courses .item .bottom,
+.content .podcasts .item .top,
+.content .podcasts .item .bottom,
+.content .articles .item .top,
+.content .articles .item .bottom{
+  display: flex;
+  gap: 10px;
+  background-color: var(--secondary-color);
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content .courses .item .top img{
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content .courses .item .top .info a,
+.content .podcasts .item .top .info a{
+  color:var(--text-color);
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  line-height: 1.4rem;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+  .content{
+    padding: 100px 60px 0;
+  }
+
+  .content .courses .item .top,
+  .content .courses .item .bottom,
+  .content .articles .item .bottom{
+    flex-direction: column;
+  }
+
+  .content .courses .item .top img{
+    width: 100%;
+    height: 180px;
+  }
+
+  .content .courses .item .bottom .price{
+    text-align: center;
+  }
+
+  .content .courses .item .bottom .discount{
+    justify-content: space-between;
+  }
+
+  .content .courses .item .bottom h5.tag{
+    text-align: center;
+  }
+
+  .content .courses .item .bottom .discount > h5{
+    width: 70%;
+    text-align: center;
+  }
+
+
+
+  .content .comments > p{
+    width: 100%;
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 940px) {
+
+  .content .courses .item,
+  .content .articles .item{
+    width: 45%;
+  }
+
+  .content .courses .item .bottom .discount > h5{
+    width: 80%;
+  }
+
+  .content .comments .right .item{
+    width: 48%;
+  }
+
+  .content .podcasts .item .top,
+  .content .podcasts .item .bottom{
+    flex-direction: column;
+  }
+
+  .content .podcasts .item .top i{
+    text-align: center;
+    padding: 18px;
+  }
+
+  .content .podcasts .item .bottom{
+    text-align: center;
+  }
+
+  .content .articles .item .top img{
+    height: 220px;
+  }
+
+
+
+}
+
+@media screen and (max-width:768px) {
+
+  .content{
+    padding: 100px 30px 0;
+  }
+
+  .content .courses .item .top{
+    height: 324px;
+  }
+
+  .content .courses .item .bottom .discount .time{
+    display: none;
+  }
+
+  .content .courses .item .bottom .discount > h5{
+    width: 100%;
+  }
+
+  .content .articles .item .top img{
+    height: 160px;
+  }
+}
+
+@media screen and (max-width:576px) {
+
+  .content .courses .item .top .info a,
+  .content .podcasts .item .top .info a{
+    font-size: 14px;
+  }
+
+  .content .comments .right .item p{
+    font-size: 13px;
+  }
+
+  .content .podcasts .item .top .info p{
+    font-size: 11px;
+  }
+
+  .content .podcasts .item .bottom .duration i{
+    font-size: 20px;
+  }
+
+}
+
+
+
+.services {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+    }
+  }
+}
+
+
+
+

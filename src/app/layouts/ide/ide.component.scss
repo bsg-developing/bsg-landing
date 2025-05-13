@@ -1,0 +1,174 @@
+.ide-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  font-family: 'Fira Code', monospace;
+  height: 180px;
+}
+
+
+.code-view {
+  margin: 0;
+  padding: 20px;
+  color: #d4d4d4;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.token-keyword  { color: #569CD6; }
+.token-method   { color: #4EC9B0; }
+.token-string   { color: #CE9178; }
+.token-function { color: #DCDCAA; }
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  color: #ffffff;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.macos-window-controls {
+  display: flex;
+  margin-right: 10px;
+}
+
+.control-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.control-button.close {
+  background-color: #ff605c;
+}
+
+.control-button.minimize {
+  background-color: #ffbd44;
+}
+
+.control-button.full-screen {
+  background-color: #00ca4e;
+}
+.ide-header {
+  background-color: #2d2d2d;
+  color: #bbb;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+}
+
+
+.ide-container {
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 20px auto;
+    height: 160px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 10px auto;
+    height: auto;           // пусть контейнер подстроится под контент
+    padding-bottom: 10px;   // небольшой запас снизу
+  }
+
+  .ide-header {
+    background-color: #2d2d2d;
+    color: #bbb;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+
+    .macos-window-controls {
+      display: flex;
+      margin-right: 10px;
+
+      @media (max-width: 480px) {
+        margin-right: 0;
+      }
+
+      .control-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+        cursor: pointer;
+
+        @media (max-width: 480px) {
+          width: 10px;
+          height: 10px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .code-view {
+    margin: 0;
+    padding: 20px;
+    color: #d4d4d4;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-y: auto;   // чтобы скроллился код, если много
+    height: calc(100% - 41px); // вычитаем высоту header (~41px)
+
+    @media (max-width: 768px) {
+      padding: 16px;
+      font-size: 13px;
+      height: calc(100% - 36px);
+    }
+
+    @media (max-width: 480px) {
+      padding: 12px;
+      font-size: 12px;
+      height: auto;      // авто, чтобы контейнер мог расти
+      max-height: 300px; // но не более, если код очень длинный
+    }
+
+    .token-keyword  { color: #569CD6; }
+    .token-method   { color: #4EC9B0; }
+    .token-string   { color: #CE9178; }
+    .token-function { color: #DCDCAA; }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      color: #ffffff;
+      animation: blink 1s step-start infinite;
+
+      @media (max-width: 480px) {
+        width: 8px;
+      }
+    }
+  }
+}
+
+// Общие keyframes без изменений
+@keyframes blink {
+  50% { opacity: 0; }
+}

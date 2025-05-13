@@ -1,0 +1,271 @@
+/*
+.services {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+    }
+  }
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+        width: fit-content;
+        background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: (--secondary-color);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+      }
+    }
+  }
+}
+
+
+.stats{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stats .stat{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.stats .stat h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.stats .stat span {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.stats .stat:not(:last-child) {
+  border-right: 1px solid var(--text-color);
+  padding-right: 5%;
+}
+
+
+*/
+
+.services {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+        background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: var(--secondary-color);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Планшеты
+  @media (max-width: 1024px) {
+    .textContainer {
+      p { font-size: 18px; }
+      hr { width: 100%; }
+      gap: 15px;
+    }
+    .titleContainer .title {
+      flex-direction: column;
+      gap: 30px;
+      h1 { font-size: 64px; }
+      button {
+        width: 250px;
+        height: 80px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  // Смартфоны
+  @media (max-width: 768px) {
+    .textContainer {
+      flex-direction: column-reverse;
+      align-self: stretch;
+      align-items: flex-start;
+      gap: 10px;
+
+      p {
+        font-size: 16px;
+        text-align: left;
+      }
+      hr { display: none; }
+    }
+    .titleContainer .title {
+      gap: 20px;
+      h1 { font-size: 48px; }
+      button {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .stat {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 200px;
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: wheat;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--text-color);
+      padding-right: 5%;
+    }
+  }
+
+  // Планшеты
+  @media (max-width: 1024px) {
+    .stat {
+      h2 { font-size: 3rem; }
+      span { font-size: 1.1rem; }
+      gap: 15px;
+    }
+  }
+
+  // Смартфоны
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .stat {
+      flex-direction: column;
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+
+      h2 { font-size: 2.5rem; }
+      span { font-size: 1rem; }
+    }
+  }
+
+  // Мини-смартфоны
+  @media (max-width: 480px) {
+    .stat {
+      h2 { font-size: 2rem; }
+      span { font-size: 0.9rem; }
+    }
+  }
+}
