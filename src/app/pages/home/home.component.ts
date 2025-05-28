@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {TranslocoPipe} from '@jsverse/transloco';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {AboutUsComponent} from '../about-us/about-us.component';
@@ -49,7 +49,7 @@ import {StackComponent} from '../stack/stack.component';
     ]),
   ],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
   stats = [
     { end: 10, label: 'Years of exp' },
     { end: 30, label: 'Lorem ipsum dolor.' },
@@ -73,5 +73,20 @@ export class HomeComponent {
       }
     };
     requestAnimationFrame(step);
+  }
+
+  ngAfterViewInit(): void {
+    const purple = document.getElementById('auroraPurple');
+    const cyan = document.getElementById('auroraCyan');
+
+    if (purple && cyan) {
+      window.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        purple.style.transform = `translate(${x / 40}px, ${y / 40}px) rotate(5deg)`;
+        cyan.style.transform = `translate(${x / -60}px, ${y / -60}px) rotate(-3deg)`;
+      });
+    }
   }
 }

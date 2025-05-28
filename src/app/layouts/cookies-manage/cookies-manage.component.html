@@ -1,6 +1,16 @@
+<!--
 @if (!isCheckingCookie && !isCookieAccepted){
   <div class="cookie-banner" >
     <p>Мы используем cookies для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей политикой.</p>
     <button (click)="acceptCookies()">Принять</button>
   </div>
 }
+-->
+<div class="cookie-banner">
+  <p class="cookie-title">Мы используем cookie</p>
+  <p class="cookie-text">
+    Этот сайт использует файлы cookie для улучшения пользовательского опыта. Подробнее в <a href="#">политике конфиденциальности</a>.
+  </p>
+  <img src="assets/Cookie%20Image.svg" alt="">
+  <button class="cookie-button">Принять</button>
+</div>

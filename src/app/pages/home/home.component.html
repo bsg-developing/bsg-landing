@@ -1,3 +1,4 @@
+<div class="aurora-spot"></div>
 <div class="services" [@fadeIn]>
   <div class="textContainer">
     <p>
@@ -25,7 +26,7 @@
       class="stat"
       *ngFor="let stat of stats; let i = index"
       [@fadeIn]
-    [@hoverEffect]
+      [@hoverEffect]
     >
       <h2
         [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
@@ -33,11 +34,11 @@
       >
         {{ values[i] }}+
       </h2>
-    <span>{{ stat.label }}</span>
-</div>
-</section>
+      <span>{{ stat.label }}</span>
+    </div>
+  </section>
 
-<section style="margin-bottom: 5vh"></section>
+  <section style="margin-bottom: 5vh"></section>
   <app-activity id="activity"/>
 
   <app-about-us id="features"></app-about-us>
