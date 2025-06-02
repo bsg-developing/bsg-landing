@@ -1,3 +1,4 @@
+/*
 .heading{
   text-align: center;
   margin-bottom: 5rem 0;
@@ -161,3 +162,133 @@
     }
   }
 }
+*/
+.star-space {
+  position: relative;
+  top: -7.4rem;
+}
+
+
+.constellation-home-1 {
+  pointer-events: none;
+  width: 30%;
+  position: absolute;
+  inset: 7% auto auto 43%;
+  transform: rotate(-34deg);
+}
+.padding-global {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.container {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.padding-global {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.w-container:before, .w-container:after {
+  content: " ";
+  grid-area: 1 / 1 / 2 / 2;
+  display: table;
+}
+
+.w-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.atf-padding {
+  padding-top: 27vh;
+  padding-bottom: 7.5rem;
+}
+
+.aft-wrapper {
+  display: flex
+;
+}
+
+.atf-col-1 {
+  width: 42%;
+}
+
+.atf-col-2 {
+  flex: 1;
+}
+
+.star-visuals-wrapper {
+  z-index: -1;
+  width: 80%;
+  height: auto;
+  position: absolute;
+  inset: 0% -20% auto auto;
+}
+.star-img-wrapper {
+  mix-blend-mode: exclusion;
+}
+.star-img {
+  width: 100%;
+  height: auto;
+}
+.star-ring-lottie {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  inset: -.75% 0% 0%;
+}
+
+.w-container:after {
+  clear: both;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+.constellation-home-1,
+.star-ring-lottie {
+  transform-origin: center center;
+  animation: spin 60s linear infinite;
+}
+
+/*.border-lvl-1  { animation-duration: 60s;          !* медленнее *! }
+.border-lvl-2  { animation-duration: 45s;          !* чуть быстрее *! }
+.border-lvl-3  { animation-duration: 30s;          !* ещё быстрее *! }
+.border-lvl-4  { animation-duration: 20s;          !* самый быстрый *! }*/
+
+.constellation-home-1 {
+  animation-duration: 150s;  /* очень медленное, фонового характера */
+  animation-direction: reverse;
+}
+
+.star-ring-lottie {
+  animation-duration: 50s;
+}
+
+

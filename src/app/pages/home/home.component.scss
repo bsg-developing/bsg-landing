@@ -5,110 +5,6 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .textContainer {
-    flex: 1;
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-
-    p {
-      font-weight: 200;
-      font-size: 20px;
-      color: gray;
-      text-align: right;
-    }
-
-    hr {
-      width: 500px;
-      border: none;
-      border-top: 0.5px solid gray;
-
-    }
-  }
-  .titleContainer {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-
-
-
-      h1 {
-        font-size: 96px;
-        font-weight: 100;
-        width: fit-content;
-        background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
-        background-clip: text;
-        -webkit-background-clip: text;
-        text-fill-color: transparent;
-        -webkit-text-fill-color: transparent;
-      }
-
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: (--secondary-color);
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-
-      }
-    }
-  }
-}
-
-
-.stats{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.stats .stat{
-  flex:1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  min-width: 200px;
-}
-
-.stats .stat h2 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.stats .stat span {
-  display: inline-block;
-  color: var(--text-color);
-  font-size: 1.2rem;
-}
-
-.stats .stat:not(:last-child) {
-  border-right: 1px solid var(--text-color);
-  padding-right: 5%;
-}
-
-
-*/
-
-.services {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   .textContainer {
     flex: 1;
@@ -246,7 +142,7 @@
   left: 0;
   width: 400px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(164, 66, 255, 0.7), rgba(0, 0, 0, 0));
+  background: linear-gradient(135deg, #3a2a6a 0%, #d35c7f 100%);
   filter: blur(80px);
   opacity: 0.95;
   z-index: 0;
@@ -277,5 +173,129 @@
   50% {
     opacity: 1;
     filter: blur(100px);
+  }
+}
+*/
+.services-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* при необходимости можно задать высоту:
+     height: 100vh; */
+}
+
+.services-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.textContainer p {
+  font-weight: 200;
+  font-size: 20px;
+  color: gray;
+  text-align: right;
+}
+.textContainer hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid gray;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.titleContainer .title {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.titleContainer h1 {
+  font-size: 96px;
+  font-weight: 100;
+  background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+.stats .stat {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  border-right: 1px solid #9b6eff;
+}
+.stats .stat:last-child {
+  border: none;
+}
+.stats h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #9b6eff, #6f9bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stats span {
+  font-size: 1.2rem;
+  color: #9b6eff;
+}
+
+@media (max-width: 1024px) {
+  .textContainer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .textContainer p {
+    font-size: 18px;
+    text-align: left;
+  }
+  .textContainer hr {
+    display: none;
+  }
+
+  .titleContainer .title {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .titleContainer h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer h1 {
+    font-size: 48px;
   }
 }
