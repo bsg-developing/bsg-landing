@@ -7,6 +7,7 @@ import {IdeComponent} from '../../layouts/ide/ide.component';
 import {ProductsComponent} from '../products/products.component';
 import {NgForOf, NgStyle} from '@angular/common';
 import {StackComponent} from '../stack/stack.component';
+import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 
 @Component({
   standalone: true,
@@ -20,6 +21,7 @@ import {StackComponent} from '../stack/stack.component';
     NgStyle,
     StackComponent,
     NgForOf,
+    ProjectTimelineComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
