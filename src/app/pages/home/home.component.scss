@@ -100,9 +100,13 @@
 @media (max-width: 768px) {
   .titleContainer{
     gap: 0;
-
+    align-items: start;
   }
   .titleContainer h1 {
     font-size: 48px;
   }
+  .stats .stat {
+      justify-content: start;
+      border-right: none;
+    }
 }
