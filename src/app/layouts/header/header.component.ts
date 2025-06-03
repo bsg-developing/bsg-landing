@@ -1,9 +1,11 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
 import {NgClass, NgForOf, NgIf, UpperCasePipe} from "@angular/common";
-import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {ThemeService} from '../../core/services/theme.service';
 import {LANGUAGES} from '../../core/configs/languages.config';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {Subscription} from 'rxjs';
+import {ViewportRuler} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-header',
@@ -19,44 +21,66 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   public selectedLanguage!: string;
-  public  logo = '</> Z & K';
-  public dropdownVisible: boolean = false;
-  public languages  = LANGUAGES;
+  public logo = '</> Z & K';
+  public dropdownVisible = false;
+  public languages = LANGUAGES;
   public isDarkTheme = false;
-  public router = inject(Router);
+  public router: Router;
+
+  public isScrolled = false;
+  public mobileMenuVisible = false;
+
+  private scrollSub!: Subscription;
+  private viewportRuler: ViewportRuler;
 
   constructor(
-    private translocateService: TranslocoService,
-    private themeService: ThemeService) {
+    router: Router,
+    private translocoService: TranslocoService,
+    private themeService: ThemeService,
+    viewportRuler: ViewportRuler
+  ) {
+    this.router = router;
+    this.viewportRuler = viewportRuler;
+
+    // Инициализация языка из localStorage (пример)
     if (typeof window !== 'undefined' && window.localStorage) {
       const lang = localStorage.getItem('lang') || 'ro';
       this.selectedLanguage = lang;
-      this.translocateService.setActiveLang(lang);
+      this.translocoService.setActiveLang(lang);
     }
   }
 
-  public toggleLanguageDropdown() {
+  ngOnInit(): void {
+    // Подписываемся на события прокрутки (CDK ViewportRuler)
+    this.scrollSub = this.viewportRuler.change(0).subscribe(() => {
+      const { top: scrollY } = this.viewportRuler.getViewportScrollPosition();
+      this.isScrolled = scrollY > 0;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.scrollSub.unsubscribe();
+  }
+
+  public toggleLanguageDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
   }
 
- public changeLang(lang: string) {
-    this.translocateService.setActiveLang(lang);
+  public changeLang(lang: string): void {
+    this.translocoService.setActiveLang(lang);
     this.selectedLanguage = lang;
     this.dropdownVisible = false;
     localStorage.setItem('lang', lang);
   }
 
-
-  public toggleTheme() {
+  public toggleTheme(): void {
     this.isDarkTheme = !this.isDarkTheme;
     this.themeService.toggleTheme();
   }
 
-  mobileMenuVisible = false;
-
-  toggleMobileMenu() {
+  public toggleMobileMenu(): void {
     this.mobileMenuVisible = !this.mobileMenuVisible;
   }
 }

@@ -1,14 +1,26 @@
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: var(--primary-color);
+
+  &.scrolled {
+    background-color:transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 
   &__logo {
     cursor: pointer;
     color: var(--text-secondary-color);
     font-weight: 600;
+    text-decoration: none;
   }
 
   &__burger {
@@ -43,6 +55,8 @@
       cursor: pointer;
       padding: 0.5rem 1rem;
       color: var(--text-secondary-color);
+      position: relative;
+
       &.active,
       &:hover {
         background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
@@ -69,7 +83,11 @@
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.2s;
-      i { margin-right: 0.3rem; }
+
+      i {
+        margin-right: 0.3rem;
+      }
+
       &:hover {
         background-color: var(--secondary-hover-color);
         transform: scale(1.05);
@@ -78,6 +96,7 @@
 
     .language-container {
       position: relative;
+
       .language-options {
         position: absolute;
         top: 100%;
@@ -85,12 +104,13 @@
         transform: translateX(-50%);
         background: var(--secondary-color);
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         gap: 7px;
         padding: 5px;
         min-width: 120px;
+        z-index: 1000;
 
         button {
           display: flex;
@@ -103,18 +123,24 @@
           width: 100%;
           text-align: left;
           cursor: pointer;
-          &:hover { background: var(--secondary-hover-color); }
+          transition: background-color 0.2s;
+
+          &:hover {
+            background: var(--secondary-hover-color);
+          }
         }
 
-        .flag-icon { width: 20px; height: 15px; border-radius: 3px; }
+        .flag-icon {
+          width: 20px;
+          height: 15px;
+          border-radius: 3px;
+        }
       }
     }
   }
 
   @media (max-width: 768px) {
-    & {
-      justify-content: space-between;
-    }
+    justify-content: space-between;
 
     &__burger {
       display: block;
@@ -132,6 +158,7 @@
       padding: 1rem 2rem;
       z-index: 100;
     }
+
     &.open &__collapse {
       display: flex;
     }

@@ -107,27 +107,6 @@ body{
 }
 
 
-.header,
-.chats .message,
-.chats .message .message__content,
-.prompt__form{
-  margin: 0 auto;
-  max-width: 824px;
-}
-
-body.hide-header .header{
-  margin: 0;
-  display: none;
-}
-
-
-
-.header{
-  margin-top: 1vh;
-}
-
-
-
 .header__title h2{
   color: var(--heading-secondary-color);
   font-size: 3.25rem;

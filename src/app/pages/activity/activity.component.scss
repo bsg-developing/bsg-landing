@@ -1,3 +1,4 @@
+/*
 .content .separator{
   display: flex;
   align-items: center;
@@ -205,4 +206,101 @@
 
 
 
+
+*/
+
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(2, 2, 10, 0.9);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.card{
+  --border-radius: 1rem;
+  --bg-color: #393e41;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-block: 2.5rem 1.5rem;
+}
+
+.card i{
+  font-size: 3.5rem;
+  color: transparent;
+  -webkit-text-stroke: thin red;
+}
+
+.card:hover  i {
+  color: black;
+  -webkit-text-stroke: 0;
+
+}
+.card .description{
+  line-height: 1.5rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.card::before , .card::after{
+  content: '';
+  position: absolute;
+
+}
+
+.card::before{
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(red 0deg, transparent 60deg, transparent 180deg, red 180deg, transparent 240deg);
+  inset: -50%;
+  z-index: -2;
+  animation: border-animation 4s linear infinite;
+}
+
+@keyframes border-animation{
+  to{
+    transform:rotate(-360deg);
+  }
+
+}
+
+.card:hover::before{
+  animation-play-state: paused;
+}
+
+.card::after{
+  --inset: 4px;
+  background: #111;
+  inset: var(--inset);
+  border-radius: calc(var(--border-radius) - var(--inset));
+  transition: all 0.3s linear;
+  z-index: -1;
+}
 

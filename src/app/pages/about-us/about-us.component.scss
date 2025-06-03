@@ -1,4 +1,5 @@
 /*
+!*
 .heading{
   text-align: center;
   margin-bottom: 5rem 0;
@@ -162,7 +163,7 @@
     }
   }
 }
-*/
+*!
 .star-space {
   position: relative;
   top: -7.4rem;
@@ -277,13 +278,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation: spin 60s linear infinite;
 }
 
-/*.border-lvl-1  { animation-duration: 60s;          !* медленнее *! }
+!*.border-lvl-1  { animation-duration: 60s;          !* медленнее *! }
 .border-lvl-2  { animation-duration: 45s;          !* чуть быстрее *! }
 .border-lvl-3  { animation-duration: 30s;          !* ещё быстрее *! }
-.border-lvl-4  { animation-duration: 20s;          !* самый быстрый *! }*/
+.border-lvl-4  { animation-duration: 20s;          !* самый быстрый *! }*!
 
 .constellation-home-1 {
-  animation-duration: 150s;  /* очень медленное, фонового характера */
+  animation-duration: 150s;  !* очень медленное, фонового характера *!
   animation-direction: reverse;
 }
 
@@ -292,3 +293,4 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 
+*/

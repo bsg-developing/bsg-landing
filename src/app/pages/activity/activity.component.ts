@@ -1,11 +1,8 @@
-import { Component } from '@angular/core';
-import {TranslocoPipe} from "@jsverse/transloco";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-activity',
-    imports: [
-        TranslocoPipe
-    ],
+  imports: [],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.scss'
 })
@@ -21,5 +18,4 @@ export class ActivityComponent {
     {img: 'assets/gitlab800.png', title: 'GitLab'},
     {img: 'assets/ts800.png', title: 'TypeScript'}
   ];
-
 }

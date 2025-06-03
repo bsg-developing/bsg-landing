@@ -8,6 +8,7 @@ import {ProductsComponent} from '../products/products.component';
 import {NgForOf, NgStyle} from '@angular/common';
 import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
+import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
 
 @Component({
   standalone: true,
@@ -22,6 +23,7 @@ import {ProjectTimelineComponent} from '../project-timeline/project-timeline.com
     StackComponent,
     NgForOf,
     ProjectTimelineComponent,
+    BackgroundWrapperComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -51,7 +53,7 @@ import {ProjectTimelineComponent} from '../project-timeline/project-timeline.com
     ]),
   ],
 })
-export class HomeComponent implements AfterViewInit{
+export class HomeComponent{
   stats = [
     { end: 10, label: 'Years of exp' },
     { end: 30, label: 'Lorem ipsum dolor.' },
@@ -77,7 +79,7 @@ export class HomeComponent implements AfterViewInit{
     requestAnimationFrame(step);
   }
 
-  ngAfterViewInit(): void {
+/*  ngAfterViewInit(): void {
     const purple = document.getElementById('auroraPurple');
     const cyan = document.getElementById('auroraCyan');
 
@@ -90,5 +92,5 @@ export class HomeComponent implements AfterViewInit{
         cyan.style.transform = `translate(${x / -60}px, ${y / -60}px) rotate(-3deg)`;
       });
     }
-  }
+  }*/
 }

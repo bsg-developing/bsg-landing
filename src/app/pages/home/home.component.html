@@ -1,68 +1,5 @@
-<!--
-<div class="aurora-spot"></div>
-<app-about-us id="features"></app-about-us>
-
-<div class="services" [@fadeIn]>
-  <div class="textContainer">
-    <p>
-      We focus on helping your brand grow
-      <br />
-      and move forward
-    </p>
-    <hr />
-  </div>
-  <div class="titleContainer">
-    <div class="title">
-      <h1>
-        <b class="hover" [ngStyle]="{ color: 'orange' }">{{ 'unique' | transloco}}</b> {{'ideas'|transloco}}
-      </h1>
-    </div>
-    <div class="title">
-      <h1>
-        <b class="hover" [ngStyle]="{ color: 'orange' }">{{'for' | transloco}}</b> {{'business'| transloco}}
-      </h1>
-    </div>
-  </div>
-  <app-ide></app-ide>
-  <section class="stats">
-    <div
-      class="stat"
-      *ngFor="let stat of stats; let i = index"
-      [@fadeIn]
-      [@hoverEffect]
-    >
-      <h2
-        [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
-        (@countUp.start)="onCountStart($any($event), stat.end, i)"
-      >
-        {{ values[i] }}+
-      </h2>
-      <span>{{ stat.label }}</span>
-    </div>
-  </section>
-
-  <section style="margin-bottom: 5vh"></section>
-  <app-activity id="activity"/>
-  <section style="margin-bottom: 5vh"></section>
-  <app-project-timeline></app-project-timeline>
-&lt;!&ndash;
-  <app-about-us id="features"></app-about-us>
-&ndash;&gt;
-  <section style="margin-bottom: 5vh"></section>
-  <app-stack id="technologies"></app-stack>
-  <section style="margin-bottom: 5vh"></section>
-  <app-products id="projects"/>
-</div>
-
-
-
--->
-<!-- В вашем Angular-шаблоне -->
 <div class="services-wrapper" >
-  <!-- Это будет фоновой секцией -->
-  <app-about-us id="features" class="services-bg" [@fadeIn]></app-about-us>
-
-  <!-- Содержимое, которое накладывается поверх фона -->
+  <background-wrapper class="services-bg" [@fadeIn]/>
   <div class="services">
     <div class="textContainer">
       <p>
@@ -91,7 +28,6 @@
       </div>
     </div>
 
-    <!-- Здесь остальные секции: stats, activity, timeline и т.д. -->
     <section class="stats">
       <div
         class="stat"
@@ -108,11 +44,9 @@
         <span>{{ stat.label }}</span>
       </div>
     </section>
-
-    <!-- остальные компоненты... -->
     <app-ide></app-ide>
     <app-activity id="activity"></app-activity>
-    <app-project-timeline></app-project-timeline>
+    <app-project-timeline id="features"></app-project-timeline>
     <app-stack id="technologies"></app-stack>
     <app-products id="projects"></app-products>
   </div>
