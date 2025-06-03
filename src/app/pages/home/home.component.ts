@@ -4,7 +4,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 import {ActivityComponent} from '../activity/activity.component';
 import {IdeComponent} from '../../layouts/ide/ide.component';
 import {ProductsComponent} from '../products/products.component';
-import {isPlatformBrowser, NgStyle} from '@angular/common';
+import {isPlatformBrowser} from '@angular/common';
 import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
@@ -17,7 +17,6 @@ import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/backg
     ActivityComponent,
     IdeComponent,
     ProductsComponent,
-    NgStyle,
     StackComponent,
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
@@ -59,8 +58,7 @@ export class HomeComponent implements AfterViewInit {
   ];
   values = this.stats.map(() => 0);
   duration = 2000;
-
-  private isBrowser: boolean;
+  isBrowser: boolean;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object
