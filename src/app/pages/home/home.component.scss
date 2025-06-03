@@ -115,7 +115,12 @@
 }
 
 @media (max-width: 768px) {
+  .titleContainer{
+    gap: 0;
+
+  }
   .titleContainer h1 {
     font-size: 48px;
   }
+
 }

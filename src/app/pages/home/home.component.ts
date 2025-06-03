@@ -1,11 +1,10 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, Inject, PLATFORM_ID} from '@angular/core';
 import {TranslocoPipe} from '@jsverse/transloco';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {AboutUsComponent} from '../about-us/about-us.component';
 import {ActivityComponent} from '../activity/activity.component';
 import {IdeComponent} from '../../layouts/ide/ide.component';
 import {ProductsComponent} from '../products/products.component';
-import {NgForOf, NgStyle} from '@angular/common';
+import {isPlatformBrowser, NgStyle} from '@angular/common';
 import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
@@ -15,13 +14,11 @@ import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/backg
   selector: 'app-home',
   imports: [
     TranslocoPipe,
-    AboutUsComponent,
     ActivityComponent,
     IdeComponent,
     ProductsComponent,
     NgStyle,
     StackComponent,
-    NgForOf,
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
   ],
@@ -53,7 +50,7 @@ import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/backg
     ]),
   ],
 })
-export class HomeComponent{
+export class HomeComponent implements AfterViewInit {
   stats = [
     { end: 10, label: 'Years of exp' },
     { end: 30, label: 'Lorem ipsum dolor.' },
@@ -63,9 +60,20 @@ export class HomeComponent{
   values = this.stats.map(() => 0);
   duration = 2000;
 
+  private isBrowser: boolean;
 
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   onCountStart(event: AnimationEvent, endVal: number, idx: number) {
+    if (!this.isBrowser) {
+      this.values[idx] = endVal;
+      return;
+    }
+
     const start = performance.now();
     const step = (now = performance.now()) => {
       const t = Math.min((now - start) / this.duration, 1);
@@ -76,12 +84,17 @@ export class HomeComponent{
         this.values[idx] = endVal;
       }
     };
+
     requestAnimationFrame(step);
   }
 
-/*  ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
+    if (!this.isBrowser) {
+      return;
+    }
+
     const purple = document.getElementById('auroraPurple');
-    const cyan = document.getElementById('auroraCyan');
+    const cyan   = document.getElementById('auroraCyan');
 
     if (purple && cyan) {
       window.addEventListener('mousemove', (e) => {
@@ -89,8 +102,8 @@ export class HomeComponent{
         const y = e.clientY;
 
         purple.style.transform = `translate(${x / 40}px, ${y / 40}px) rotate(5deg)`;
-        cyan.style.transform = `translate(${x / -60}px, ${y / -60}px) rotate(-3deg)`;
+        cyan.style.transform   = `translate(${x / -60}px, ${y / -60}px) rotate(-3deg)`;
       });
     }
-  }*/
+  }
 }

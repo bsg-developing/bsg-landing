@@ -29,20 +29,17 @@
     </div>
 
     <section class="stats">
-      <div
-        class="stat"
-        *ngFor="let stat of stats; let i = index"
-        [@fadeIn]
-        [@hoverEffect]
-      >
-        <!--        <h2
-                  [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
-                  (@countUp.start)="onCountStart($any($event), stat.end, i)"
-                >
-                  {{ values[i] }}+
-                </h2>-->
-        <span>{{ stat.label }}</span>
-      </div>
+      @for ( stat of stats; let i = $index; track stat){
+        <div class="stat">
+          <h2
+            [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
+            (@countUp.start)="onCountStart($any($event), stat.end, i)"
+          >
+            {{ values[i] }}+
+          </h2>
+          <span>{{ stat.label }}</span>
+        </div>
+      }
     </section>
     <app-ide></app-ide>
     <app-activity id="activity"></app-activity>

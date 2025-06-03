@@ -21,6 +21,8 @@
     color: var(--text-secondary-color);
     font-weight: 600;
     text-decoration: none;
+    width: 60px;
+    height: 60px;
   }
 
   &__burger {
@@ -101,16 +103,27 @@
         position: absolute;
         top: 100%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-10px);
+        opacity: 0;
         background: var(--secondary-color);
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         display: flex;
         flex-direction: column;
-        gap: 7px;
-        padding: 5px;
-        min-width: 120px;
+        gap: 8px;
+        padding: 8px;
+        min-width: 140px;
         z-index: 1000;
+
+        /* Чтобы «скользило» по высоте */
+        max-height: 0;
+        overflow: hidden;
+
+        /* Плавные переходы */
+        transition:
+          max-height 300ms ease,
+          opacity 200ms ease,
+          transform 200ms ease;
 
         button {
           display: flex;
@@ -119,11 +132,12 @@
           background: none;
           border: none;
           color: var(--text-color);
-          padding: 5px 8px;
+          padding: 8px 12px;
           width: 100%;
           text-align: left;
           cursor: pointer;
-          transition: background-color 0.2s;
+          border-radius: 4px;
+          transition: background-color 150ms ease;
 
           &:hover {
             background: var(--secondary-hover-color);
@@ -132,8 +146,15 @@
 
         .flag-icon {
           width: 20px;
-          height: 15px;
-          border-radius: 3px;
+          height: 20px;
+          border-radius: 50%;
+        }
+
+        /* Когда нужно показать меню */
+        &.visible {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+          max-height: 400px; /* достаточно, чтобы поместить все кнопки */
         }
       }
     }
@@ -162,11 +183,17 @@
     &.open &__collapse {
       display: flex;
     }
+    &__menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-    &__logo,
+      &__logo,
     &__burger {
       z-index: 200;
       background: var(--primary-color);
     }
   }
 }
+

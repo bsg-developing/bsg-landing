@@ -1,5 +1,5 @@
 import { ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
-import {provideRouter, withInMemoryScrolling} from '@angular/router';
+import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/router';
 import { provideTransloco } from '@jsverse/transloco';
 import {provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
@@ -23,7 +23,18 @@ export const appConfig: ApplicationConfig = {
       loader: TranslocoHttpLoader,
     }),
     provideClientHydration(withEventReplay()),
-    provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled'
+      }),
+      withRouterConfig({
+        // чтобы при повторном клике на тот же URL + тот же фрагмент
+        // он "reload" прокручивал заново
+        onSameUrlNavigation: 'reload'
+      })
+    ),
   ]
 };
 

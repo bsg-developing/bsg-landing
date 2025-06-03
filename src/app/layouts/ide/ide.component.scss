@@ -134,7 +134,7 @@
     color: #d4d4d4;
     white-space: pre-wrap;
     font-size: 14px;
-    overflow-y: auto;   // чтобы скроллился код, если много
+    overflow-y: hidden;   // чтобы скроллился код, если много
     height: calc(100% - 41px); // вычитаем высоту header (~41px)
 
     @media (max-width: 768px) {
