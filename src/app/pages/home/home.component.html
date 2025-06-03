@@ -4,17 +4,13 @@
     <div class="titleContainer">
       <div class="title">
         <h1>
-          <b class="hover" [ngStyle]="{ color: 'orange' }">
-            {{ 'unique' | transloco }}
-          </b>
+          <b class="hover">{{ 'unique' | transloco }}</b>
           {{ 'ideas' | transloco }}
         </h1>
       </div>
       <div class="title">
         <h1>
-          <b class="hover" [ngStyle]="{ color: 'orange' }">
-            {{ 'for' | transloco }}
-          </b>
+          <b class="hover">{{ 'for' | transloco }}</b>
           {{ 'business' | transloco }}
         </h1>
       </div>
@@ -23,11 +19,8 @@
     <section class="stats">
       @for ( stat of stats; let i = $index; track stat){
         <div class="stat">
-          <h2
-            [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
-            (@countUp.start)="onCountStart($any($event), stat.end, i)"
-          >
-            {{ values[i] }}+
+          <h2 [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
+              (@countUp.start)="onCountStart($any($event), stat.end, i)">{{ values[i] }}+
           </h2>
           <span>{{ stat.label }}</span>
         </div>
