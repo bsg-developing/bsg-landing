@@ -4,6 +4,7 @@ import {FooterComponent} from './layouts/footer/footer.component';
 import {RouterOutlet} from '@angular/router';
 import {NgxScrollTopComponent} from 'ngx-scrolltop';
 
+
 @Component({
   standalone: true,
   selector: 'app-root',
@@ -11,7 +12,8 @@ import {NgxScrollTopComponent} from 'ngx-scrolltop';
     HeaderComponent,
     FooterComponent,
     RouterOutlet,
-    NgxScrollTopComponent
+    NgxScrollTopComponent,
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
