@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import {TranslocoPipe} from '@jsverse/transloco';
+import {AboutUsComponent} from "../about-us/about-us.component";
+import {TitleComponent} from '../../layouts/title/title.component';
 
 @Component({
   selector: 'app-stack',
   imports: [
-    TranslocoPipe
+    TranslocoPipe,
+    AboutUsComponent,
+    TitleComponent
   ],
   templateUrl: './stack.component.html',
   styleUrl: './stack.component.scss'

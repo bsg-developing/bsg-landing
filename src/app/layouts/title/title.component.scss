@@ -1,0 +1,65 @@
+.separator-container {
+  display: flex;
+  align-items: center;       /* выравниваем по вертикали */
+  justify-content: center;   /* по горизонтали центруем весь контейнер */
+  gap: 24px;                 /* расстояние между линией и текстом */
+  max-width: 1550px;
+  margin: 0 auto;            /* чтобы контейнер был по центру страницы */
+  width: 100%;
+  overflow: hidden;          /* обрезаем всё лишнее, если ширина окна меньше */
+  padding: 0;
+  position: relative;
+  height: min-content;       /* высота зависит от контента */
+}
+
+/* Общие стили для линии (левая и правая) */
+.separator-container .line {
+  flex: 1 0 0;               /* растягиваемся, но не сжимаемся меньше «0» */
+  height: 2px;               /* толщина линии */
+  border-radius: 10px;       /* чуть скруглённые края */
+  overflow: hidden;
+  position: relative;
+  will-change: transform;    /* hint для производительности (Framer) */
+}
+
+/* Левая линия: градиент слева → прозрачность справа */
+.separator-container .line-left {
+  background: linear-gradient(
+      270deg,
+      #afa7de 0%,            /* светло-фиолетовый слева */
+      rgb(52, 52, 82) 40%,
+      rgba(52, 52, 82, 0) 100% /* плавно к прозрачному справа */
+  );
+}
+
+/* Правая линия: градиент справа → прозрачность слева */
+.separator-container .line-right {
+  background: linear-gradient(
+      90deg,
+      #afa7de 0%,            /* светло-фиолетовый слева */
+      rgb(52, 52, 82) 40%,
+      rgba(52, 52, 82, 0) 100% /* к прозрачному справа */
+  );
+}
+
+/* Блок для текста */
+.separator-container .text-wrapper {
+  flex: 0 0 auto;            /* не растягиваемся и не сжимаемся */
+  white-space: pre-wrap;      /* чтобы текст переносился по словам */
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: center;         /* текст центрируем внутри блока */
+}
+
+/* Стиль самого заголовка */
+.separator-text {
+  margin: 0;
+  font-size: 1.25rem;         /* можно подкорректировать под ваш дизайн */
+  font-weight: 600;
+  /*
+  color: #fff;                !* или любой другой цвет *!
+  */
+  background: linear-gradient(to right, #afa7de, #343452);
+  -webkit-background-clip: text;
+  color: transparent;
+}

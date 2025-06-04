@@ -1,10 +1,8 @@
-import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import {NgClass, NgIf, UpperCasePipe} from "@angular/common";
+import {Component, inject} from '@angular/core';
+import {NgClass, UpperCasePipe} from "@angular/common";
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {LANGUAGES} from '../../core/configs/languages.config';
 import {Router, RouterLinkActive} from '@angular/router';
-import {Subscription} from 'rxjs';
-import {ViewportRuler} from '@angular/cdk/overlay';
 import {ClickOutsideDirective} from '../../core/directives/click-outside.directive';
 
 @Component({
@@ -36,7 +34,6 @@ export class HeaderComponent{
   public isScrolled = false;
   public mobileMenuVisible = false;
 
-  private scrollSub!: Subscription;
 
   constructor(
     private translocateService: TranslocoService,

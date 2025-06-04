@@ -162,7 +162,7 @@ section {
 }
 
 .vector-1 {
-  background-image: url(assets/images/lines/vector-1.svg);
+  background-image: url('/assets/images/lines/vector-1.svg');
   position: absolute;
   top: 26%;
   left: 29%;
@@ -171,7 +171,7 @@ section {
 }
 
 .vector-2{
-  background-image: url(assets/images/lines/vector-2.svg);
+  background-image: url('/assets/images/lines/vector-2.svg');
   position: absolute;
   top: 66%;
   left: 29%;
@@ -181,7 +181,7 @@ section {
 
 
 .vector-3 {
-  background-image: url(assets/images/lines/vector-3.svg);
+  background-image: url('/assets/images/lines/vector-3.svg');
   position: absolute;
   top: 26%;
   left: 61%;
@@ -194,7 +194,7 @@ section {
 
 
 .vector-5{
-  background-image: url(assets/images/lines/vector-4.svg);
+  background-image: url('/assets/images/lines/vector-4.svg');
   transform: scaleX(-1);
   position: absolute;
   top: 66%;

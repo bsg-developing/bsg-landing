@@ -8,6 +8,7 @@ import {isPlatformBrowser} from '@angular/common';
 import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
+import {AboutUsComponent} from '../about-us/about-us.component';
 
 @Component({
   standalone: true,
@@ -20,6 +21,7 @@ import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/backg
     StackComponent,
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
+    AboutUsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -8,13 +8,16 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
-
-  &.scrolled {
+  background-color:transparent;
+  /*
+  -webkit-backdrop-filter: blur(10px);
+  */
+  backdrop-filter: blur(8px);
+/*  &.scrolled {
     background-color:transparent;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-  }
+  }*/
 
   &__logo {
     cursor: pointer;
