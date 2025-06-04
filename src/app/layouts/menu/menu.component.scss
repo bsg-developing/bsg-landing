@@ -13,20 +13,24 @@
   width: 390px;
   height: fit-content;
   padding: 35px;
-  background: white;
+  background: rgba(255, 255, 255, 0.1); /* полупрозрачный */
+  backdrop-filter: blur(12px); /* размытие заднего фона */
+  -webkit-backdrop-filter: blur(12px); /* для Safari */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: poppins;
   border-radius: 0 0 7mm 7mm;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* лёгкая тень для глубины */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* опциональная граница */
 }
+
 .nav-bar label {
   display: flex;
   align-items: center;
   justify-content: left;
   font-size: 15px;
   font-weight: 500;
-  padding: 10px;
+  padding: 0px;
   border-radius: 8mm;
   max-width: 32px;
   overflow: hidden;
@@ -49,14 +53,22 @@
   padding: 10px 14px;
 }
 .check:nth-child(1):checked ~ .center {
+  /*
   background: rgb(91, 55, 183);
+  */
 }
 .check:nth-child(2):checked ~ .center {
+  /*
   background: rgb(201, 55, 157);
+  */
 }
 .check:nth-child(3):checked ~ .center {
+  /*
   background: rgb(230, 169, 25);
+  */
 }
 .check:nth-child(4):checked ~ .center {
+  /*
   background: rgb(17, 148, 170);
+  */
 }

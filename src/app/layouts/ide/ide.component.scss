@@ -79,7 +79,9 @@
 
   @media (max-width: 480px) {
     margin: 10px auto;
+    /*
     height: auto;           // пусть контейнер подстроится под контент
+    */
     padding-bottom: 10px;   // небольшой запас снизу
   }
 
@@ -146,7 +148,9 @@
     @media (max-width: 480px) {
       padding: 12px;
       font-size: 12px;
+      /*
       height: auto;      // авто, чтобы контейнер мог расти
+      */
       max-height: 300px; // но не более, если код очень длинный
     }
 
