@@ -1,7 +1,9 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {NgForOf} from '@angular/common';
 import {CarouselModule} from 'ngx-owl-carousel-o';
 import {TranslocoPipe} from '@jsverse/transloco';
+import {AboutUsComponent} from "../about-us/about-us.component";
+import {TitleComponent} from '../../layouts/title/title.component';
 
 
 @Component({
@@ -11,6 +13,8 @@ import {TranslocoPipe} from '@jsverse/transloco';
     CarouselModule,
     NgForOf,
     TranslocoPipe,
+    AboutUsComponent,
+    TitleComponent,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',

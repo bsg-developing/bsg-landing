@@ -231,7 +231,9 @@ pre{
   font-size: 14px;
   border-radius: 10px;
   margin: 0;
+  /*
   overflow-x: auto;
+  */
 }
 
 code{
@@ -353,6 +355,22 @@ svg {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
+:root {
+  --color-white:        #ffffff;
+  --color-light-gray:   #dbdbdb;
+  --color-dark-gray:    #191919;
+  --color-almost-black: #0a0a0a;
+  --color-black:        #000000;
+  --color-error:        #e06363;
+  --color-highlight:    #056370;
 
+  --font-base:   "e-Ukraine", sans-serif;
+  --font-bold:   500;
+  --font-regular:200;
+  --font-title:  "Clash Display", sans-serif;
+}

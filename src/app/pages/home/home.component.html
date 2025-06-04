@@ -1,53 +1,42 @@
 <div class="services-wrapper" >
   <background-wrapper class="services-bg" [@fadeIn]/>
   <div class="services">
-    <div class="textContainer">
-      <p>
-        We focus on helping your brand grow<br>
-        and move forward
-      </p>
-      <hr />
-    </div>
-
     <div class="titleContainer">
       <div class="title">
         <h1>
-          <b class="hover" [ngStyle]="{ color: 'orange' }">
-            {{ 'unique' | transloco }}
-          </b>
+          <b class="hover">{{ 'unique' | transloco }}</b>
           {{ 'ideas' | transloco }}
         </h1>
       </div>
       <div class="title">
         <h1>
-          <b class="hover" [ngStyle]="{ color: 'orange' }">
-            {{ 'for' | transloco }}
-          </b>
+          <b class="hover">{{ 'for' | transloco }}</b>
           {{ 'business' | transloco }}
         </h1>
       </div>
     </div>
 
     <section class="stats">
-      <div
-        class="stat"
-        *ngFor="let stat of stats; let i = index"
-        [@fadeIn]
-        [@hoverEffect]
-      >
-        <!--        <h2
-                  [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
-                  (@countUp.start)="onCountStart($any($event), stat.end, i)"
-                >
-                  {{ values[i] }}+
-                </h2>-->
-        <span>{{ stat.label }}</span>
-      </div>
+      @for ( stat of stats; let i = $index; track stat){
+        <div class="stat">
+          <h2 [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
+              (@countUp.start)="onCountStart($any($event), stat.end, i)">{{ values[i] }}+
+          </h2>
+          <span>{{ stat.label }}</span>
+        </div>
+      }
     </section>
     <app-ide></app-ide>
-    <app-activity id="activity"></app-activity>
     <app-project-timeline id="features"></app-project-timeline>
+    <app-activity id="activity"></app-activity>
+
     <app-stack id="technologies"></app-stack>
+    <slider></slider>
     <app-products id="projects"></app-products>
+    <app-contact-form/>
   </div>
+<!--
+  <app-menu></app-menu>
+-->
+
 </div>

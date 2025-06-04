@@ -1,0 +1,66 @@
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.logos {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 25s linear infinite;
+}
+.logos img {
+  width: 110px;
+  margin: 0 25px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*Responsive*/
+
+/*Screen size less that 700 pixels*/
+@media screen and (max-width: 700px) {
+  .logos img {
+    width: 70px;
+    margin: 0 20px;
+  }
+}
+
+/*Screen size less that 480 pixels*/
+@media screen and (max-width: 480px) {
+  .logos img {
+    width: 55px;
+    margin: 0 15px;
+  }
+}
+
+/*Screen size more that 1800 pixels*/
+@media screen and (min-width: 1800px) {
+  .logos img {
+    width: 170px;
+    margin: 0 35px;
+  }
+}

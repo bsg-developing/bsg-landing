@@ -1,9 +1,6 @@
-<nav
-  class="navbar"
-  [class.open]="mobileMenuVisible"
-  [class.scrolled]="isScrolled">
+<nav class="navbar" [class.open]="mobileMenuVisible" [class.scrolled]="isScrolled">
 
-  <h3 class="navbar__logo">{{ logo }}</h3>
+  <img class="navbar__logo" src="assets/images/logo.svg" alt="">
 
   <button class="navbar__burger" (click)="toggleMobileMenu()">
     <i class="bx" [ngClass]="mobileMenuVisible ? 'bx-x' : 'bx-menu'"></i>
@@ -11,63 +8,31 @@
 
   <div class="navbar__collapse" [class.open]="mobileMenuVisible">
     <ul class="navbar__menu">
-      <li
-        (click)="router.navigate(['/home'], { fragment: 'activity' })"
-        routerLinkActive="active"
-      >
-        {{ 'aboutUs' | transloco }}
-      </li>
-      <li
-        (click)="router.navigate(['/home'], { fragment: 'features' })"
-        routerLinkActive="active"
-      >
-        {{ 'careers' | transloco }}
-      </li>
-      <li
-        (click)="router.navigate(['/home'], { fragment: 'technologies' })"
-        routerLinkActive="active"
-      >
-        {{ 'technologies' | transloco }}
-      </li>
-      <li
-        (click)="router.navigate(['/home'], { fragment: 'footer' })"
-        routerLinkActive="active"
-      >
-        {{ 'contactUs' | transloco }}
-      </li>
-      <li
-        (click)="router.navigate(['/home'], { fragment: 'projects' })"
-        routerLinkActive="active"
-      >
-        {{ 'products' | transloco }}
-      </li>
+      @for (item of menuItems ; track item) {
+        <li (click)="router.navigate(['/'], { fragment: item.fragment })" routerLinkActive="active">
+          {{ item.labelKey | transloco }}
+        </li>
+      }
     </ul>
-
     <div class="navbar__actions">
-      <!-- Смена темы -->
-      <button class="navbar__button" (click)="toggleTheme()">
-        <i class="bx" [ngClass]="isDarkTheme ? 'bx-moon' : 'bx-sun'"></i>
-      </button>
-
-      <!-- Смена языка -->
       <div class="language-container">
         <button class="navbar__button" (click)="toggleLanguageDropdown()">
           <i class="bx bx-globe"></i>
           <span class="language-text">{{ selectedLanguage | uppercase }}</span>
         </button>
-        <div class="language-options" *ngIf="dropdownVisible">
-          <button
-            *ngFor="let language of languages"
-            (click)="changeLang(language.code)"
-          >
-            <img
-              [src]="language.flag"
-              alt="{{ language.name }}"
-              class="flag-icon"
-            />
-            {{ language.name }}
-          </button>
-        </div>
+        @if (dropdownVisible){
+          <div class="language-options"
+               clickOutside
+               [class.visible]="dropdownVisible"
+               (clickOutside)="dropdownVisible = false">
+            @for (language of languages; track $index){
+              <button (click)="changeLang(language.code)">
+                <img [src]="language.flag"   alt="{{ language.name }}" class="flag-icon"/>
+                {{ language.name }}
+              </button>
+            }
+          </div>
+        }
       </div>
     </div>
   </div>

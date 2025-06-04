@@ -1,67 +1,49 @@
-import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import {NgClass, NgForOf, NgIf, UpperCasePipe} from "@angular/common";
+import {Component, inject} from '@angular/core';
+import {NgClass, UpperCasePipe} from "@angular/common";
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
-import {ThemeService} from '../../core/services/theme.service';
 import {LANGUAGES} from '../../core/configs/languages.config';
-import {Router, RouterLink, RouterLinkActive} from '@angular/router';
-import {Subscription} from 'rxjs';
-import {ViewportRuler} from '@angular/cdk/overlay';
+import {Router, RouterLinkActive} from '@angular/router';
+import {ClickOutsideDirective} from '../../core/directives/click-outside.directive';
 
 @Component({
   selector: 'app-header',
   imports: [
     UpperCasePipe,
     TranslocoPipe,
-    RouterLink,
     RouterLinkActive,
     NgClass,
-    NgForOf,
-    NgIf
+    ClickOutsideDirective,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent{
   public selectedLanguage!: string;
-  public logo = '</> Z & K';
   public dropdownVisible = false;
   public languages = LANGUAGES;
-  public isDarkTheme = false;
-  public router: Router;
+  public router= inject(Router);
+  public menuItems = [
+    { fragment: 'activity', labelKey: 'aboutUs' },
+    { fragment: 'features', labelKey: 'careers' },
+    { fragment: 'technologies', labelKey: 'technologies' },
+    { fragment: 'projects', labelKey: 'products' },
+    { fragment: 'footer', labelKey: 'contactUs' }
+  ];
+
 
   public isScrolled = false;
   public mobileMenuVisible = false;
 
-  private scrollSub!: Subscription;
-  private viewportRuler: ViewportRuler;
 
   constructor(
-    router: Router,
-    private translocoService: TranslocoService,
-    private themeService: ThemeService,
-    viewportRuler: ViewportRuler
+    private translocateService: TranslocoService,
   ) {
-    this.router = router;
-    this.viewportRuler = viewportRuler;
 
-    // Инициализация языка из localStorage (пример)
     if (typeof window !== 'undefined' && window.localStorage) {
       const lang = localStorage.getItem('lang') || 'ro';
       this.selectedLanguage = lang;
-      this.translocoService.setActiveLang(lang);
+      this.translocateService.setActiveLang(lang);
     }
-  }
-
-  ngOnInit(): void {
-    // Подписываемся на события прокрутки (CDK ViewportRuler)
-    this.scrollSub = this.viewportRuler.change(0).subscribe(() => {
-      const { top: scrollY } = this.viewportRuler.getViewportScrollPosition();
-      this.isScrolled = scrollY > 0;
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.scrollSub.unsubscribe();
   }
 
   public toggleLanguageDropdown(): void {
@@ -69,16 +51,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   public changeLang(lang: string): void {
-    this.translocoService.setActiveLang(lang);
+    this.translocateService.setActiveLang(lang);
     this.selectedLanguage = lang;
     this.dropdownVisible = false;
     localStorage.setItem('lang', lang);
   }
 
-  public toggleTheme(): void {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.themeService.toggleTheme();
-  }
 
   public toggleMobileMenu(): void {
     this.mobileMenuVisible = !this.mobileMenuVisible;

@@ -8,6 +8,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  filter: brightness(0.7);
 }
 
 .services {
@@ -19,26 +20,9 @@
   padding: 4rem 2rem;
 }
 
-.textContainer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-.textContainer p {
-  font-weight: 200;
-  font-size: 20px;
-  color: gray;
-  text-align: right;
-}
-.textContainer hr {
-  flex: 1;
-  border: none;
-  border-top: 1px solid gray;
-}
 
 .titleContainer {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +32,6 @@
 .titleContainer .title {
   display: flex;
   align-items: center;
-  gap: 50px;
 }
 .titleContainer h1 {
   font-size: 96px;
@@ -115,7 +98,15 @@
 }
 
 @media (max-width: 768px) {
+  .titleContainer{
+    gap: 0;
+    align-items: start;
+  }
   .titleContainer h1 {
     font-size: 48px;
   }
+  .stats .stat {
+      justify-content: start;
+      border-right: none;
+    }
 }
