@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # или другая ветка, с которой деплоишь
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Copy project to VPS
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: 167.86.75.246
+          username: root
+          key: ${{ secrets.SOLTERPRISE_PRIVATE_SSH_KEY }}
+          source: "."                     # всё из корня
+          target: "/opt/solteprise-app"         # финальная директория на сервере
+          strip_components: 0            # сохранить структуру
+
+      - name: Run Docker Compose on VPS
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: 167.86.75.246
+          username: root
+          key: ${{ secrets.SOLTERPRISE_PRIVATE_SSH_KEY }}
+          script: |
+            cd /opt/solteprise-app
+            docker compose down || true
+            docker compose build --no-cache
+            docker compose up -d

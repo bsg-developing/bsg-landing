@@ -1,11 +1,13 @@
 {
-  "name": "client",
+  "name": "solterprise",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "build": "ng build solterprise --configuration production",
+    "build:ssr": "ng build solterprise && ng run solterprise:server:production",
+    "serve:ssr": "node dist/solterprise/server/server.mjs",
     "test": "ng test",
     "serve:ssr:client": "node dist/client/server/server.mjs"
   },
