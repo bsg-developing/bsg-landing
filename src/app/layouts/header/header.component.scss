@@ -7,12 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem; /* увеличили сверху/снизу */
   background-color:transparent;
   /*
   -webkit-backdrop-filter: blur(10px);
   */
+  /*
   backdrop-filter: blur(8px);
+  */
 /*  &.scrolled {
     background-color:transparent;
     -webkit-backdrop-filter: blur(10px);
@@ -21,12 +23,11 @@
 
   &__logo {
     cursor: pointer;
-    color: var(--text-secondary-color);
-    font-weight: 600;
-    text-decoration: none;
-    width: 60px;
-    height: 60px;
+    width: 90px;   /* новый размер */
+    height: 90px;  /* новый размер */
+    object-fit: contain; /* на случай, если это <img> с неравным соотношением сторон */
   }
+
 
   &__burger {
     display: none;

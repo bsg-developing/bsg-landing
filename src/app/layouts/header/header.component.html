@@ -1,8 +1,6 @@
 <nav class="navbar" [class.open]="mobileMenuVisible" [class.scrolled]="isScrolled">
 
-<!--
-  <img class="navbar__logo" src="assets/solterprise_embedded_final.svg" alt="">
--->
+  <img class="navbar__logo" src="assets/images/logo.svg" alt="">
 
   <button class="navbar__burger" (click)="toggleMobileMenu()">
     <i class="bx" [ngClass]="mobileMenuVisible ? 'bx-x' : 'bx-menu'"></i>
@@ -10,7 +8,6 @@
 
   <div class="navbar__collapse" [class.open]="mobileMenuVisible">
     <ul class="navbar__menu">
-      <!-- Вместо пяти отдельных <li> используем *ngFor по menuItems -->
       @for (item of menuItems ; track item) {
         <li (click)="router.navigate(['/'], { fragment: item.fragment })" routerLinkActive="active">
           {{ item.labelKey | transloco }}

@@ -9,6 +9,9 @@ import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
 import {AboutUsComponent} from '../about-us/about-us.component';
+import {ContactFormComponent} from '../../layouts/contact-form/contact-form.component';
+import {MenuComponent} from '../../layouts/menu/menu.component';
+import {SliderComponent} from '../../layouts/slider/slider.component';
 
 @Component({
   standalone: true,
@@ -22,6 +25,9 @@ import {AboutUsComponent} from '../about-us/about-us.component';
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
     AboutUsComponent,
+    ContactFormComponent,
+    MenuComponent,
+    SliderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

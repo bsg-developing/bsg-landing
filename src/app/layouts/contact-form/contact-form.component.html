@@ -1,1 +1,92 @@
-<p>contact-form works!</p>
+<main class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <form class="contact-form" method="POST">
+        <h3>We are here for you</h3>
+        <p>Start taking advantage of all the benefits that Consolidator offers for your agency.</p>
+
+        <div class="input-group">
+          <p class="input-label required">Full name<span>*</span></p>
+          <input type="text" name="name" placeholder="Enter your full name" />
+        </div>
+
+        <div class="input-group">
+          <p class="input-label required">Email<span>*</span></p>
+          <input type="email" name="email" placeholder="Enter your email address" />
+        </div>
+
+        <div class="input-group">
+          <p class="input-label required">Company<span>*</span></p>
+          <input type="text" name="company" placeholder="Enter your company name" />
+        </div>
+
+        <div class="input-group">
+          <p class="input-label required">Company website<span>*</span></p>
+          <input type="url" name="companyWebsite" placeholder="Company website link" />
+        </div>
+
+        <div class="textarea-group">
+          <p class="input-label required">Message<span>*</span></p>
+          <textarea name="message" placeholder="The more describe you are in message, the better we can help you."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+          <div class="tracker"></div>
+          <span>Send message</span>
+        </button>
+      </form>
+
+      <!-- ПРАВАЯ ЧАСТЬ: информационный блок -->
+      <aside class="contact-info">
+        <!-- 1. Email -->
+        <div class="info-item email-item">
+          <div class="info-icon">
+            <!-- Здесь можно вставить SVG или <img> для иконки почты -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4H22V20H2V4Z" stroke="#00AEEF" stroke-width="2"/>
+              <path d="M2 4L12 13L22 4" stroke="#00AEEF" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h4>Email</h4>
+            <a href="mailto:vahe@hackvector.io">vahe.io</a>
+          </div>
+        </div>
+
+        <!-- 2. Социальные кнопки -->
+        <div class="social-buttons">
+          <a href="https://linkedin.com/in/your-profile" class="btn-link icon-linkedin" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/your-profile" class="btn-link icon-github" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <!-- 3. Response Time -->
+        <div class="info-item response-item">
+          <div class="info-icon">
+            <!-- Иконка часов -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#00AEEF" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h4>Response Time</h4>
+            <p>I typically respond within<br/>24-48 hours</p>
+          </div>
+        </div>
+
+        <!-- 4. Блок для срочных запросов -->
+        <div class="urgent-box">
+          <div class="urgent-border"></div>
+          <div class="urgent-content">
+            <h4>Looking for immediate assistance?</h4>
+            <p>For urgent security matters, please indicate the urgency in your message<br/>and I'll prioritize your request.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

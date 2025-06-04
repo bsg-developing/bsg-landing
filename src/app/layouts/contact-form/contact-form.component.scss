@@ -1,0 +1,553 @@
+/* ===========================
+   Переменные (цвета, шрифты)
+   =========================== */
+
+
+/* ===========================
+   Секция контактов
+   =========================== */
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+/* Центровка и макс. ширина контейнера */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+
+.contact-form {
+  margin: 144px auto 0;
+  padding: 56px 112px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 648px;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 8px;
+  background-color: rgba(10, 10, 10, 0.56);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Заголовок формы */
+.contact-form h3 {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 32px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Описание под заголовком */
+.contact-form > p {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-light-gray);
+  margin: 0 0 24px 0;
+}
+
+/* ===========================
+   Группа текстового поля
+   =========================== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-label {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 12px;
+  line-height: 167%;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+/* Звёздочка обязательного поля */
+.input-label.required span {
+  font-family: var(--font-title);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--color-error);
+}
+
+/* Собственно сам <input> */
+.input-group input {
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-white);
+  background: var(--color-almost-black);
+  outline-color: var(--color-highlight);
+  transition: background-color 0.3s;
+}
+
+/* ===========================
+   Группа текстовой области (textarea)
+   =========================== */
+.textarea-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.textarea-group textarea {
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-white);
+  background: var(--color-almost-black);
+  height: 156px;
+  resize: none;
+  outline-color: var(--color-highlight);
+  transition: background-color 0.3s;
+  margin: 0;
+}
+
+/* Подпись (лейбл) для textarea можно переиспользовать .input-label */
+
+/* ===========================
+   Кнопка отправки
+   =========================== */
+.submit-button {
+  width: 100%;
+  height: 56px;
+  margin-top: 24px;
+  padding: 16px 24px;
+  border-radius: 100px;
+  background: var(--color-white);
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+  line-height: 171%;
+  text-transform: uppercase;
+  color: var(--color-black);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+}
+
+/* Эффект “трекера” (при наведении появляется радиальный градиент) */
+.tracker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+  -webkit-mask-image: -webkit-linear-gradient(180deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.tracker::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);
+  -webkit-mask-image: -webkit-linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+/* Показать “трекер” при наведении на кнопку */
+.submit-button:hover .tracker {
+  opacity: 1;
+}
+/* === Адаптивные стили для контактной формы === */
+
+/* 1) Для экранов до 1024px */
+@media (max-width: 1024px) {
+  /* Уменьшаем отступы у формы */
+  .contact-form {
+    margin-top: 100px;      /* вместо 144px */
+    padding: 40px 60px;     /* вместо 56px 112px */
+  }
+}
+
+/* 2) Для экранов до 768px (обычные планшеты и крупные смартфоны) */
+@media (max-width: 768px) {
+  /* Контейнер перестаёт быть строчным, если вдруг внутри будет несколько колонок */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Форма занимает почти весь экран по ширине */
+  .contact-form {
+    width: 90%;             /* вместо фиксированного max-width:648px */
+    margin-top: 80px;       /* чуть меньше, чтобы не так много пустоты сверху */
+    padding: 32px 24px;     /* отступы поменьше */
+  }
+
+  /* Заголовок немного уменьшаем */
+  .contact-form h3 {
+    font-size: 28px;        /* вместо 32px */
+    line-height: 1.2;
+  }
+
+  /* Описание под заголовком */
+  .contact-form > p {
+    font-size: 15px;        /* вместо 16px */
+    margin-bottom: 20px;    /* вместо 24px */
+  }
+
+  /* Лейблы полей */
+  .input-label {
+    font-size: 11px;        /* вместо 12px */
+  }
+  /* Обязательная звёздочка */
+  .input-label.required span {
+    font-size: 13px;        /* вместо 14px */
+  }
+
+  /* Поля ввода и textarea */
+  .input-group input,
+  .textarea-group textarea {
+    font-size: 15px;        /* вместо 16px */
+    padding: 14px 18px;     /* чуть меньше, чем на больших экранах */
+  }
+
+  /* Кнопка отправки */
+  .submit-button {
+    font-size: 13px;        /* вместо 14px */
+    height: 52px;           /* вместо 56px */
+    padding: 14px 20px;
+  }
+}
+
+/* 3) Для очень узких экранов до 480px (мелкие смартфоны) */
+@media (max-width: 480px) {
+  /* Форма максимально «растягивается» */
+  .contact-form {
+    width: 95%;             /* почти во всю ширину экрана */
+    margin-top: 60px;       /* убираем лишнюю пустоту сверху */
+    padding: 24px 16px;     /* минимальные отступы внутри */
+  }
+
+  /* Заголовок ещё меньше */
+  .contact-form h3 {
+    font-size: 24px;
+  }
+
+  /* Описание под заголовком */
+  .contact-form > p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  /* Лейблы полей */
+  .input-label {
+    font-size: 10px;
+  }
+  .input-label.required span {
+    font-size: 12px;
+  }
+
+  /* Поля ввода и textarea */
+  .input-group input,
+  .textarea-group textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  /* Текстarea по высоте можно немного «урезать», если нужно */
+  .textarea-group textarea {
+    height: 130px;          /* вместо 156px */
+  }
+
+  /* Кнопка отправки */
+  .submit-button {
+    font-size: 12px;
+    height: 48px;
+    padding: 12px 16px;
+  }
+}
+/* =======================================================
+   2.1. Расположение левой формы и правого блока рядом
+   ======================================================= */
+.contact-content {
+  display: flex;
+  gap: 40px;              /* расстояние между формой и информационным блоком */
+  align-items: flex-start;/* выравниваем по верху */
+}
+
+/* Левая сторона (форма) остаётся такой, какой мы её уже задали: .contact-form */
+
+/* Правая сторона: информационный блок */
+.contact-info {
+  background-color: rgba(10, 10, 10, 0.56);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 8px;
+  padding: 32px 24px;
+  max-width: 360px;       /* можно подкорректировать под ваш дизайн */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--color-white);
+}
+
+/* =================================================
+   2.2. Стили для секций внутри .contact-info
+   ================================================= */
+
+/* 2.2.1. Универсальный класс для строки с иконкой и текстом */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Иконка слева */
+.info-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ставим бело-голубой обводку (можно убрать/поменять), чтобы было похоже на макет */
+  background: rgba(0, 174, 239, 0.1);
+  border-radius: 50%;
+}
+
+/* Внутри .info-icon SVG-иконка (уже настроена) */
+
+/* Текст рядом с иконкой */
+.info-text h4 {
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.info-text a,
+.info-text p {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 4px 0 0 0;
+  color: var(--color-highlight); /* подчёркнутый голубой цвет для email */
+  text-decoration: none;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+
+/* =================================================
+   2.3. Стили для социальных кнопок
+   ================================================= */
+.social-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Общие стили для кнопок LinkedIn и GitHub */
+.btn-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--color-dark-gray);
+  border: 1px solid var(--color-highlight);
+  border-radius: 6px;
+  color: var(--color-highlight);
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Если у вас есть SVG-иконка для LinkedIn/GitHub, вставьте её внутри <a>, заменив псевдокласс :before */
+.btn-link:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-dark-gray);
+}
+
+/* Пример вставки иконок через псевдоклассы (замените пути или уберите, если будете вставлять SVG напрямую) */
+/*
+.icon-linkedin::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('path/to/linkedin-icon.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-github::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('path/to/github-icon.svg') no-repeat center center;
+  background-size: contain;
+}
+*/
+
+/* =================================================
+   2.4. Стили для блока Response Time
+   ================================================= */
+/* Поскольку он – это просто .info-item + немножко другой текст, */
+/* выше уже описаны стили .info-item и .info-text. */
+
+.info-item.response-item .info-text h4 {
+  /* Можно переопределить размер, если нужно */
+  font-size: 18px;
+}
+
+.info-item.response-item .info-text p {
+  color: var(--color-light-gray);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* =================================================
+   2.5. Стили для блока срочных запросов (urgent-box)
+   ================================================= */
+.urgent-box {
+  display: flex;
+  align-items: stretch;
+  background: rgba(0, 174, 239, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.urgent-border {
+  width: 4px;
+  background: var(--color-highlight);
+}
+
+.urgent-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.urgent-content h4 {
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.urgent-content p {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--color-light-gray);
+}
+
+/* =================================================
+   2.6. Адаптив (для .contact-content + .contact-info)
+   ================================================= */
+
+/* === Для экранов до 1024px === */
+@media (max-width: 1024px) {
+  .contact-content {
+    gap: 24px;          /* уменьшаем расстояние между колонками */
+  }
+
+  /* Уменьшаем отступы у правого блока */
+  .contact-info {
+    padding: 24px 20px;
+  }
+}
+
+/* === Для экранов до 768px === */
+@media (max-width: 768px) {
+  /* На планшетах и больших смартфонах: ставим форму и info-блок вертикально */
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    width: 90%;            /* почти во всю ширину контейнера */
+    max-width: 100%;
+    margin-top: 32px;      /* отступ от формы */
+  }
+
+  /* Уменьшаем заголовок в info-блоке (если хотим) */
+  .info-item .info-text h4 {
+    font-size: 16px;
+  }
+
+  .info-item .info-text p {
+    font-size: 13px;
+  }
+}
+
+/* === Для экранов до 480px === */
+@media (max-width: 480px) {
+  /* Форма уже адаптирована ранее, здесь только донастраиваем info-блок */
+  .contact-info {
+    width: 95%;
+    padding: 16px 12px;
+  }
+
+  .info-item .info-text h4 {
+    font-size: 14px;
+  }
+
+  .info-item .info-text p {
+    font-size: 12px;
+  }
+
+  .btn-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .urgent-content h4 {
+    font-size: 14px;
+  }
+
+  .urgent-content p {
+    font-size: 11px;
+  }
+}

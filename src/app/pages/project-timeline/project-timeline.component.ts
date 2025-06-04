@@ -6,9 +6,7 @@ import {TranslocoPipe} from '@jsverse/transloco';
 @Component({
   selector: 'app-project-timeline',
   imports: [
-    AboutUsComponent,
     TitleComponent,
-    TranslocoPipe
   ],
   templateUrl: './project-timeline.component.html',
   styleUrl: './project-timeline.component.scss'
