@@ -17,4 +17,4 @@ RUN npm run build:ssr
 EXPOSE 4000
 
 # Запускаем SSR-сервер
-CMD ["node", "dist/solterprice/server/server.mjs"]
+CMD ["node", "dist/solterprise/server/server.mjs"]
