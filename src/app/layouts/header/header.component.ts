@@ -1,68 +1,48 @@
 import {Component, inject} from '@angular/core';
-import {NgClass, NgForOf, UpperCasePipe} from "@angular/common";
+import {UpperCasePipe} from "@angular/common";
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
-import {LANGUAGES} from '../../core/configs/languages.config';
-import {Router, RouterLinkActive} from '@angular/router';
+import {Language, LANGUAGES} from '../../core/configs/languages.config';
+import {Router} from '@angular/router';
 import {ClickOutsideDirective} from '../../core/directives/click-outside.directive';
+import {MENU_ITEMS} from '../../core/constants/menu-items';
 
 @Component({
   selector: 'app-header',
   imports: [
     UpperCasePipe,
     TranslocoPipe,
-    RouterLinkActive,
-    NgClass,
     ClickOutsideDirective,
-
-    NgForOf,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent{
-  public selectedLanguage!: string;
+  public selectedLanguage: string = '';
+  public  selectedIcon!: string ;
   public dropdownVisible = false;
   public languages = LANGUAGES;
   public router= inject(Router);
-  public menuItems = [
-    { fragment: 'activity', labelKey: 'aboutUs' },
-    { fragment: 'features', labelKey: 'careers' },
-    { fragment: 'technologies', labelKey: 'technologies' },
-    { fragment: 'projects', labelKey: 'products' },
-    { fragment: 'footer', labelKey: 'contactUs' }
-  ];
+  private translocateService = inject(TranslocoService);
+  public menuItems = MENU_ITEMS;
 
-
-  public isScrolled = false;
-  public mobileMenuVisible = false;
-
-
-  constructor(
-    private translocateService: TranslocoService,
-  ) {
-
+  constructor() {
     if (typeof window !== 'undefined' && window.localStorage) {
       const lang = localStorage.getItem('lang') || 'ro';
       this.selectedLanguage = lang;
+      this.selectedIcon = LANGUAGES.find(lang => lang.code === this.selectedLanguage)?.flag || ' ';
       this.translocateService.setActiveLang(lang);
     }
   }
-  public getFlagByCode(code: string): string {
-    return this.languages.find(lang => lang.code === code)?.flag || '';
-  }
+
   public toggleLanguageDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
   }
 
-  public changeLang(lang: string): void {
-    this.translocateService.setActiveLang(lang);
-    this.selectedLanguage = lang;
+  public changeLang(lang: Language): void {
+    this.translocateService.setActiveLang(lang.code);
+    this.selectedLanguage = lang.code;
+    this.selectedIcon = lang.flag;
     this.dropdownVisible = false;
-    localStorage.setItem('lang', lang);
-  }
-
-
-  public toggleMobileMenu(): void {
-    this.mobileMenuVisible = !this.mobileMenuVisible;
+    localStorage.setItem('lang', lang.code);
   }
 }

@@ -63,8 +63,11 @@
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 
-    i {
-      margin-right: 0.3rem;
+    img {
+      margin-right: 0.5rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
 
     &:hover {

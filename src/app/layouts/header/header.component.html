@@ -9,7 +9,10 @@
     <div class="actions">
     <div class="language-container">
       <button class="navbar-button" (click)="toggleLanguageDropdown()">
+<!--
         <i class="bx bx-globe"></i>
+-->
+        <img [src]="selectedIcon" alt="">
         <span class="language-text">{{ selectedLanguage | uppercase }}</span>
       </button>
       @if (dropdownVisible){
@@ -18,7 +21,7 @@
              [class.visible]="dropdownVisible"
              (clickOutside)="dropdownVisible = false">
           @for (language of languages; track $index){
-            <button (click)="changeLang(language.code)">
+            <button (click)="changeLang(language)">
               <img [src]="language.flag"   alt="{{ language.name }}" class="flag-icon"/>
               {{ language.name }}
             </button>
