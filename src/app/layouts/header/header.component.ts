@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {NgClass, UpperCasePipe} from "@angular/common";
+import {NgClass, NgForOf, UpperCasePipe} from "@angular/common";
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {LANGUAGES} from '../../core/configs/languages.config';
 import {Router, RouterLinkActive} from '@angular/router';
@@ -13,6 +13,8 @@ import {ClickOutsideDirective} from '../../core/directives/click-outside.directi
     RouterLinkActive,
     NgClass,
     ClickOutsideDirective,
+
+    NgForOf,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
@@ -45,7 +47,9 @@ export class HeaderComponent{
       this.translocateService.setActiveLang(lang);
     }
   }
-
+  public getFlagByCode(code: string): string {
+    return this.languages.find(lang => lang.code === code)?.flag || '';
+  }
   public toggleLanguageDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
   }
