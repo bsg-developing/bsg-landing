@@ -63,3 +63,16 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+.separator-container .line {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+
+.separator-container .line-right {
+  transform-origin: right;
+}
+
+.separator-container.in-view .line {
+  transform: scaleX(1);
+}
