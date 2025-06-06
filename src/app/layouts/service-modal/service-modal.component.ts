@@ -8,6 +8,7 @@ import {
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {LineBreaksPipe} from '../../line-breaks-pipe';
+import {TranslocoPipe} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-service-modal',
@@ -18,6 +19,7 @@ import {LineBreaksPipe} from '../../line-breaks-pipe';
     MatButtonModule,
     MatDialogClose,
     LineBreaksPipe,
+    TranslocoPipe,
   ],
   templateUrl: './service-modal.component.html',
   styleUrl: './service-modal.component.scss'
