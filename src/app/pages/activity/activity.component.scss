@@ -1,141 +1,116 @@
-body{
+.container {
+  margin: 10vh auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: rgba(2, 2, 10, 0.9);
-}
-
-.container{
-  margin-top: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   gap: 70px;
 }
 
-.card{
+.card {
   --border-radius: 1rem;
   --bg-color: #393e41;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 300px;
-  height: 400px;
+  height: 420px;
   background: var(--bg-color);
   border-radius: var(--border-radius);
   color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  isolation: isolate;
   overflow: hidden;
+  isolation: isolate;
+  padding: 20px;
+  text-align: center;
+  gap: 16px;
   cursor: pointer;
 }
 
-.card .title {
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-block: 2.5rem 1.5rem;
-}
-
-.card i{
+.card i {
   font-size: 3.5rem;
   color: transparent;
-  -webkit-text-stroke: thin red;
+  -webkit-text-stroke: thin whitesmoke;
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
 }
 
-.card:hover  i {
-  color: black;
+.card:hover i {
+  color: #d9d9d9;
   -webkit-text-stroke: 0;
-
 }
-.card .description{
+
+.card .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.card .description {
   line-height: 1.5rem;
-  text-align: center;
   opacity: 0.75;
+  font-size: 0.95rem;
+  padding: 0 10px;
+  flex-grow: 1;
 }
 
-.card::before , .card::after{
+.details-btn {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid #7c66a1;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #7c66a1;
+  color: #fff;
+}
+
+/* ================== Ртутный фон ================== */
+.card::before {
   content: '';
   position: absolute;
-
-}
-
-.card::before{
   width: 200%;
   height: 200%;
-  background-image: conic-gradient(red 0deg, transparent 60deg, transparent 180deg, red 180deg, transparent 240deg);
   inset: -50%;
   z-index: -2;
-  animation: border-animation 4s linear infinite;
+  background-image: conic-gradient(
+      #3b2666 0deg,
+      #7c66a1 60deg,
+      #d9d9d9 120deg,
+      #2a2d34 180deg,
+      #a8b0b9 240deg,
+      #3b2666 300deg,
+      #3b2666 360deg
+  );
+  animation: border-animation 8s linear infinite;
+  opacity: 0.8;
+  filter: blur(2px);
+  border-radius: inherit;
 }
 
-@keyframes border-animation{
-  to{
-    transform:rotate(-360deg);
-  }
-
-}
-
-.card:hover::before{
+.card:hover::before {
   animation-play-state: paused;
 }
 
-.card::after{
-  --inset: 4px;
-  background: #111;
-  inset: var(--inset);
-  border-radius: calc(var(--border-radius) - var(--inset));
-  transition: all 0.3s linear;
-  z-index: -1;
-}
-
-/*--------------------------------------------*/
-.folder {
-  position: relative;
-  width: 300px;
-  background-color: #2c2c2c;
-  border-radius: 11px;
-  padding: 24px;
-  color: #ccc;
-  font-family: sans-serif;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  margin: 40px;
-}
-
-/* Язычок — в самом левом верхнем углу */
-.folder::before {
-  content: "";
+.card::after {
+  content: '';
   position: absolute;
-  top: -12px;
-  left: 0;
-  width: 100px;
-  height: 20px;
-  background-color: #2c2c2c;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  inset: 4px;
+  background: #111;
+  border-radius: calc(var(--border-radius) - 4px);
+  z-index: -1;
+  transition: all 0.3s linear;
 }
 
-
-/* Контент внутри */
-.folder-content p {
-  margin: 8px 0;
-  font-size: 14px;
-}
-
-.folder-link {
-  display: inline-block;
-  margin-top: 12px;
-  color: #ffb980;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.folder-link:hover {
-  color: #ffd7aa;
+@keyframes border-animation {
+  to {
+    transform: rotate(-360deg);
+  }
 }
