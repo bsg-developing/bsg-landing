@@ -89,9 +89,14 @@
       #3b2666 300deg,
       #3b2666 360deg
   );
+
   animation: border-animation 8s linear infinite;
+  /*
   opacity: 0.8;
+  */
+  /*
   filter: blur(2px);
+  */
   border-radius: inherit;
 }
 

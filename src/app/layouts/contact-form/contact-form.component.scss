@@ -67,6 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 16px;
 }
 
 .input-label {
@@ -299,9 +300,6 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-dark-gray);
-  /*
-  border-radius: 8px;
-  */
   padding: 32px 24px;
   max-width: 360px;       /* можно подкорректировать под ваш дизайн */
   width: 100%;
