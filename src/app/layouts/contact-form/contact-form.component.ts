@@ -20,7 +20,7 @@ export class ContactFormComponent {
   private readonly dialogStore = inject(ContactFormService);
   readonly form = this.dialogStore.contactForm;
   readonly dialogLoading = this.dialogStore.loading;
-  readonly dialogError = this.dialogStore.error;
+  readonly dialogError = this.dialogStore.formInvalid;
 
   saveDictionary(): void {
     console.log(this.form.value);

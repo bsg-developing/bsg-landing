@@ -12,6 +12,7 @@ export class ContactFormService {
   private readonly fb = inject(FormBuilder);
   private readonly http = inject(HttpClient);
   private apiUrl = 'https://api.solterprise.com/api/customer-requests';
+  formInvalid = signal(false);
 
   contactForm = this.fb.group({
     customer: this.fb.group({
@@ -19,28 +20,35 @@ export class ContactFormService {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      companyName: ['', Validators.required]
+      companyName: ['']
     }),
-    message: ['', Validators.required]
+    message: ['']
   });
 
- save() {
+  save() {
     this.contactForm.markAllAsTouched();
-       if (this.contactForm.invalid) return;
-        const value = this.contactForm.getRawValue() as CustomerRequest;
-        this.loading.set(true);
 
-        const request$ =   this.createRequest(value);
+    if (this.contactForm.invalid) {
+      this.formInvalid.set(true); // <-- установить флаг ошибки валидации
+      return;
+    }
 
-        request$.subscribe({
-          next: () => {
-            this.loading.set(false);
-          },
-          error: (error) => {
-            this.loading.set(false);
-            this.error.set(error.error?.message || error.error?.errors?.GENERAL?.[0] || 'Ошибка при отправке заявки');
-          }
-        });
+    this.formInvalid.set(false); // сброс ошибки при валидной форме
+    this.error.set(null);        // сброс предыдущих ошибок
+    this.loading.set(true);
+
+    const value = this.contactForm.getRawValue() as CustomerRequest;
+    const request$ = this.createRequest(value);
+
+    request$.subscribe({
+      next: () => {
+        this.loading.set(false);
+      },
+      error: (error) => {
+        this.loading.set(false);
+        this.error.set(error.error?.message || error.error?.errors?.GENERAL?.[0] || 'Ошибка при отправке заявки');
+      }
+    });
   }
 
 
