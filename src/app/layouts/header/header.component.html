@@ -9,10 +9,7 @@
     <div class="actions">
     <div class="language-container">
       <button class="navbar-button" (click)="toggleLanguageDropdown()">
-<!--
         <i class="bx bx-globe"></i>
--->
-        <img [src]="selectedIcon" alt="">
         <span class="language-text">{{ selectedLanguage | uppercase }}</span>
       </button>
       @if (dropdownVisible){

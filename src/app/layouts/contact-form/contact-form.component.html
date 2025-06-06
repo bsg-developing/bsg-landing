@@ -1,36 +1,43 @@
 <main class="contact-section">
   <div class="container">
     <div class="contact-content">
-      <form class="contact-form" method="POST">
+      <form class="contact-form" [formGroup]="form">
         <h3>We are here for you</h3>
         <p>Start taking advantage of all the benefits that Consolidator offers for your agency.</p>
 
+        <div formGroupName="customer">
         <div class="input-group">
           <p class="input-label required">Full name<span>*</span></p>
-          <input type="text" name="name" placeholder="Enter your full name" />
+          <input type="text" name="name" placeholder="Enter your full name" formControlName="firstName"/>
         </div>
+          <div class="input-group">
+            <p class="input-label required">Last name<span>*</span></p>
+            <input type="text" name="name" placeholder="Enter your full name" formControlName="lastName"/>
+          </div>
 
-        <div class="input-group">
+
+          <div class="input-group">
           <p class="input-label required">Email<span>*</span></p>
-          <input type="email" name="email" placeholder="Enter your email address" />
+          <input type="email" name="email" placeholder="Enter your email address" formControlName="email" />
         </div>
 
         <div class="input-group">
           <p class="input-label required">Company<span>*</span></p>
-          <input type="text" name="company" placeholder="Enter your company name" />
+          <input type="text" name="company" placeholder="Enter your company name" formControlName="companyName" />
         </div>
 
         <div class="input-group">
-          <p class="input-label required">Company website<span>*</span></p>
-          <input type="url" name="companyWebsite" placeholder="Company website link" />
+          <p class="input-label required">Phone<span>*</span></p>
+          <input type="url" name="companyWebsite" placeholder="Company website link"formControlName="phone" />
+        </div>
         </div>
 
         <div class="textarea-group">
           <p class="input-label required">Message<span>*</span></p>
-          <textarea name="message" placeholder="The more describe you are in message, the better we can help you."></textarea>
+          <textarea name="message" placeholder="The more describe you are in message, the better we can help you." formControlName="message"></textarea>
         </div>
 
-        <button type="submit" class="submit-button">
+        <button type="submit" class="submit-button" (click)="saveDictionary()">
           <div class="tracker"></div>
           <span>Send message</span>
         </button>
@@ -48,18 +55,18 @@
             </svg>
           </div>
           <div class="info-text">
-            <h4>Email</h4>
-            <a href="mailto:vahe@hackvector.io">vahe.io</a>
+            <h4>Contact Us</h4>
+            <a href="mailto:vahe@hackvector.io"></a>
           </div>
         </div>
 
         <!-- 2. Социальные кнопки -->
         <div class="social-buttons">
-          <a href="https://linkedin.com/in/your-profile" class="btn-link icon-linkedin" target="_blank" rel="noopener noreferrer">
-            <span>LinkedIn</span>
+          <a href="https://wa.me/message/3BWFY3BN2PMLO1" class="btn-link icon-linkedin" target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp</span>
           </a>
-          <a href="https://github.com/your-profile" class="btn-link icon-github" target="_blank" rel="noopener noreferrer">
-            <span>GitHub</span>
+          <a href="https://www.linkedin.com/company/solterprise" class="btn-link icon-github" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
           </a>
         </div>
 
@@ -90,3 +97,4 @@
     </div>
   </div>
 </main>
+
