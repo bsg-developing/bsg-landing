@@ -6,6 +6,18 @@ import {NgForOf} from '@angular/common';
 import {MatDialog} from '@angular/material/dialog';
 import {ServiceModalComponent} from '../../layouts/service-modal/service-modal.component';
 
+
+export interface Service {
+  icon: string;
+  title: string;
+  description: string;
+  descriptionRo?: string;
+  descriptionEng?: string;
+  descriptionFull?: string;
+  descriptionFullRo?: string;
+  descriptionFullEng?: string;
+}
+
 @Component({
   selector: 'app-activity',
   imports: [
@@ -21,11 +33,11 @@ export class ActivityComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  openModal(service: { title: string; description: string }) {
+  openModal(service: Service) {
     this.dialog.open(ServiceModalComponent, {
       data: {
         title: service.title,
-        description: service.description
+        description: service.descriptionFull
       },
       width: '400px',
       panelClass: 'custom-dialog-panel',
