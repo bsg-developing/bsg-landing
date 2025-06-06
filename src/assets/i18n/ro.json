@@ -15,5 +15,23 @@
   "for": "Pentru Afacerea",
   "business": " Dumneavoastră.",
   "ideas" : "Idei",
-  "wwd": "CE FACEM?"
+  "wwd": "CE FACEM?",
+  "contactForm": {
+    "title": "Suntem aici pentru tine",
+    "subtitle": "Începe să profiți de toate avantajele pe care Consolidator le oferă agenției tale.",
+    "firstname": "Prenume",
+    "placeholderName": "Introdu numele tău",
+    "lastName": "Nume de familie",
+    "placeholderLastName": "Introdu numele de familie",
+    "email": "Email",
+    "placeholderEmail": "Introdu adresa ta de email",
+    "phone": "Telefon",
+    "placeholderPhone": "Introdu numărul tău de telefon",
+    "company": "Companie",
+    "placeholderCompany": "Introdu numele companiei tale",
+    "message": "Mesaj",
+    "placeholderMessage": "Cu cât ne dai mai multe detalii, cu atât mai bine te putem ajuta.",
+    "sendButton": "Trimite mesajul"
+  }
+
 }

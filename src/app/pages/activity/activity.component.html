@@ -1,13 +1,16 @@
-<custom-title></custom-title>
+<custom-title text=""></custom-title>
 
 <div class="container">
-  <div class="card" *ngFor="let service of services">
-    <i [class]="service.icon"></i>
-    <div class="title">{{ service.title }}</div>
-    <div class="description">{{ service.description }}</div>
-    <button class="details-btn" (click)="openModal(service)">
-      Подробнее
-    </button>
-  </div>
+  @for (service of services; track service){
+    <div class="card">
+      <i [class]="service.icon"></i>
+      <div class="title">{{ getTitle(service) }}</div>
+      <div class="description">{{ getDescription(service) }}</div>
+      <button class="details-btn" (click)="openModal(service)">
+        {{'more'| transloco}}
+      </button>
+    </div>
+
+  }
 </div>
 

@@ -2,44 +2,44 @@
   <div class="container">
     <div class="contact-content">
       <form class="contact-form" [formGroup]="form">
-        <h3>We are here for you</h3>
-        <p>Start taking advantage of all the benefits that Consolidator offers for your agency.</p>
+        <h3>{{ 'contactForm.title' | transloco }}</h3>
+        <p>{{ 'contactForm.subtitle' | transloco }}</p>
 
         <div formGroupName="customer">
         <div class="input-group">
-          <p class="input-label required">Full name<span>*</span></p>
-          <input type="text" name="name" placeholder="Enter your full name" formControlName="firstName"/>
+          <p class="input-label required">{{ 'contactForm.firstname' | transloco }}<span>*</span></p>
+          <input type="text" name="name" [placeholder]="'contactForm.placeholderName' | transloco" formControlName="firstName"/>
         </div>
           <div class="input-group">
-            <p class="input-label required">Last name<span>*</span></p>
-            <input type="text" name="name" placeholder="Enter your full name" formControlName="lastName"/>
+            <p class="input-label required">{{ 'contactForm.lastName' | transloco }}<span>*</span></p>
+            <input type="text" name="name"  [placeholder]="'contactForm.placeholderLastName' | transloco" formControlName="lastName"/>
           </div>
 
 
           <div class="input-group">
-          <p class="input-label required">Email<span>*</span></p>
-          <input type="email" name="email" placeholder="Enter your email address" formControlName="email" />
+          <p class="input-label required">{{ 'contactForm.email' | transloco }}<span>*</span></p>
+          <input type="email" name="email" [placeholder]="'contactForm.placeholderEmail' | transloco"  formControlName="email" />
         </div>
 
         <div class="input-group">
-          <p class="input-label required">Company<span>*</span></p>
-          <input type="text" name="company" placeholder="Enter your company name" formControlName="companyName" />
+          <p class="input-label required">{{ 'contactForm.phone' | transloco }}<span>*</span></p>
+          <input type="tel" name="company"  [placeholder]="'contactForm.placeholderPhone' | transloco"  formControlName="companyName" />
         </div>
 
         <div class="input-group">
-          <p class="input-label required">Phone<span>*</span></p>
-          <input type="url" name="companyWebsite" placeholder="Company website link"formControlName="phone" />
+          <p class="input-label required">{{ 'contactForm.company' | transloco }}<span>*</span></p>
+          <input type="url" name="companyWebsite" [placeholder]="'contactForm.placeholderCompany' | transloco" formControlName="phone" />
         </div>
         </div>
 
         <div class="textarea-group">
-          <p class="input-label required">Message<span>*</span></p>
-          <textarea name="message" placeholder="The more describe you are in message, the better we can help you." formControlName="message"></textarea>
+          <p class="input-label required">{{ 'contactForm.message' | transloco }}<span>*</span></p>
+          <textarea name="message" [placeholder]="'contactForm.placeholderMessage' | transloco" formControlName="message"></textarea>
         </div>
 
         <button type="submit" class="submit-button" (click)="saveDictionary()">
           <div class="tracker"></div>
-          <span>Send message</span>
+          <span>{{ 'contactForm.sendButton' | transloco }}</span>
         </button>
       </form>
 

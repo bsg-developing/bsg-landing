@@ -27,6 +27,7 @@
     "@angular/ssr": "^19.1.4",
     "@jsverse/transloco": "^7.5.1",
     "express": "^4.18.2",
+    "geoip-lite": "^1.4.10",
     "ngx-cookie-service-ssr": "^19.1.0",
     "ngx-owl-carousel-o": "^19.0.2",
     "ngx-scrolltop": "^19.0.2",
