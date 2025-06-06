@@ -109,7 +109,7 @@ export const SERVICES = [
     icon: "fa-solid fa-diagram-project",
     title: "Интеграции и автоматизация",
     titleRo:"Integrări și Automatizare",
-    titleEng:"Integrations and Automatio",
+    titleEng:"Integrations and Automation",
     description: "Соединяем ваши сервисы в единую систему: сайт, CRM, склад, бухгалтерия, маркетинг. Автоматизируем рутину, убираем дубли, ускоряем бизнес‑процессы.",
     descriptionRo: "Conectăm serviciile tale într-un sistem unitar: site, CRM, depozit, contabilitate, marketing. Automatizăm rutina și accelerăm procesele de business.",
     descriptionEng: "We connect your services into a single system: website, CRM, inventory, accounting, marketing. We automate routine tasks and speed up your business processes.",

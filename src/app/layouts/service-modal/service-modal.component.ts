@@ -7,6 +7,7 @@ import {
   MatDialogTitle
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import {LineBreaksPipe} from '../../line-breaks-pipe';
 
 @Component({
   selector: 'app-service-modal',
@@ -16,6 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatDialogActions,
     MatButtonModule,
     MatDialogClose,
+    LineBreaksPipe,
   ],
   templateUrl: './service-modal.component.html',
   styleUrl: './service-modal.component.scss'
