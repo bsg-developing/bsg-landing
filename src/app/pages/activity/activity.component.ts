@@ -1,18 +1,19 @@
-import {Component, inject} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {TitleComponent} from '../../layouts/title/title.component';
 import {SERVICES} from '../../core/constants/services';
 import {MatDialog} from '@angular/material/dialog';
 import {ServiceModalComponent} from '../../layouts/service-modal/service-modal.component';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {toSignal} from '@angular/core/rxjs-interop';
+import {InViewDirective} from './in-view.directive';
 
 @Component({
   selector: 'app-activity',
-  imports: [TitleComponent, TranslocoPipe],
+  imports: [TitleComponent, TranslocoPipe, InViewDirective],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.scss'
 })
-export class ActivityComponent {
+export class ActivityComponent implements AfterViewInit {
   services = SERVICES;
   private translocate = inject(TranslocoService);
   readonly currentLang = toSignal(this.translocate.langChanges$, {
@@ -55,6 +56,23 @@ export class ActivityComponent {
       backdropClass: 'custom-dialog-backdrop'
     });
   }
+  ngAfterViewInit() {
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cards.forEach(card => observer.observe(card));
+  }
+
 }
 export interface Service {
   icon: string;

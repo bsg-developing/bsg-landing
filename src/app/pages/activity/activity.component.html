@@ -1,8 +1,8 @@
-<custom-title text=""></custom-title>
+<custom-title text="{{'activity'|transloco}}"></custom-title>
 
 <div class="container">
-  @for (service of services; track service){
-    <div class="card">
+  @for (service of services; let i = $index; track service) {
+    <div class="card delay-{{i + 1}}">
       <i [class]="service.icon"></i>
       <div class="title">{{ getTitle(service) }}</div>
       <div class="description">{{ getDescription(service) }}</div>
@@ -12,4 +12,3 @@
     </div>
   }
 </div>
-
