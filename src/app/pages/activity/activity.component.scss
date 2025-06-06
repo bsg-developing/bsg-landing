@@ -8,6 +8,9 @@
 }
 
 .card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
   --border-radius: 1rem;
   --bg-color: #393e41;
   position: relative;
@@ -27,6 +30,16 @@
   text-align: center;
   gap: 16px;
   cursor: pointer;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@for $i from 1 through 10 {
+  .delay-#{$i} {
+    transition-delay: #{($i * 100)}ms;
+  }
 }
 
 .card i {
