@@ -27,7 +27,9 @@ export class ActivityComponent {
         title: service.title,
         description: service.description
       },
-      width: '400px'
+      width: '400px',
+      panelClass: 'custom-dialog-panel',
+      backdropClass: 'custom-dialog-backdrop'
     });
   }
 }
