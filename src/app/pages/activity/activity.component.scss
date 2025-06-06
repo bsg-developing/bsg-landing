@@ -93,3 +93,49 @@ body{
   z-index: -1;
 }
 
+/*--------------------------------------------*/
+.folder {
+  position: relative;
+  width: 300px;
+  background-color: #2c2c2c;
+  border-radius: 11px;
+  padding: 24px;
+  color: #ccc;
+  font-family: sans-serif;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  margin: 40px;
+}
+
+/* Язычок — в самом левом верхнем углу */
+.folder::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100px;
+  height: 20px;
+  background-color: #2c2c2c;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Контент внутри */
+.folder-content p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.folder-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ffb980;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.folder-link:hover {
+  color: #ffd7aa;
+}

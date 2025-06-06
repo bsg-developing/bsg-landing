@@ -1,4 +1,3 @@
-
 .center {
   width: 100%;
   height: 100%;
@@ -6,69 +5,101 @@
   align-items: center;
   justify-content: center;
 }
-.check {
-  display: none;
-}
-.nav-bar {
-  width: 390px;
+.navigation {
+  width: 100%;
   height: fit-content;
-  padding: 35px;
-  background: rgba(255, 255, 255, 0.1); /* полупрозрачный */
-  backdrop-filter: blur(12px); /* размытие заднего фона */
-  -webkit-backdrop-filter: blur(12px); /* для Safari */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 7mm 7mm;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* лёгкая тень для глубины */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* опциональная граница */
+  padding: 9px 20px;
+  border-radius: 10mm;
+  position: relative;
+  max-width: 1000px;
+  width: fit-content;
+  overflow: hidden;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-
-.nav-bar label {
+input {
+  display: none;
+}
+.icon {
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 10mm;
+  background: rgb(77, 77, 77);
   display: flex;
   align-items: center;
-  justify-content: left;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 0px;
-  border-radius: 8mm;
-  max-width: 32px;
+  justify-content: center;
+  margin: 0 12px;
+  cursor: pointer;
   overflow: hidden;
-  transition: 0.35s ease-out;
+  transition: 0.25s;
 }
-.nav-bar label span {
-  font-size: 32px;
-  margin-right: 10px;
+.icon .material-icons-outlined {
+  font-size: 24px;
 }
-.nav-bar label:hover {
-  background: rgba(0, 0, 0, 0.1);
+.icon .text {
+  width: 0;
+  overflow: hidden;
 }
-.check:nth-child(1):checked ~ .center .nav-bar label:nth-child(1),
-.check:nth-child(2):checked ~ .center .nav-bar label:nth-child(2),
-.check:nth-child(3):checked ~ .center .nav-bar label:nth-child(3),
-.check:nth-child(4):checked ~ .center .nav-bar label:nth-child(4) {
-  background: var(--color1);
-  max-width: 150px;
-  color: var(--color2);
-  padding: 10px 14px;
+input:checked + .icon .text {
+  width: fit-content;
 }
-.check:nth-child(1):checked ~ .center {
+input:checked + .icon {
+  width: fit-content;
+  border-radius: 50%;
+  padding: 0 10px;
+  background: linear-gradient(90deg, #9b6eff, #6f9bff);
+  color: var(--text-color);
+}
+.icon:hover {
   /*
-  background: rgb(91, 55, 183);
+  background: white;
   */
+  color: rgb(40, 40, 40);
 }
-.check:nth-child(2):checked ~ .center {
-  /*
-  background: rgb(201, 55, 157);
-  */
+.close-btn {
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-.check:nth-child(3):checked ~ .center {
-  /*
-  background: rgb(230, 169, 25);
-  */
+.close-btn::before {
+  content: "close";
+  font-family: "Material Icons";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 24px;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
 }
-.check:nth-child(4):checked ~ .center {
-  /*
-  background: rgb(17, 148, 170);
-  */
+#close:checked + .icons {
+  max-width: 18px;
+}
+#close:checked + .icons .icon {
+  visibility: hidden;
+}
+#close:checked + .icons .close-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#close:checked + .icons .close-btn::before {
+  content: "fullscreen";
 }
