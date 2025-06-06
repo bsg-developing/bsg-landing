@@ -27,13 +27,13 @@
         </div>
 
         <div class="input-group">
-          <p class="input-label required">{{ 'contactForm.company' | transloco }}<span>*</span></p>
+          <p class="input-label required">{{ 'contactForm.company' | transloco }}</p>
           <input type="url" name="companyWebsite" [placeholder]="'contactForm.placeholderCompany' | transloco" formControlName="phone" />
         </div>
         </div>
 
         <div class="textarea-group">
-          <p class="input-label required">{{ 'contactForm.message' | transloco }}<span>*</span></p>
+          <p class="input-label required">{{ 'contactForm.message' | transloco }}</p>
           <textarea name="message" [placeholder]="'contactForm.placeholderMessage' | transloco" formControlName="message"></textarea>
         </div>
 
@@ -43,16 +43,13 @@
         </button>
       </form>
 
-      <!-- ПРАВАЯ ЧАСТЬ: информационный блок -->
       <aside class="contact-info">
-        <!-- 1. Email -->
         <div class="info-item email-item">
           <div class="info-icon">
-            <!-- Здесь можно вставить SVG или <img> для иконки почты -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <!--   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 4H22V20H2V4Z" stroke="#00AEEF" stroke-width="2"/>
               <path d="M2 4L12 13L22 4" stroke="#00AEEF" stroke-width="2"/>
-            </svg>
+            </svg>-->
           </div>
           <div class="info-text">
             <h4>Contact Us</h4>
@@ -75,8 +72,8 @@
           <div class="info-icon">
             <!-- Иконка часов -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="#00AEEF" stroke-width="2"/>
-              <path d="M12 6V12L16 14" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="10" stroke="  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke=" background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="info-text">
