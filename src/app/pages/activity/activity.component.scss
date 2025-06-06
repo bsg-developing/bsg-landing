@@ -72,7 +72,6 @@
   color: #fff;
 }
 
-/* ================== Ртутный фон ================== */
 .card::before {
   content: '';
   position: absolute;
@@ -91,12 +90,6 @@
   );
 
   animation: border-animation 8s linear infinite;
-  /*
-  opacity: 0.8;
-  */
-  /*
-  filter: blur(2px);
-  */
   border-radius: inherit;
 }
 
@@ -119,3 +112,4 @@
     transform: rotate(-360deg);
   }
 }
+

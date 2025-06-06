@@ -102,6 +102,9 @@ export const SERVICES = [
     titleRO: 'Telegram Mini App',
     description: 'Разрабатываем мини-приложения внутри Telegram: быстрый запуск MVP, кастомная логика, оплата, взаимодействие с ботами.',
     descriptionEng: 'We develop mini-apps within Telegram: fast MVP launch, custom logic, payments, and bot interaction.',
+    descriptionFullEng: `Telegram Mini Apps (TMA) are a convenient way to deliver services directly inside the messenger without leaving the chat. We build custom solutions with user authentication, bot integration, payments, and analytics. It's a great tool for fast MVP launch or scaling your existing product.`,
+    descriptionFullRo: `Mini-aplicațiile Telegram (TMA) sunt o modalitate convenabilă de a oferi servicii direct în cadrul mesageriei, fără a părăsi chatul. Creăm soluții personalizate cu autentificare, integrare cu boți, plăți și analitică. Este un instrument excelent pentru lansarea rapidă a unui MVP sau pentru scalarea unui produs existent.`,
+    descriptionFull: `Мини-приложения Telegram (TMA) — это удобный способ внедрить сервис прямо в мессенджер, не выходя из чата. Мы разрабатываем кастомные решения с авторизацией, интеграцией с ботами, оплатами и аналитикой. Это отличный инструмент для быстрого запуска MVP или масштабирования существующего продукта.`,
     descriptionRo: 'Dezvoltăm mini-aplicații în Telegram: lansare rapidă MVP, logică personalizată, plăți și interacțiune cu boți.'
   },
 
@@ -109,7 +112,7 @@ export const SERVICES = [
     icon: "fa-solid fa-diagram-project",
     title: "Интеграции и автоматизация",
     titleRo:"Integrări și Automatizare",
-    titleEng:"Integrations and Automatio",
+    titleEng:"Integrations and Automation",
     description: "Соединяем ваши сервисы в единую систему: сайт, CRM, склад, бухгалтерия, маркетинг. Автоматизируем рутину, убираем дубли, ускоряем бизнес‑процессы.",
     descriptionRo: "Conectăm serviciile tale într-un sistem unitar: site, CRM, depozit, contabilitate, marketing. Automatizăm rutina și accelerăm procesele de business.",
     descriptionEng: "We connect your services into a single system: website, CRM, inventory, accounting, marketing. We automate routine tasks and speed up your business processes.",

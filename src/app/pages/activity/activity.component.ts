@@ -34,15 +34,37 @@ export class ActivityComponent {
     return service.titleEng ?? service.title;
   }
 
-  openModal(service: { title: string; description: string }) {
+  openModal(service: any) {
+    const lang = this.currentLang();
+
+    const title = lang === 'ro'
+      ? service.titleRo ?? service.title
+      : lang === 'ru'
+        ? service.title ?? ''
+        : service.titleEng ?? service.title;
+
+    const description = lang === 'ro'
+      ? service.descriptionFullRo ?? service.descriptionFull
+      : lang === 'ru'
+        ? service.descriptionFull ?? ''
+        : service.descriptionFullEng ?? service.descriptionFull;
+
     this.dialog.open(ServiceModalComponent, {
-      data: {
-        title: service.title,
-        description: service.description
-      },
-      width: '400px',
+      data: { title, description },
       panelClass: 'custom-dialog-panel',
       backdropClass: 'custom-dialog-backdrop'
     });
   }
+}
+export interface Service {
+  icon: string;
+  title: string;
+  description: string;
+  descriptionRo: string;
+  descriptionEng: string;
+  descriptionFull: string;
+  descriptionFullRo: string;
+  descriptionFullEng: string;
+  titleEng: string;
+  titleRo: string;
 }
