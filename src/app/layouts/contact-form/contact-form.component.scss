@@ -492,3 +492,19 @@
   }
 }
 
+.rotate-icon {
+  font-size: 32px;
+  /*
+  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);
+  */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
