@@ -5,7 +5,7 @@
     <i [class]="service.icon"></i>
     <div class="title">{{ service.title }}</div>
     <div class="description">{{ service.description }}</div>
-    <button class="details-btn">
+    <button class="details-btn" (click)="openModal(service)">
       Подробнее
     </button>
   </div>
