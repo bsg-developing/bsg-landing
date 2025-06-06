@@ -4,7 +4,9 @@
   <div class="card" *ngFor="let service of services">
     <i [class]="service.icon"></i>
     <div class="title">{{ service.title }}</div>
-    <div class="description">{{ service.description }}</div>
+<!--
+    <div class="description">{{ service?.descriptionRo }}</div>
+-->
     <button class="details-btn" (click)="openModal(service)">
       Подробнее
     </button>

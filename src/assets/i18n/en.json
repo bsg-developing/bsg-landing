@@ -15,5 +15,22 @@
   "for": "For Your",
   "business": " Business.",
   "ideas" : "ideas",
-  "wwd": "WHAT WE DO?"
+  "wwd": "WHAT WE DO?",
+  "contactForm": {
+    "title" : "We are here for you",
+    "subtitle": "Start taking advantage of all the benefits that Consolidator offers for your agency.",
+    "firstname" : "Name",
+    "placeholderName": "Enter your name",
+    "lastName" : "Last name",
+    "placeholderLastName": "Enter your last name",
+    "email" : "Email",
+    "placeholderEmail": "Enter your email address",
+    "phone " : "Phone",
+    "placeholderPhone": "Enter your phone",
+    "company" : "Company",
+    "placeholderCompany": "Enter your company Name",
+    "message" : "Message",
+    "placeholderMessage": "The more describe you are in message, the better we can help you.",
+    "sendButton" : "Send Message"
+  }
 }
