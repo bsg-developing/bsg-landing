@@ -17,15 +17,18 @@
     </div>
 
     <section class="stats">
-      @for ( stat of stats; let i = $index; track stat){
+      @for (stat of stats; let i = $index; track stat){
         <div class="stat">
-          <h2 [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
-              (@countUp.start)="onCountStart($any($event), stat.end, i)">{{ values[i] }}+
+          <h2
+            [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
+            (@countUp.start)="onCountStart($any($event), stat.end, i)">
+            {{ values[i] }}+
           </h2>
-          <span>{{ stat.label }}</span>
+          <span>{{ getLabel(stat) }}</span>
         </div>
       }
     </section>
+
     <app-ide></app-ide>
 
     <app-activity id="activity"></app-activity>

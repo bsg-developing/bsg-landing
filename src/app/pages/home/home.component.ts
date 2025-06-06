@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, Inject, PLATFORM_ID} from '@angular/core';
-import {TranslocoPipe} from '@jsverse/transloco';
+import {AfterViewInit, Component, inject, Inject, PLATFORM_ID} from '@angular/core';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {ActivityComponent} from '../activity/activity.component';
 import {IdeComponent} from '../../layouts/ide/ide.component';
@@ -11,6 +11,7 @@ import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/backg
 import {ContactFormComponent} from '../../layouts/contact-form/contact-form.component';
 import {MenuComponent} from '../../layouts/menu/menu.component';
 import {SliderComponent} from '../../layouts/slider/slider.component';
+import {toSignal} from '@angular/core/rxjs-interop';
 
 @Component({
   standalone: true,
@@ -56,12 +57,46 @@ import {SliderComponent} from '../../layouts/slider/slider.component';
   ],
 })
 export class HomeComponent implements AfterViewInit {
+  private translocate = inject(TranslocoService);
+  readonly currentLang = toSignal(this.translocate.langChanges$, {
+    initialValue: this.translocate.getActiveLang()
+  });
+
   stats = [
-    { end: 10, label: 'Years of exp' },
-    { end: 30, label: 'Lorem ipsum dolor.' },
-    { end: 5,  label: 'Lorem ipsum dolor.' },
-    { end: 6,  label: 'Lorem ipsum dolor sit amet.' }
+    {
+      end: 12,
+      label: {
+        ru: 'Лет опыта в IT-индустрии',
+        ro: 'Ani de experiență în industria IT',
+        en: 'Years in IT industry'
+      }
+    },
+    {
+      end: 30,
+      label: {
+        ru: 'Успешно реализованных проектов',
+        ro: 'Proiecte finalizate cu succes',
+        en: 'Successfully completed projects'
+      }
+    },
+    {
+      end: 10,
+      label: {
+        ru: 'Отраслей, с которыми мы работали',
+        ro: 'Industrii cu care am colaborat',
+        en: 'Industries we’ve worked with'
+      }
+    },
+    {
+      end: 20,
+      label: {
+        ru: 'Довольных клиентов',
+        ro: 'Clienți satisfăcuți',
+        en: 'Happy clients'
+      }
+    }
   ];
+
   values = this.stats.map(() => 0);
   duration = 2000;
   isBrowser: boolean;
@@ -110,4 +145,11 @@ export class HomeComponent implements AfterViewInit {
       });
     }
   }
+  getLabel(stat: typeof this.stats[number]): string {
+    const lang = this.currentLang();
+    if (lang === 'ro') return stat.label.ro;
+    if (lang === 'ru') return stat.label.ru;
+    return stat.label.en;
+  }
+
 }
