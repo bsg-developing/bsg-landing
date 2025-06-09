@@ -99,3 +99,16 @@ a{
   bottom: 75px!important;
 }
 
+.vercel-subtitle {
+  letter-spacing: 0.5px;
+  text-align: left;
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 60px;
+  strong{
+    background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
