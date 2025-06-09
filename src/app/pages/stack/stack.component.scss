@@ -1,0 +1,72 @@
+.vercel-section {
+  background: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: sans-serif;
+}
+
+.vercel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vercel-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.vercel-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.vercel-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.feature-box {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.feature-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.feature-text {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.investors-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.investors-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.investors-logos img {
+  height: 30px;
+  object-fit: contain;
+}
