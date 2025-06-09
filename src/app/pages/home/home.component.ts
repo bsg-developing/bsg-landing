@@ -5,13 +5,14 @@ import {ActivityComponent} from '../activity/activity.component';
 import {IdeComponent} from '../../layouts/ide/ide.component';
 import {ProductsComponent} from '../products/products.component';
 import {isPlatformBrowser} from '@angular/common';
-import {StackComponent} from '../stack/stack.component';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
 import {ContactFormComponent} from '../../layouts/contact-form/contact-form.component';
 import {MenuComponent} from '../../layouts/menu/menu.component';
 import {SliderComponent} from '../../layouts/slider/slider.component';
 import {toSignal} from '@angular/core/rxjs-interop';
+import {AboutUsComponent} from '../about-us/about-us.component';
+import {TrustedCompaniesComponent} from '../trusted-companies/trusted-companies.component';
 
 @Component({
   standalone: true,
@@ -21,12 +22,13 @@ import {toSignal} from '@angular/core/rxjs-interop';
     ActivityComponent,
     IdeComponent,
     ProductsComponent,
-    StackComponent,
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
     ContactFormComponent,
     MenuComponent,
     SliderComponent,
+    AboutUsComponent,
+    TrustedCompaniesComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

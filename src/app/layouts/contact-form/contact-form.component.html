@@ -2,6 +2,12 @@
   <div class="container">
     <div class="contact-content">
       <form class="contact-form" [formGroup]="form">
+        @if (dialogError()){
+<!--
+          <span style="color: red">fffffff</span>
+-->
+
+        }
         <h3>{{ 'contactForm.title' | transloco }}</h3>
         <p>{{ 'contactForm.subtitle' | transloco }}</p>
 
@@ -46,10 +52,6 @@
       <aside class="contact-info">
         <div class="info-item email-item">
           <div class="info-icon">
-         <!--   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 4H22V20H2V4Z" stroke="#00AEEF" stroke-width="2"/>
-              <path d="M2 4L12 13L22 4" stroke="#00AEEF" stroke-width="2"/>
-            </svg>-->
           </div>
           <div class="info-text">
             <h4>Contact Us</h4>
@@ -57,32 +59,27 @@
           </div>
         </div>
 
-        <!-- 2. Социальные кнопки -->
         <div class="social-buttons">
-          <a href="https://wa.me/message/3BWFY3BN2PMLO1" class="btn-link icon-linkedin" target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp</span>
+          <a href="https://wa.me/message/3BWFY3BN2PMLO1" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="https://www.linkedin.com/company/solterprise" class="btn-link icon-github" target="_blank" rel="noopener noreferrer">
-            <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/company/solterprise" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://t.me/your_channel_or_username" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-telegram"></i>
           </a>
         </div>
 
-        <!-- 3. Response Time -->
+
         <div class="info-item response-item">
-          <div class="info-icon">
-            <!-- Иконка часов -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);" stroke-width="2"/>
-              <path d="M12 6V12L16 14" stroke=" background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+            <i class="fas fa-clock rotate-icon"></i>
           <div class="info-text">
             <h4>Response Time</h4>
             <p>I typically respond within<br/>24-48 hours</p>
           </div>
         </div>
 
-        <!-- 4. Блок для срочных запросов -->
         <div class="urgent-box">
           <div class="urgent-border"></div>
           <div class="urgent-content">

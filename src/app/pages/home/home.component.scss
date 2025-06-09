@@ -68,11 +68,15 @@
   background: linear-gradient(90deg, #9b6eff, #6f9bff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 4px rgba(155, 110, 255, 0.3); /* светлое неоновое свечение */
 }
+
 .stats span {
   font-size: 1.2rem;
-  color: #9b6eff;
+  color:  #9b6eff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); /* лёгкая глубина */
 }
+
 
 @media (max-width: 1024px) {
   .textContainer {
@@ -121,9 +125,6 @@ app-menu{
     bottom: 10px;
     left: 0;
     right: 0;
-    /*
-    width: 100%;
-    */
     height: auto;
     z-index: 1000;
   }

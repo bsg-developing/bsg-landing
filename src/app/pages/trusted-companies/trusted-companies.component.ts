@@ -3,13 +3,14 @@ import {TitleComponent} from '../../layouts/title/title.component';
 import {TranslocoPipe} from '@jsverse/transloco';
 
 @Component({
-  selector: 'about-us',
+  selector: 'trusted-companies',
   imports: [
     TitleComponent,
-    TranslocoPipe,
+    TranslocoPipe
   ],
-  templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.scss'
+  templateUrl: './trusted-companies.component.html',
+  styleUrl: './trusted-companies.component.scss'
 })
-export class AboutUsComponent {
+export class TrustedCompaniesComponent {
+
 }

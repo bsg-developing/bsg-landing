@@ -1,4 +1,4 @@
-<div class="services-wrapper" >
+<div class="services-wrapper" id="main">
   <background-wrapper class="services-bg" [@fadeIn]/>
   <div class="services">
     <div class="titleContainer">
@@ -15,9 +15,9 @@
         </h1>
       </div>
     </div>
-
+    <ide/>
     <section class="stats">
-      @for (stat of stats; let i = $index; track stat){
+      @for (stat of stats; let i = $index; track stat) {
         <div class="stat">
           <h2
             [@countUp]="{ value: stat.end, params: { duration: duration, easing: 'ease-out' } }"
@@ -28,16 +28,13 @@
         </div>
       }
     </section>
-
-    <app-ide></app-ide>
-
-    <app-activity id="activity"></app-activity>
-    <app-project-timeline id="features"></app-project-timeline>
-
-    <app-stack id="technologies"></app-stack>
-    <slider></slider>
-    <app-products id="projects"></app-products>
+    <activity id="activity"/>
+    <about-us/>
+    <slider/>
+    <app-project-timeline id="features"/>
+    <trusted-companies/>
+    <app-products id="projects"/>
     <app-contact-form/>
   </div>
-  <app-menu></app-menu>
 </div>
+<app-menu/>

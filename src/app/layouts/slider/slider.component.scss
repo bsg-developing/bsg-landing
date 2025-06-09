@@ -39,9 +39,7 @@
   }
 }
 
-/*Responsive*/
 
-/*Screen size less that 700 pixels*/
 @media screen and (max-width: 700px) {
   .logos img {
     width: 70px;
@@ -49,7 +47,6 @@
   }
 }
 
-/*Screen size less that 480 pixels*/
 @media screen and (max-width: 480px) {
   .logos img {
     width: 55px;
@@ -57,7 +54,6 @@
   }
 }
 
-/*Screen size more that 1800 pixels*/
 @media screen and (min-width: 1800px) {
   .logos img {
     width: 170px;

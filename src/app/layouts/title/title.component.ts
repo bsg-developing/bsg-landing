@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, Inject, Input, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'custom-title',
@@ -8,13 +9,18 @@ import {AfterViewInit, Component, Input} from '@angular/core';
 })
 export class TitleComponent implements AfterViewInit {
   @Input() text: string = 'Expertise in Data Science and Artificial Intelligence';
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    if (typeof IntersectionObserver === 'undefined') return;
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
-          observer.unobserve(entry.target); // Убираем, если хотим анимацию один раз
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.3 });
@@ -22,7 +28,4 @@ export class TitleComponent implements AfterViewInit {
     const separators = document.querySelectorAll('.separator-container');
     separators.forEach(el => observer.observe(el));
   }
-
-
-
 }

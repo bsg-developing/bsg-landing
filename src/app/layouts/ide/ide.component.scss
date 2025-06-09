@@ -79,10 +79,7 @@
 
   @media (max-width: 480px) {
     margin: 10px auto;
-    /*
-    height: auto;           // пусть контейнер подстроится под контент
-    */
-    padding-bottom: 10px;   // небольшой запас снизу
+    padding-bottom: 10px;
   }
 
   .ide-header {
@@ -136,8 +133,8 @@
     color: #d4d4d4;
     white-space: pre-wrap;
     font-size: 14px;
-    overflow-y: hidden;   // чтобы скроллился код, если много
-    height: calc(100% - 41px); // вычитаем высоту header (~41px)
+    overflow-y: hidden;
+    height: calc(100% - 41px);
 
     @media (max-width: 768px) {
       padding: 16px;
@@ -148,10 +145,7 @@
     @media (max-width: 480px) {
       padding: 12px;
       font-size: 12px;
-      /*
-      height: auto;      // авто, чтобы контейнер мог расти
-      */
-      max-height: 300px; // но не более, если код очень длинный
+      max-height: 300px;
     }
 
     .token-keyword  { color: #569CD6; }
@@ -172,7 +166,6 @@
   }
 }
 
-// Общие keyframes без изменений
 @keyframes blink {
   50% { opacity: 0; }
 }
