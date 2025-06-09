@@ -5,7 +5,6 @@
   position: relative;
 }
 
-/* Центровка и макс. ширина контейнера */
 .container {
   width: 100%;
   max-width: 1440px;
@@ -14,18 +13,14 @@
   position: relative;
 }
 
-/* Расположение левой формы и правого блока рядом */
 .contact-content {
   display: flex;
-  gap: 40px;              /* расстояние между формой и информационным блоком */
-  align-items: flex-start;/* выравниваем по верху */
+  gap: 40px;
+  align-items: flex-start;
 }
 
-/* ===========================
-   Левая часть: контактная форма
-   =========================== */
+
 .contact-form {
-  /* Убрали авто-центрирование: теперь margin-top только по вертикали */
   margin: 144px 0 0;
   padding: 56px 112px;
   display: flex;
@@ -41,7 +36,6 @@
 
 /* Заголовок формы */
 .contact-form h3 {
-  font-family: var(--font-base);
   font-weight: var(--font-regular);
   font-size: 32px;
   line-height: 125%;
@@ -50,7 +44,6 @@
   margin: 0;
 }
 
-/* Описание под заголовком */
 .contact-form > p {
   font-weight: var(--font-regular);
   font-size: 16px;
@@ -60,9 +53,6 @@
   margin: 0 0 24px 0;
 }
 
-/* ===========================
-   Группа текстового поля
-   =========================== */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -81,7 +71,6 @@
   margin: 0;
 }
 
-/* Звёздочка обязательного поля */
 .input-label.required span {
   font-weight: var(--font-bold);
   font-size: 14px;
@@ -89,7 +78,6 @@
   color: var(--color-error);
 }
 
-/* Собственно сам <input> */
 .input-group input {
   border: 1px solid var(--color-dark-gray);
   border-radius: 8px;
@@ -99,13 +87,10 @@
   line-height: 150%;
   color: var(--color-white);
   background: var(--color-almost-black);
-  outline-color: var(--color-highlight);
   transition: background-color 0.3s;
 }
 
-/* ===========================
-   Группа текстовой области (textarea)
-   =========================== */
+
 .textarea-group {
   display: flex;
   flex-direction: column;
@@ -123,7 +108,6 @@
   background: var(--color-almost-black);
   height: 156px;
   resize: none;
-  outline-color: var(--color-highlight);
   transition: background-color 0.3s;
   margin: 0;
 }
@@ -235,7 +219,6 @@
   }
 }
 
-/* 3) Для очень узких экранов до 480px (мелкие смартфоны) */
 @media (max-width: 480px) {
   /* Форма максимально «растягивается» */
   .contact-form {
@@ -244,18 +227,15 @@
     padding: 24px 16px;     /* минимальные отступы внутри */
   }
 
-  /* Заголовок ещё меньше */
   .contact-form h3 {
     font-size: 24px;
   }
 
-  /* Описание под заголовком */
   .contact-form > p {
     font-size: 14px;
     margin-bottom: 16px;
   }
 
-  /* Лейблы полей */
   .input-label {
     font-size: 10px;
   }
@@ -263,19 +243,12 @@
     font-size: 12px;
   }
 
-  /* Поля ввода и textarea */
   .input-group input,
   .textarea-group textarea {
     font-size: 14px;
     padding: 12px 14px;
   }
 
-  /* Текстarea по высоте можно немного «урезать», если нужно */
-  .textarea-group textarea {
-    height: 130px;          /* вместо 156px */
-  }
-
-  /* Кнопка отправки */
   .submit-button {
     font-size: 12px;
     height: 48px;
@@ -283,9 +256,7 @@
   }
 }
 
-/* ===========================
-   Правая часть: информационный блок
-   =========================== */
+
 .contact-info {
   margin: 144px 0 0;
   background-color: rgba(10, 10, 10, 0.56);
@@ -293,7 +264,7 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-dark-gray);
   padding: 32px 24px;
-  max-width: 360px;       /* можно подкорректировать под ваш дизайн */
+  max-width: 360px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -331,47 +302,16 @@
   color: var(--color-white);
 }
 
-.info-text a,
-.info-text p {
-  font-weight: var(--font-regular);
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 4px 0 0 0;
-  color: var(--color-highlight); /* подчёркнутый голубой цвет для email */
-  text-decoration: none;
-}
 
-.info-text a:hover {
-  text-decoration: underline;
-}
 
-/* ===========================
-   Стили для социальных кнопок
-   =========================== */
+
 .social-buttons {
   display: flex;
   gap: 16px;
 }
 
-.btn-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background-color: var(--color-dark-gray);
-  border: 1px solid var(--color-highlight);
-  border-radius: 6px;
-  color: var(--color-highlight);
-  font-weight: var(--font-bold);
-  font-size: 14px;
-  text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
-}
 
-.btn-link:hover {
-  background-color: var(--color-highlight);
-  color: var(--color-dark-gray);
-}
+
 
 .info-item.response-item .info-text h4 {
   font-size: 18px;
@@ -383,21 +323,24 @@
   line-height: 1.4;
 }
 
-/* ===========================
-   Стили для блока срочных запросов (urgent-box)
-   =========================== */
+
 .urgent-box {
   display: flex;
   align-items: stretch;
-  background: rgba(0, 174, 239, 0.05);
+  background: rgba(138, 43, 226, 0.05);
   border-radius: 6px;
   overflow: hidden;
 }
 
 .urgent-border {
   width: 4px;
-  background: var(--color-highlight);
+  background: linear-gradient(
+      to bottom,
+      rgba(253, 112, 255, 0.5),
+      transparent 80%
+  );
 }
+
 
 .urgent-content {
   padding: 16px;
@@ -422,37 +365,29 @@
   color: var(--color-light-gray);
 }
 
-/* ===========================
-   Адаптив (для .contact-content + .contact-info)
-   =========================== */
 
-/* Для экранов до 1024px */
 @media (max-width: 1024px) {
   .contact-content {
-    gap: 24px;          /* уменьшаем расстояние между колонками */
+    gap: 24px;
   }
 
-  /* Уменьшаем отступы у правого блока */
   .contact-info {
     padding: 24px 20px;
   }
 }
 
-/* Для экранов до 768px */
 @media (max-width: 768px) {
-  /* На планшетах и больших смартфонах: ставим форму и info-блок вертикально */
   .contact-content {
     flex-direction: column;
     align-items: center;
   }
 
   .contact-info {
-    width: 90%;            /* почти во всю ширину контейнера */
+    width: 90%;
     max-width: 100%;
-    margin-top: 32px;      /* отступ от формы */
+    margin-top: 32px;
   }
 
-  /* Уменьшаем заголовок в info-блоке */
   .info-item .info-text h4 {
     font-size: 16px;
   }
@@ -462,9 +397,7 @@
   }
 }
 
-/* Для экранов до 480px */
 @media (max-width: 480px) {
-  /* Форма уже адаптирована ранее, здесь донастраиваем info-блок */
   .contact-info {
     width: 95%;
     padding: 16px 12px;
@@ -494,10 +427,7 @@
 
 .rotate-icon {
   font-size: 32px;
-  /*
-  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);
-  */
-  animation: spin 2s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
@@ -510,13 +440,39 @@
 }
 
 
-.social-icon {
-  font-size: 28px;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
+.social-buttons {
+  display: flex;
+  gap: 16px;
 }
 
-.social-icon:hover {
+.social-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Базовый цвет */
+}
+
+/* WhatsApp Hover */
+.social-icon[href*="wa.me"]:hover {
+  background-color: #25D366;
+  color: white;
   transform: scale(1.2);
-  color: #6f9bff; /* подсветка при наведении */
+}
+
+/* LinkedIn Hover */
+.social-icon[href*="linkedin.com"]:hover {
+  background-color: #0077B5;
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Telegram Hover */
+.social-icon[href*="/t.me"]:hover {
+  background-color: #229ED9;
+  color: white;
+  transform: scale(1.2);
 }

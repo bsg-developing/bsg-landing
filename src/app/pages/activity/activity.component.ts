@@ -77,17 +77,4 @@ export class ActivityComponent implements AfterViewInit {
 
     cards.forEach(card => observer.observe(card));
   }
-
-}
-export interface Service {
-  icon: string;
-  title: string;
-  description: string;
-  descriptionRo: string;
-  descriptionEng: string;
-  descriptionFull: string;
-  descriptionFullRo: string;
-  descriptionFullEng: string;
-  titleEng: string;
-  titleRo: string;
 }
