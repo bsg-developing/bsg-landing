@@ -31,7 +31,13 @@
     "placeholderCompany": "Introdu numele companiei tale",
     "message": "Mesaj",
     "placeholderMessage": "Cu cât ne dai mai multe detalii, cu atât mai bine te putem ajuta.",
-    "sendButton": "Trimite mesajul"
+    "sendButton": "Trimite mesajul",
+    "response": "Timp de răspuns",
+    "contact-us": "Contactați-ne",
+    "period": "Răspundem de obicei în <br> 24–48 de ore",
+    "assistance": "Aveți nevoie de asistență imediată?",
+    "assistance-text": "Pentru probleme urgente de securitate, vă rugăm să menționați gradul de urgență în mesajul dvs.<br/>și vom da prioritate solicitării dvs"
+
   },
   "activity": "Instrumente pentru dezvoltare digitală",
   "close-btn": "Închide",
