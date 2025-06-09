@@ -1,251 +1,72 @@
-/*
-:root {
-  --primary: #fff;
-  --secondary: rgb(255, 124, 10);
-}
-body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-.center {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.team {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.vercel-section {
+  background: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: sans-serif;
 }
 
-.title {
-  font-size: 40px;
-  font-weight: 700;
+.vercel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
-.profiles {
-  width: 100%;
-  height: fit-content;
+
+.vercel-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.vercel-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.vercel-features {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.feature-box {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.feature-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.feature-text {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.investors-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.investors-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
-.profile {
-  width: fit-content;
-  height: fit-content;
-  min-width: 350px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  padding-top: 20px;
-  margin: 20px;
-  max-height: 100px;
-  transition: 0.5s ease-in-out;
-}
-.profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-}
-.details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-}
-.details span {
-  font-weight: 300;
-}
-.card {
-  width: 320px;
-  height: 300px;
-  margin-bottom: 20px;
-  background: var(--primary);
-  box-sizing: border-box;
-  padding: 20px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  border-radius: 6mm;
-  position: relative;
-}
-.head {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: left;
-  margin-bottom: 5px;
-}
-.head img {
-  margin: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 5mm;
-}
-.name {
-  font-size: 16px;
-  font-weight: 200;
-  width: fit-content;
-  margin-left: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0 8px;
-  border-radius: 3mm;
-}
-.content {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 15px;
-  position: relative;
-}
-.role {
-  font-weight: 200;
-  font-size: 14px;
-}
-.icons {
-  backdrop-filter: blur(9px) saturate(180%);
-  -webkit-backdrop-filter: blur(9px) saturate(180%);
-  background: rgba(255, 255, 255, 0.4);
-  width: 100%;
-  height: fit-content;
-  box-sizing: border-box;
-  padding: 0 20px;
-  border-radius: 7mm;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.content::before {
-  position: absolute;
-  content: "";
-  top: 100%;
-  left: 70%;
-  transform: translate(-50%, 0);
-  background: var(--secondary);
-  width: 60px;
+
+.investors-logos img {
   height: 30px;
-  filter: blur(30px);
-}
-.icons a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.35s;
-}
-.icons a:hover {
-  background: white;
-  color: var(--primary);
-  border-radius: 50%;
-}
-.card::before {
-  position: absolute;
-  content: "location_pin";
-  font-family: "Material Icons";
-  color: var(--primary);
-  font-size: 85px;
-  top: calc(100% - 7px);
-  left: 50%;
-  transform: translate(-50%, 0) rotate(180deg);
-}
-.profile:hover {
-  max-height: 500px;
-}
-.profile:hover #picture {
-  border: 5px solid var(--primary);
-}
-.profile:hover .card {
-  display: flex;
-  animation: fade 0.5s ease-in-out;
-}
-@keyframes fade {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1%,
-  50% {
-    display: flex;
-    opacity: 0;
-  }
-  100% {
-    display: flex;
-    opacity: 1;
-  }
-}
-.profile:nth-child(odd) {
-  --secondary: #fff;
-  --primary: rgb(255, 124, 10);
-}
-*/
-.trusted-companies {
-  padding: 4rem 2rem;
-  text-align: center;
-
-  h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    background: linear-gradient(to right, #9b6eff, #6f9bff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .companies-logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .company-logo {
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.05);
-    }
-
-    img {
-      max-height: 60px;
-      max-width: 100%;
-      object-fit: contain;
-    }
-  }
-}
-/*
-svg{
-  fill:black;
-width: 10rem;
-}
-*/
-.svg-trusted {
-  width: 160px;              /* Подогнать по ширине как у других */
-  height: auto;
-  display: block;
-  /*
-  margin: 0 auto;
-  */
-  transform: translateY(6px); /* Поднять/опустить при необходимости */
-  fill: white;               /* Сделать логотип белым на чёрном фоне */
+  object-fit: contain;
 }

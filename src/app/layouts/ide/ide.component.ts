@@ -3,7 +3,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {isPlatformBrowser} from '@angular/common';
 
 @Component({
-  selector: 'app-ide',
+  selector: 'ide',
   imports: [],
   templateUrl: './ide.component.html',
   styleUrl: './ide.component.scss'

@@ -8,7 +8,7 @@ import {toSignal} from '@angular/core/rxjs-interop';
 import {isPlatformBrowser} from '@angular/common';
 
 @Component({
-  selector: 'app-activity',
+  selector: 'activity',
   imports: [TitleComponent, TranslocoPipe],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.scss'
