@@ -35,5 +35,9 @@
   },
   "activity": "Tools for Digital Growth",
   "close-btn": "Close",
-  "company-block": "Companies That Trust Us"
+  "company-block": "Companies That Trust Us",
+  "about-us":{
+    "title": "Solterprise helps businesses move into the future through technology.",
+    "subtitle": "<strong>We are a group of experienced developers and business analysts</strong> who came together to create unique solutions for businesses.<br>\nOur goal is to make your business as digital and automated as possible.<br>\n\nWe’ve worked across many industries and understand not only the technologies needed to solve problems, but also the real challenges you face every day.<br>\n\nIn today’s world, one technology is no longer enough to solve all the challenges a successful business faces. Most IT companies think that if they have a hammer, everything looks like a nail. <strong>We believe that’s an outdated mindset.</strong><br>\n\nOur mission is to build infrastructure around your business, where every tool is carefully chosen to solve a specific problem. While others think you must adapt your business to existing solutions, we believe that <strong>solutions must adapt to your business.</strong><br>\n\nWe believe every business is unique — even if you feel like you have many competitors. In today’s world of endless options, only a unique and memorable website design will help you stand out. And a system tailored to your vision will help you cut costs and become a market leader.<br>\n\nWe don’t sell off-the-shelf solutions.<strong> We build exactly what you need.</strong>"
+  }
 }

@@ -1,27 +1,6 @@
 <section class="vercel-section">
   <div class="vercel-container">
-    <h1 class="vercel-title">Vercel enables the world<br>to ship the best products.</h1>
-    <p class="vercel-subtitle">
-      Vercel’s Frontend Cloud provides the developer experience and<br>
-      infrastructure to <strong>build</strong>, <strong>scale</strong>, and <strong>secure</strong> a faster, more personalized web.
-    </p>
-
-    <div class="vercel-features">
-      <div class="feature-box">
-        <div class="feature-icon">∅</div>
-        <h3 class="feature-title">Easy.</h3>
-        <p class="feature-text">Building and deploying should be as easy as a single tap.</p>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon">🌐</div>
-        <h3 class="feature-title">Universal.</h3>
-        <p class="feature-text">To connect the world, sites should be fast from everywhere.</p>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon">🧍</div>
-        <h3 class="feature-title">Accessible.</h3>
-        <p class="feature-text">Great care in experience and design enables everyone.</p>
-      </div>
-    </div>
+    <h1 class="vercel-title">{{'about-us.title'| transloco}}</h1>
+    <p class="vercel-subtitle" [innerHTML]="'about-us.subtitle'| transloco"></p>
   </div>
 </section>
