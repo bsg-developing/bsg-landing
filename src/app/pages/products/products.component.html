@@ -1,8 +1,8 @@
-<div class="services">
-  <custom-title text="{{ 'success' | transloco}}"/>
-  <div class="carousel-container">
-    <owl-carousel-o [options]="carouselOptions">
-      <ng-container *ngFor="let slide of slidesStore">
+<!--
+<custom-title text="{{ 'success' | transloco}}"/>
+
+    <owl-carousel-o [options]="carouselOptions" style="margin-top:20px!important;">
+      @for (slide of slidesStore ; track slide) {
         <ng-template carouselSlide>
           <div class="slide-container">
             <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" class="carousel-img" />
@@ -14,7 +14,8 @@
             </div>
           </div>
         </ng-template>
-      </ng-container>
+
+      }
     </owl-carousel-o>
-  </div>
-</div>
+
+-->

@@ -11,7 +11,6 @@ import {TitleComponent} from '../../layouts/title/title.component';
   selector: 'app-products',
   imports: [
     CarouselModule,
-    NgForOf,
     TranslocoPipe,
     TitleComponent,
   ],
@@ -63,8 +62,8 @@ export class ProductsComponent {
 export const CAROUSEL_OPTIONS = {
   loop: true,
   mouseDrag: false,
-  touchDrag: false,
-  pullDrag: false,
+  touchDrag: true,
+  pullDrag: true,
   dots: false,
   navSpeed: 700,
   navText: ['', ''],
