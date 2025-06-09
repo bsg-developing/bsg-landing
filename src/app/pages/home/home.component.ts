@@ -12,6 +12,7 @@ import {ContactFormComponent} from '../../layouts/contact-form/contact-form.comp
 import {MenuComponent} from '../../layouts/menu/menu.component';
 import {SliderComponent} from '../../layouts/slider/slider.component';
 import {toSignal} from '@angular/core/rxjs-interop';
+import {AboutUsComponent} from '../about-us/about-us.component';
 
 @Component({
   standalone: true,
@@ -27,6 +28,7 @@ import {toSignal} from '@angular/core/rxjs-interop';
     ContactFormComponent,
     MenuComponent,
     SliderComponent,
+    AboutUsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

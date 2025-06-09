@@ -508,3 +508,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.social-icon {
+  font-size: 28px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #6f9bff; /* подсветка при наведении */
+}

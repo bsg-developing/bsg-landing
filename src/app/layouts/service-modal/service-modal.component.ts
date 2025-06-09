@@ -25,6 +25,7 @@ import {TranslocoPipe} from '@jsverse/transloco';
   styleUrl: './service-modal.component.scss'
 })
 export class ServiceModalComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { title: string; description: string }) {}
+  constructor(@Inject(MAT_DIALOG_DATA)
+              public data: { title: string; description: string }) {}
 
 }

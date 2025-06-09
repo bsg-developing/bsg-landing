@@ -1,15 +1,15 @@
-import {AfterViewInit, Component, inject} from '@angular/core';
+import {AfterViewInit, Component, Inject, inject, PLATFORM_ID} from '@angular/core';
 import {TitleComponent} from '../../layouts/title/title.component';
 import {SERVICES} from '../../core/constants/services';
 import {MatDialog} from '@angular/material/dialog';
 import {ServiceModalComponent} from '../../layouts/service-modal/service-modal.component';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {toSignal} from '@angular/core/rxjs-interop';
-import {InViewDirective} from './in-view.directive';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-activity',
-  imports: [TitleComponent, TranslocoPipe, InViewDirective],
+  imports: [TitleComponent, TranslocoPipe],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.scss'
 })
@@ -20,6 +20,7 @@ export class ActivityComponent implements AfterViewInit {
     initialValue: this.translocate.getActiveLang()
   });
   private dialog = inject(MatDialog);
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   getDescription(service: any): string {
     const lang = this.currentLang();
@@ -56,7 +57,11 @@ export class ActivityComponent implements AfterViewInit {
       backdropClass: 'custom-dialog-backdrop'
     });
   }
+
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    if (typeof IntersectionObserver === 'undefined') return;
+
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(
       entries => {

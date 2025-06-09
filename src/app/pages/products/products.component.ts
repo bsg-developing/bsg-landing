@@ -13,7 +13,6 @@ import {TitleComponent} from '../../layouts/title/title.component';
     CarouselModule,
     NgForOf,
     TranslocoPipe,
-    AboutUsComponent,
     TitleComponent,
   ],
   templateUrl: './products.component.html',

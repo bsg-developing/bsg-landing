@@ -1,6 +1,7 @@
-import {AfterViewInit, Component, ElementRef} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID} from '@angular/core';
 import {TitleComponent} from '../../layouts/title/title.component';
 import {TranslocoPipe} from '@jsverse/transloco';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-project-timeline',
@@ -11,9 +12,16 @@ import {TranslocoPipe} from '@jsverse/transloco';
   styleUrl: './project-timeline.component.scss'
 })
 export class ProjectTimelineComponent implements AfterViewInit {
-  constructor(private elRef: ElementRef) {}
+  constructor(
+    private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+  }
 
   ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    if (typeof IntersectionObserver === 'undefined') return;
+
     const blocks = this.elRef.nativeElement.querySelectorAll('.block-text');
     const observer = new IntersectionObserver(
       entries => {
@@ -24,7 +32,7 @@ export class ProjectTimelineComponent implements AfterViewInit {
           }
         });
       },
-      { threshold: 0.3 }
+      {threshold: 0.3}
     );
 
     blocks.forEach((block: Element) => observer.observe(block));
