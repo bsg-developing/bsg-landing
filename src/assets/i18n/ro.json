@@ -31,13 +31,19 @@
     "placeholderCompany": "Introdu numele companiei tale",
     "message": "Mesaj",
     "placeholderMessage": "Cu cât ne dai mai multe detalii, cu atât mai bine te putem ajuta.",
-    "sendButton": "Trimite mesajul"
+    "sendButton": "Trimite mesajul",
+    "response": "Timp de răspuns",
+    "contact-us": "Contactați-ne",
+    "period": "Răspundem de obicei în <br> 24–48 de ore",
+    "assistance": "Aveți nevoie de asistență imediată?",
+    "assistance-text": "Pentru probleme urgente de securitate, vă rugăm să menționați gradul de urgență în mesajul dvs.<br/>și vom da prioritate solicitării dvs"
+
   },
   "activity": "Instrumente pentru dezvoltare digitală",
   "close-btn": "Închide",
   "company-block": "Companii care au încredere în noi",
   "about-us":{
-    "title": "Solterprise ajută afacerile să pășească în viitor prin tehnologie.",
-    "subtitle": "<strong>Suntem un grup de dezvoltatori și analiști de afaceri cu experiență</strong>, care au decis să se unească pentru a crea soluții unice pentru afaceri.<br>\nScopul nostru este să digitalizăm și automatizăm afacerea ta cât mai mult posibil.<br>\n\nAm trecut prin numeroase domenii de activitate și înțelegem nu doar tehnologiile necesare pentru a rezolva problemele, ci și provocările cu care te confrunți zi de zi.<br>\n\nÎn lumea modernă, o singură tehnologie nu mai este suficientă pentru a răspunde tuturor provocărilor unui business de succes. Majoritatea companiilor IT cred că dacă au un ciocan în mână, totul pare un cui. <strong>Noi considerăm această abordare învechită.</strong><br>\n\nMisiunea noastră este să construim infrastructura în jurul afacerii tale, unde fiecare instrument este ales cu precizie pentru a rezolva o problemă concretă. În timp ce alții cred că trebuie să-ți adaptezi afacerea la soluțiile existente, noi credem că <strong>soluțiile trebuie adaptate la afacerea ta.</strong><br>\n\nConsiderăm că fiecare afacere este unică — chiar dacă ai mulți concurenți pe piață. Astăzi, într-o lume plină de opțiuni, doar un design unic și irepetabil al site-ului tău te poate face remarcat. Iar un sistem construit după viziunea ta te va ajuta să reduci costurile și să devii lider în domeniul tău.<br>\n\nNu vindem soluții standard.<strong> Noi creăm exact ceea ce ai nevoie.</strong>"
+    "title": "ajută afacerile să pășească în viitor prin tehnologie.",
+    "subtitle": "<strong>Suntem un grup de dezvoltatori și analiști de afaceri cu experiență</strong>, care au decis să se unească pentru a crea soluții unice pentru afaceri.<br>\nScopul nostru este să digitalizăm și automatizăm afacerea ta cât mai mult posibil.<br>\n\nAm trecut prin numeroase domenii de activitate și înțelegem nu doar tehnologiile necesare pentru a rezolva problemele, ci și provocările cu care te confrunți zi de zi.<br>\n\nÎn lumea modernă, o singură tehnologie nu mai este suficientă pentru a răspunde tuturor provocărilor unui business de succes. Majoritatea companiilor IT cred că dacă au un ciocan în mână, totul pare un cui. <strong>Noi considerăm această abordare învechită.</strong><br>\n\nMisiunea noastră este să construim infrastructura în jurul afacerii tale, unde <strong> fiecare instrument este ales cu precizie pentru a rezolva o problemă concretă</strong>. În timp ce alții cred că trebuie să-ți adaptezi afacerea la soluțiile existente, noi credem că <strong>soluțiile trebuie adaptate la afacerea ta.</strong><br>\n\nConsiderăm că fiecare afacere este unică — chiar dacă ai mulți concurenți pe piață. Astăzi, într-o lume plină de opțiuni, doar un design unic și irepetabil al site-ului tău te poate face remarcat. Iar un sistem construit după viziunea ta te va ajuta să reduci costurile și să devii lider în domeniul tău.<br>\n\nNu vindem soluții standard.<strong> Noi creăm exact ceea ce ai nevoie.</strong>"
   }
 }

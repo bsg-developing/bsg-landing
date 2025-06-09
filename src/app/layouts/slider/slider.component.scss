@@ -1,3 +1,7 @@
+.slider{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 .slider::before,
 .slider::after {
   content: "";
@@ -10,6 +14,7 @@
 }
 
 .slider::before {
+
   left: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
 }

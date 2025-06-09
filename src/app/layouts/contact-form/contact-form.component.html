@@ -54,8 +54,7 @@
           <div class="info-icon">
           </div>
           <div class="info-text">
-            <h4>Contact Us</h4>
-            <a href="mailto:vahe@hackvector.io"></a>
+            <h4>{{'contactForm.contact-us'| transloco}}</h4>
           </div>
         </div>
 
@@ -75,16 +74,16 @@
         <div class="info-item response-item">
             <i class="fas fa-clock rotate-icon"></i>
           <div class="info-text">
-            <h4>Response Time</h4>
-            <p>I typically respond within<br/>24-48 hours</p>
+            <h4>{{'contactForm.response'| transloco}}</h4>
+            <p [innerHTML]="'contactForm.period'| transloco"></p>
           </div>
         </div>
 
         <div class="urgent-box">
           <div class="urgent-border"></div>
           <div class="urgent-content">
-            <h4>Looking for immediate assistance?</h4>
-            <p>For urgent security matters, please indicate the urgency in your message<br/>and I'll prioritize your request.</p>
+            <h4>{{ 'contactForm.assistance'| transloco }}</h4>
+            <p [innerHTML]="'contactForm.assistance-text'| transloco"></p>
           </div>
         </div>
       </aside>
