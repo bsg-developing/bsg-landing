@@ -18,8 +18,6 @@ import {NgIf} from '@angular/common';
 export class ContactFormComponent {
   private readonly dialogStore = inject(ContactFormService);
   readonly form = this.dialogStore.contactForm;
-  readonly dialogLoading = this.dialogStore.loading;
-  readonly dialogError = this.dialogStore.formInvalid;
   readonly submissionSuccess = this.dialogStore.submissionSuccess;
 
   saveDictionary(): void {

@@ -20,7 +20,13 @@ export class ContactFormService {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
+      phone: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(/^\+?[0-9\s\-()]{10,18}$/)
+        ]
+      ],
       companyName: ['']
     }),
     message: ['']
@@ -38,10 +44,19 @@ export class ContactFormService {
     this.error.set(null);
     this.loading.set(true);
 
-    const value = this.contactForm.getRawValue() as CustomerRequest;
-    const request$ = this.createRequest(value);
+    const rawValue = this.contactForm.getRawValue() as CustomerRequest;
 
-    request$.subscribe({
+    const cleanedPhone = rawValue.customer.phone.replace(/[^\d+]/g, '');
+
+    const cleanedData: CustomerRequest = {
+      ...rawValue,
+      customer: {
+        ...rawValue.customer,
+        phone: cleanedPhone
+      }
+    };
+
+    this.createRequest(cleanedData).subscribe({
       next: () => {
         this.submissionSuccess.set(true);
         this.loading.set(false);
