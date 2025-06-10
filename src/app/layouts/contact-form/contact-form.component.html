@@ -36,7 +36,7 @@
             @if (form.get('customer.email')?.touched && form.get('customer.email')?.invalid) {
               <div class="error">
                 @if (form.get('customer.email')?.errors?.['required']){
-                  <small>Email обязателен</small>
+                  <small>{{ 'errors.required' | transloco }}</small>
                 } @else if (form.get('customer.email')?.errors?.['email']){
                   <small>{{ 'errors.invalidEmail' | transloco }}</small>
                 }
