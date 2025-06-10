@@ -473,3 +473,20 @@
   color: white;
   transform: scale(1.2);
 }
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid #e74c3c;
+}
+
+.error small {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.error small {
+  transition: all 0.3s ease;
+}
