@@ -45,4 +45,17 @@ export class HeaderComponent{
     this.dropdownVisible = false;
     localStorage.setItem('lang', lang.code);
   }
+  navigateToMain(): void {
+    const element = document.getElementById('main');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.router.navigate([], {
+        fragment: undefined,
+        skipLocationChange: true,
+        replaceUrl: true
+      });
+    }
+  }
+
+
 }
