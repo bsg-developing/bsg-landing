@@ -514,3 +514,10 @@ textarea.ng-invalid.ng-touched {
     opacity: 0;
   }
 }
+.submit-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* пробел между текстом и иконкой */
+}
