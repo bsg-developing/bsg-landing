@@ -29,7 +29,7 @@ export class ContactFormService {
       ],
       companyName: ['']
     }),
-    message: ['']
+    message: ['', Validators.required]
   });
 
   save() {
@@ -58,6 +58,7 @@ export class ContactFormService {
 
     this.createRequest(cleanedData).subscribe({
       next: () => {
+        this.contactForm.reset();
         this.submissionSuccess.set(true);
         this.loading.set(false);
       },
