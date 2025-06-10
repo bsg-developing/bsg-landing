@@ -2,12 +2,6 @@
   <div class="container">
     <div class="contact-content">
       <form class="contact-form" [formGroup]="form">
-        @if (dialogError()){
-<!--
-          <span style="color: red">fffffff</span>
--->
-
-        }
         <h3>{{ 'contactForm.title' | transloco }}</h3>
         <p>{{ 'contactForm.subtitle' | transloco }}</p>
 
@@ -15,38 +9,78 @@
         <div class="input-group">
           <p class="input-label required">{{ 'contactForm.firstname' | transloco }}<span>*</span></p>
           <input type="text" name="name" [placeholder]="'contactForm.placeholderName' | transloco" formControlName="firstName"/>
+          @if (form.get('customer.firstName')?.touched && form.get('customer.firstName')?.invalid){
+            <div class="error">
+              @if (form.get('customer.firstName')?.errors?.['required']){
+                <small>Имя обязателено</small>
+              }
+            </div>
+          }
         </div>
           <div class="input-group">
             <p class="input-label required">{{ 'contactForm.lastName' | transloco }}<span>*</span></p>
-            <input type="text" name="name"  [placeholder]="'contactForm.placeholderLastName' | transloco" formControlName="lastName"/>
+            <input type="text" name="lastName"   [placeholder]="'contactForm.placeholderLastName' | transloco" formControlName="lastName"/>
+            @if (form.get('customer.lastName')?.touched && form.get('customer.lastName')?.invalid){
+              <div class="error">
+                @if (form.get('customer.lastName')?.errors?.['required']){
+                  <small>Фамилия обязателена</small>
+                }
+              </div>
+            }
           </div>
 
 
           <div class="input-group">
           <p class="input-label required">{{ 'contactForm.email' | transloco }}<span>*</span></p>
           <input type="email" name="email" [placeholder]="'contactForm.placeholderEmail' | transloco"  formControlName="email" />
+            @if (form.get('customer.email')?.touched && form.get('customer.email')?.invalid) {
+              <div class="error">
+                @if (form.get('customer.email')?.errors?.['required']){
+                  <small>Email обязателен</small>
+                } @else if (form.get('customer.email')?.errors?.['email']){
+                  <small >Некорректный email</small>
+                }
+              </div>
+            }
         </div>
 
         <div class="input-group">
           <p class="input-label required">{{ 'contactForm.phone' | transloco }}<span>*</span></p>
-          <input type="tel" name="company"  [placeholder]="'contactForm.placeholderPhone' | transloco"  formControlName="companyName" />
+          <input type="tel"   name="phone" [placeholder]="'contactForm.placeholderPhone' | transloco"  formControlName="phone"/>
+          @if (form.get('customer.phone')?.touched && form.get('customer.phone')?.invalid) {
+            <div class="error">
+              @if (form.get('customer.phone')?.errors?.['required']){
+                <small>Телефон обязателен</small>
+              }
+            </div>
+          }
         </div>
 
         <div class="input-group">
-          <p class="input-label required">{{ 'contactForm.company' | transloco }}</p>
-          <input type="url" name="companyWebsite" [placeholder]="'contactForm.placeholderCompany' | transloco" formControlName="phone" />
+          <p class="input-label">{{ 'contactForm.company' | transloco }}</p>
+          <input type="url" name="companyWebsite" [placeholder]="'contactForm.placeholderCompany' | transloco" formControlName="companyName" />
         </div>
         </div>
 
         <div class="textarea-group">
-          <p class="input-label required">{{ 'contactForm.message' | transloco }}</p>
+          <p class="input-label">{{ 'contactForm.message' | transloco }}</p>
           <textarea name="message" [placeholder]="'contactForm.placeholderMessage' | transloco" formControlName="message"></textarea>
         </div>
 
-        <button type="submit" class="submit-button" (click)="saveDictionary()">
+        <!-- До отправки -->
+        <button *ngIf="!submissionSuccess()" type="submit" class="submit-button" (click)="saveDictionary()">
           <div class="tracker"></div>
           <span>{{ 'contactForm.sendButton' | transloco }}</span>
         </button>
+
+        <!-- После отправки -->
+        <button *ngIf="submissionSuccess()" class="submit-button" disabled>
+          <span>{{ 'contactForm.sendButton' | transloco }}</span>
+          <div class="mail-animation">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </button>
+
       </form>
 
       <aside class="contact-info">

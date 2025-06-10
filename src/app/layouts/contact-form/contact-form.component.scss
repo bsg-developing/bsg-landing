@@ -473,3 +473,44 @@
   color: white;
   transform: scale(1.2);
 }
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid #e74c3c;
+}
+
+.error small {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.error small {
+  transition: all 0.3s ease;
+}
+
+
+.mail-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flyUp 1s ease-in-out forwards;
+  font-size: 24px;
+  color: #800080;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0;
+  }
+}
