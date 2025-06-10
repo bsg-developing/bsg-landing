@@ -13,6 +13,7 @@ export class ContactFormService {
   private readonly http = inject(HttpClient);
   private apiUrl = 'https://api.solterprise.com/api/customer-requests';
   formInvalid = signal(false);
+  submissionSuccess = signal(false);
 
   contactForm = this.fb.group({
     customer: this.fb.group({
@@ -29,12 +30,12 @@ export class ContactFormService {
     this.contactForm.markAllAsTouched();
 
     if (this.contactForm.invalid) {
-      this.formInvalid.set(true); // <-- установить флаг ошибки валидации
+      this.formInvalid.set(true);
       return;
     }
 
-    this.formInvalid.set(false); // сброс ошибки при валидной форме
-    this.error.set(null);        // сброс предыдущих ошибок
+    this.formInvalid.set(false);
+    this.error.set(null);
     this.loading.set(true);
 
     const value = this.contactForm.getRawValue() as CustomerRequest;
@@ -42,6 +43,7 @@ export class ContactFormService {
 
     request$.subscribe({
       next: () => {
+        this.submissionSuccess.set(true);
         this.loading.set(false);
       },
       error: (error) => {

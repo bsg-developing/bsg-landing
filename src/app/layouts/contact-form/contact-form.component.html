@@ -25,7 +25,7 @@
         </div>
           <div class="input-group">
             <p class="input-label required">{{ 'contactForm.lastName' | transloco }}<span>*</span></p>
-            <input type="text" name="name"  [placeholder]="'contactForm.placeholderLastName' | transloco" formControlName="lastName"/>
+            <input type="text" name="lastName"   [placeholder]="'contactForm.placeholderLastName' | transloco" formControlName="lastName"/>
             @if (form.get('customer.lastName')?.touched && form.get('customer.lastName')?.invalid){
               <div class="error">
                 @if (form.get('customer.lastName')?.errors?.['required']){
@@ -52,7 +52,7 @@
 
         <div class="input-group">
           <p class="input-label required">{{ 'contactForm.phone' | transloco }}<span>*</span></p>
-          <input type="tel"  [placeholder]="'contactForm.placeholderPhone' | transloco"  formControlName="phone"/>
+          <input type="tel"   name="phone" [placeholder]="'contactForm.placeholderPhone' | transloco"  formControlName="phone"/>
           @if (form.get('customer.phone')?.touched && form.get('customer.phone')?.invalid) {
             <div class="error">
               @if (form.get('customer.phone')?.errors?.['required']){
@@ -73,10 +73,20 @@
           <textarea name="message" [placeholder]="'contactForm.placeholderMessage' | transloco" formControlName="message"></textarea>
         </div>
 
-        <button type="submit" class="submit-button" (click)="saveDictionary()">
+        <!-- До отправки -->
+        <button *ngIf="!submissionSuccess()" type="submit" class="submit-button" (click)="saveDictionary()">
           <div class="tracker"></div>
           <span>{{ 'contactForm.sendButton' | transloco }}</span>
         </button>
+
+        <!-- После отправки -->
+        <button *ngIf="submissionSuccess()" class="submit-button" disabled>
+          <span>{{ 'contactForm.sendButton' | transloco }}</span>
+          <div class="mail-animation">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </button>
+
       </form>
 
       <aside class="contact-info">

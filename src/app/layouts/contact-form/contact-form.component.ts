@@ -20,9 +20,9 @@ export class ContactFormComponent {
   readonly form = this.dialogStore.contactForm;
   readonly dialogLoading = this.dialogStore.loading;
   readonly dialogError = this.dialogStore.formInvalid;
+  readonly submissionSuccess = this.dialogStore.submissionSuccess;
 
   saveDictionary(): void {
-    console.log(this.form.value);
     this.dialogStore.save();
   }
 
