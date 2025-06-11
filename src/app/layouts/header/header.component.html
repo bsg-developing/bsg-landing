@@ -1,6 +1,8 @@
 <header class="nav-header">
   <nav class="nav-menu">
+<!--
     <img class="logo" src="assets/images/logo.svg" alt="" (click)="router.navigate(['/'], {fragment:'main'})">
+-->
     @for (item of menuItems ; track item) {
       <a (click)="router.navigate(['/'], { fragment: item.fragment })">
         {{ item.labelKey | transloco }}
