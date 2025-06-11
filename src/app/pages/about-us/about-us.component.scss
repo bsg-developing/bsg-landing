@@ -31,6 +31,9 @@
 }
 
 .vercel-subtitle {
+  overflow: hidden;
+  max-width: 100ch;
+  white-space: pre-wrap;
   letter-spacing: 0.5px;
   text-align: left;
   font-size: 18px;
@@ -41,11 +44,7 @@
     color: #a855f7!important;
   }
 }
-/*.vercel-subtitle {
-  overflow: hidden; !* Hide text beyond current width *!
-  white-space: nowrap; !* Keep text on one line *!
-  display: inline-block; !* Ensure width animation works *!
-}*/
+
 
 @media (max-width: 600px) {
   .vercel-title {
@@ -82,14 +81,5 @@ strong{
   -webkit-text-fill-color: transparent;
 }
 
-.typing-animation {
-  white-space: pre-wrap;
-  overflow: hidden;
-  animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-  max-width: 100ch;
-}
 
-@keyframes typing {
-  from { max-width: 0; }
-  to { max-width: 100ch; }
-}
+
