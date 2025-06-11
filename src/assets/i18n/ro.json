@@ -51,5 +51,18 @@
     "invalidEmail": "Adresă de email invalidă",
     "invalidPhone": "Număr de telefon invalid",
     "invalidMessage": "Mesajul este obligatoriu"
-  }
+  },
+  "projectTimeLine": {
+    "analytics": "Analiză",
+    "analytic-text": "Primul pas este analiza afacerii tale. Credem că o soluție eficientă începe cu o înțelegere completă a punctelor slabe și a problemelor — așa cum un medic știe că nu poate prescrie un tratament fără analize corecte.",
+    "Architecture": "Arhitectură",
+    "Architecture-text": "Al doilea pas este proiectarea sistemului viitor împreună cu persoanele responsabile din compania ta. Construim arhitectura soluției la fel cum un arhitect planifică structura unei case noi.",
+    "design": "Design",
+    "design-text": "Al treilea pas este crearea designului aplicației sau site-ului tău. Cu îndrumarea ta și experiența noastră, realizăm un design adaptabil pentru o experiență cât mai intuitivă a utilizatorului — pentru că un utilizator înțelege cel mai bine ce trebuie să facă atunci când interfața este clară.",
+    "developing": "Dezvoltare",
+    "developing-text": "Ultimul pas este dezvoltarea. Abordarea noastră presupune împărțirea sarcinilor mari în subtaskuri mici și implicarea ta constantă. Astfel construim un produs perfect adaptat nevoilor afacerii tale."
+  },
+  "Approach": "Abordarea Noastră",
+  "stages":"Etapele Dezvoltării"
+
 }

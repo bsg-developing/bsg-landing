@@ -5,7 +5,7 @@ section {
 .prime-box-text{
   font-weight: 700;
   font-size: 20px;
-  line-height: 140%;
+  line-height: 130%;
   text-align: center;
   color: #fff;
   min-height: 700px;
@@ -116,7 +116,7 @@ section {
 
 .block-text-text-3{
   position: absolute;
-  top: 20%;
+  top: 14%;
   right: -1%;
 }
 
@@ -239,4 +239,25 @@ section {
 .block-text.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+.block-text-number {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(253, 112, 255, 0.5), transparent 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.block-text-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

@@ -49,5 +49,18 @@
     "invalidEmail": "Invalid email address",
     "invalidPhone": "Invalid phone number",
     "invalidMessage": "Message is required"
-  }
+  },
+  "projectTimeLine": {
+    "analytics": "Analytics",
+    "analytic-text": "The first stage is analyzing your business. We believe that an effective solution starts with a complete understanding of bottlenecks and problems — just like a doctor knows that no treatment can be prescribed without proper diagnostics.",
+    "Architecture": "Architecture",
+    "Architecture-text": "The second stage is designing the future system in collaboration with your business stakeholders. We build the architecture of the solution just like an architect plans the structure of a new home.",
+    "design": "Design",
+    "design-text": "The third stage is designing your app or website. With your input and our expertise, we create a responsive and intuitive design that provides the best user experience — because users should instinctively know what to do.",
+    "developing": "Development",
+    "developing-text": "The final stage is development. Our approach involves breaking large tasks into small deliverables and keeping you engaged at every step. This ensures the product we build is tailored to your business needs."
+  },
+  "Approach": "Our Approach",
+  "stages":"Development Stages"
+
 }

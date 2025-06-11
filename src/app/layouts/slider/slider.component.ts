@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {TitleComponent} from "../title/title.component";
+import {TranslocoPipe} from '@jsverse/transloco';
 
 @Component({
   selector: 'slider',
-    imports: [
-        TitleComponent
-    ],
+  imports: [
+    TitleComponent,
+    TranslocoPipe
+  ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })
