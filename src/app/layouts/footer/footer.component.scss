@@ -1,80 +1,89 @@
-.container{
-  max-width: 1200px;
-  margin: auto;
-  padding: 5rem 2rem;
-}
-
-.blur {
-  position: absolute;
-  box-shadow: 0 0 1000px 50px 	#c084fc; /* фиолетовый */
-  z-index: -100;
-}
-
-
-footer{
+.footer-line {
   position: relative;
-  display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
-  gap: 2rem;
-}
-
-footer .column .all-right{
   color: #ccc;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
+  padding: 2rem 2rem;
+  overflow: hidden;
+  z-index: 0;
 }
 
-footer .column h4{
-  color: #fff;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+.footer-line-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+  z-index: 1;
+  position: relative;
 }
 
-footer .column > a{
+.footer-left,
+.footer-center,
+.footer-right {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-right a {
   color: #ccc;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer .column > a:hover{
+.footer-right a:hover {
   background: linear-gradient(to right, #4a90e2, #a355b9, #ff6b6b);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.copyright{
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-  color: #fff;
-  font-size: 0.8rem;
-  text-align: center;
+.blur {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c084fc 0%, transparent 70%);
+  opacity: 0.15;
+  z-index: -1;
 }
 
-@media (width < 900px){
-  footer{
-    grid-template-columns: 1fr 200px;
+@media (max-width: 768px) {
+  .footer-line-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-right a {
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
   }
 }
-
-@media (width < 600px){
-  footer{
-    grid-template-columns: 1fr 150px;
-  }
-}
-
-
-.phone-link{
-  letter-spacing: 2px;
-  display: flex;
-  flex-direction: row;
+.footer-right a {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 6px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
+.footer-right a:hover {
+  color: #fff;
+}
 
+.footer-right i {
+  font-size: 1.2rem;
+}
