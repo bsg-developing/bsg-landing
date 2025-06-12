@@ -4,6 +4,7 @@ import {FooterComponent} from './layouts/footer/footer.component';
 import {RouterOutlet} from '@angular/router';
 import {NgxScrollTopComponent} from 'ngx-scrolltop';
 import {GeoService} from './core/services/geo.service';
+import {ViewportScroller} from '@angular/common';
 
 
 @Component({
@@ -20,10 +21,11 @@ import {GeoService} from './core/services/geo.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  private geoService= inject(GeoService);
+
+  private vs = inject(ViewportScroller);
 
   constructor() {
-    this.geoService.getCountry()
+    this.vs.setOffset([0, 100]);
   }
 
 }

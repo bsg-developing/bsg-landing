@@ -5,7 +5,7 @@ export interface MenuItem {
 
 export const MENU_ITEMS: MenuItem[] = [
   { fragment: 'activity', labelKey: 'aboutUs' },
+  { fragment: 'Approach', labelKey: 'Approach' },
   { fragment: 'technologies', labelKey: 'technologies' },
-  { fragment: 'projects', labelKey: 'products' },
-  { fragment: 'footer', labelKey: 'contactUs' }
+  { fragment: 'contact-us', labelKey: 'contactUs' }
 ];

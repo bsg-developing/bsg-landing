@@ -3,7 +3,6 @@ import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {ActivityComponent} from '../activity/activity.component';
 import {IdeComponent} from '../../layouts/ide/ide.component';
-import {ProductsComponent} from '../products/products.component';
 import {isPlatformBrowser} from '@angular/common';
 import {ProjectTimelineComponent} from '../project-timeline/project-timeline.component';
 import {BackgroundWrapperComponent} from '../../layouts/background-wrapper/background-wrapper.component';
@@ -21,7 +20,6 @@ import {TrustedCompaniesComponent} from '../trusted-companies/trusted-companies.
     TranslocoPipe,
     ActivityComponent,
     IdeComponent,
-    ProductsComponent,
     ProjectTimelineComponent,
     BackgroundWrapperComponent,
     ContactFormComponent,
