@@ -61,6 +61,7 @@ export class ContactFormService {
         this.contactForm.reset();
         this.submissionSuccess.set(true);
         this.loading.set(false);
+        setTimeout(() => this.submissionSuccess.set(false), 1000);
       },
       error: (error) => {
         this.loading.set(false);
