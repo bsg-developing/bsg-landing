@@ -72,13 +72,14 @@
           }
         </div>
 
-        <button type="submit" class="submit-button" (click)="saveDictionary()" [disabled]="submissionSuccess()">
+        <button type="submit" class="submit-button" (click)="saveDictionary()">
           <span>{{ 'contactForm.sendButton' | transloco }}</span>
 
           <div class="mail-animation" *ngIf="submissionSuccess()">
             <i class="fas fa-envelope"></i>
           </div>
         </button>
+
 
 
 
