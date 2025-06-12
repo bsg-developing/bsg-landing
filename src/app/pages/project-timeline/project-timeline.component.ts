@@ -7,6 +7,7 @@ import {isPlatformBrowser} from '@angular/common';
   selector: 'app-project-timeline',
   imports: [
     TitleComponent,
+    TranslocoPipe,
   ],
   templateUrl: './project-timeline.component.html',
   styleUrl: './project-timeline.component.scss'

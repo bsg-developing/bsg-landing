@@ -1,8 +1,23 @@
 
 <div class="center">
   <div class="navigation">
+
     <input type="checkbox" name="" id="close" />
     <div class="icons">
+      <div class="lang-menu-wrapper icon"  (click)="$event.stopPropagation()">
+        <button class="lang-toggle-btn" (click)="toggleLangMenu()">
+          <span class="material-icons">language</span>
+        </button>
+
+        <div class="lang-menu"
+             [class.open]="langMenuOpen"
+             (clickOutside)="langMenuOpen = false">
+          <div class="lang-option" (click)="changeLang('ru')">🇷🇺 Русский</div>
+          <div class="lang-option" (click)="changeLang('en')">🇬🇧 English</div>
+          <div class="lang-option" (click)="changeLang('ro')">🇷🇴 Română</div>
+        </div>
+      </div>
+
       <input type="radio" name="nav" id="n1" checked />
       <label for="n1" class="icon">
         <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: 'aboutUs' })"> home </span>
@@ -13,10 +28,10 @@
         <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: 'careers' })"> info</span>
       </label>
 
-      <input type="radio" name="nav" id="n3" />
+ <!--     <input type="radio" name="nav" id="n3" />
       <label for="n3" class="icon">
         <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: 'technologies' })">work </span>
-      </label>
+      </label>-->
 
 
       <input type="radio" name="nav" id="n7" />

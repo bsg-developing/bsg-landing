@@ -16,12 +16,12 @@ import {NgIf} from '@angular/common';
 
 })
 export class ContactFormComponent {
-  private readonly dialogStore = inject(ContactFormService);
-  readonly form = this.dialogStore.contactForm;
-  readonly submissionSuccess = this.dialogStore.submissionSuccess;
+  private readonly formService = inject(ContactFormService);
+  readonly form = this.formService.contactForm;
+  readonly submissionSuccess = this.formService.submissionSuccess;
 
   saveDictionary(): void {
-    this.dialogStore.save();
+    this.formService.save();
   }
 
 }

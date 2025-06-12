@@ -34,7 +34,7 @@
     "sendButton": "Trimite mesajul",
     "response": "Timp de răspuns",
     "contact-us": "Contactați-ne",
-    "period": "Răspundem de obicei în <br> 24–48 de ore",
+    "period": "Răspundem de obicei în <br> 24 de ore",
     "assistance": "Aveți nevoie de asistență imediată?",
     "assistance-text": "Pentru probleme urgente de securitate, vă rugăm să menționați gradul de urgență în mesajul dvs.<br/>și vom da prioritate solicitării dvs"
 
@@ -45,5 +45,24 @@
   "about-us":{
     "title": "ajută afacerile să pășească în viitor prin tehnologie.",
     "subtitle": "<strong>Suntem un grup de dezvoltatori și analiști de afaceri cu experiență</strong>, care au decis să se unească pentru a crea soluții unice pentru afaceri.<br>\nScopul nostru este să digitalizăm și automatizăm afacerea ta cât mai mult posibil.<br>\n\nAm trecut prin numeroase domenii de activitate și înțelegem nu doar tehnologiile necesare pentru a rezolva problemele, ci și provocările cu care te confrunți zi de zi.<br>\n\nÎn lumea modernă, o singură tehnologie nu mai este suficientă pentru a răspunde tuturor provocărilor unui business de succes. Majoritatea companiilor IT cred că dacă au un ciocan în mână, totul pare un cui. <strong>Noi considerăm această abordare învechită.</strong><br>\n\nMisiunea noastră este să construim infrastructura în jurul afacerii tale, unde <strong> fiecare instrument este ales cu precizie pentru a rezolva o problemă concretă</strong>. În timp ce alții cred că trebuie să-ți adaptezi afacerea la soluțiile existente, noi credem că <strong>soluțiile trebuie adaptate la afacerea ta.</strong><br>\n\nConsiderăm că fiecare afacere este unică — chiar dacă ai mulți concurenți pe piață. Astăzi, într-o lume plină de opțiuni, doar un design unic și irepetabil al site-ului tău te poate face remarcat. Iar un sistem construit după viziunea ta te va ajuta să reduci costurile și să devii lider în domeniul tău.<br>\n\nNu vindem soluții standard.<strong> Noi creăm exact ceea ce ai nevoie.</strong>"
-  }
+  },
+  "errors": {
+    "required": "Câmpul este obligatoriu",
+    "invalidEmail": "Adresă de email invalidă",
+    "invalidPhone": "Număr de telefon invalid",
+    "invalidMessage": "Mesajul este obligatoriu"
+  },
+  "projectTimeLine": {
+    "analytics": "Analiză",
+    "analytic-text": "Primul pas este analiza afacerii tale. Credem că o soluție eficientă începe cu o înțelegere completă a punctelor slabe și a problemelor — așa cum un medic știe că nu poate prescrie un tratament fără analize corecte.",
+    "Architecture": "Arhitectură",
+    "Architecture-text": "Al doilea pas este proiectarea sistemului viitor împreună cu persoanele responsabile din compania ta. Construim arhitectura soluției la fel cum un arhitect planifică structura unei case noi.",
+    "design": "Design",
+    "design-text": "Al treilea pas este crearea designului aplicației sau site-ului tău. Cu îndrumarea ta și experiența noastră, realizăm un design adaptabil pentru o experiență cât mai intuitivă a utilizatorului — pentru că un utilizator înțelege cel mai bine ce trebuie să facă atunci când interfața este clară.",
+    "developing": "Dezvoltare",
+    "developing-text": "Ultimul pas este dezvoltarea. Abordarea noastră presupune împărțirea sarcinilor mari în subtaskuri mici și implicarea ta constantă. Astfel construim un produs perfect adaptat nevoilor afacerii tale."
+  },
+  "Approach": "Abordarea Noastră",
+  "stages":"Etapele Dezvoltării"
+
 }

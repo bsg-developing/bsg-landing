@@ -56,9 +56,6 @@
   margin: 0;
   font-size: 1.25rem;         /* можно подкорректировать под ваш дизайн */
   font-weight: 600;
-  /*
-  color: #fff;                !* или любой другой цвет *!
-  */
   background: linear-gradient(to right, #afa7de, #343452);
   -webkit-background-clip: text;
   color: transparent;
@@ -76,3 +73,8 @@
 .separator-container.in-view .line {
   transform: scaleX(1);
 }
+@media screen and (max-width: 700px) {
+  .separator-text {
+    font-size: 0.8rem;
+  }
+  }

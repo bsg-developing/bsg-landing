@@ -154,4 +154,6 @@ export class HomeComponent implements AfterViewInit {
     return stat.label.en;
   }
 
+
+
 }

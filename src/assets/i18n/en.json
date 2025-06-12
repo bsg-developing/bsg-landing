@@ -33,7 +33,7 @@
     "sendButton": "Send Message",
     "response": "Response Time",
     "contact-us": "Contact Us",
-    "period": "We typically respond within<br/>24-48 hour",
+    "period": "We typically respond within<br/>24 hour",
     "assistance": "Looking for immediate assistance?",
     "assistance-text": "For urgent security matters, please indicate the urgency in your message<br/>and I'll prioritize your request."
   },
@@ -43,5 +43,24 @@
   "about-us":{
     "title": "helps businesses move into the future through technology.",
     "subtitle": "<strong>We are a group of experienced developers and business analysts</strong> who came together to create unique solutions for businesses.<br>\nOur goal is to make your business as digital and automated as possible.<br>\n\nWe’ve worked across many industries and understand not only the technologies needed to solve problems, but also the real challenges you face every day.<br>\n\nIn today’s world, one technology is no longer enough to solve all the challenges a successful business faces. Most IT companies think that if they have a hammer, everything looks like a nail. <strong>We believe that’s an outdated mindset.</strong><br>\n\nOur mission is to build infrastructure around your business, where<strong> every tool is carefully chosen to solve a specific problem</strong>. While others think you must adapt your business to existing solutions, we believe that <strong>solutions must adapt to your business.</strong><br>\n\nWe believe every business is unique — even if you feel like you have many competitors. In today’s world of endless options, only a unique and memorable website design will help you stand out. And a system tailored to your vision will help you cut costs and become a market leader.<br>\n\nWe don’t sell off-the-shelf solutions.<strong> We build exactly what you need.</strong>"
-  }
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "invalidPhone": "Invalid phone number",
+    "invalidMessage": "Message is required"
+  },
+  "projectTimeLine": {
+    "analytics": "Analytics",
+    "analytic-text": "The first stage is analyzing your business. We believe that an effective solution starts with a complete understanding of bottlenecks and problems — just like a doctor knows that no treatment can be prescribed without proper diagnostics.",
+    "Architecture": "Architecture",
+    "Architecture-text": "The second stage is designing the future system in collaboration with your business stakeholders. We build the architecture of the solution just like an architect plans the structure of a new home.",
+    "design": "Design",
+    "design-text": "The third stage is designing your app or website. With your input and our expertise, we create a responsive and intuitive design that provides the best user experience — because users should instinctively know what to do.",
+    "developing": "Development",
+    "developing-text": "The final stage is development. Our approach involves breaking large tasks into small deliverables and keeping you engaged at every step. This ensures the product we build is tailored to your business needs."
+  },
+  "Approach": "Our Approach",
+  "stages":"Development Stages"
+
 }

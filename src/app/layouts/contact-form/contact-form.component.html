@@ -3,8 +3,6 @@
     <div class="contact-content">
       <form class="contact-form" [formGroup]="form">
         <h3>{{ 'contactForm.title' | transloco }}</h3>
-        <p>{{ 'contactForm.subtitle' | transloco }}</p>
-
         <div formGroupName="customer">
         <div class="input-group">
           <p class="input-label required">{{ 'contactForm.firstname' | transloco }}<span>*</span></p>
@@ -12,7 +10,7 @@
           @if (form.get('customer.firstName')?.touched && form.get('customer.firstName')?.invalid){
             <div class="error">
               @if (form.get('customer.firstName')?.errors?.['required']){
-                <small>Имя обязателено</small>
+                <small>  {{ 'errors.required' | transloco }}</small>
               }
             </div>
           }
@@ -23,7 +21,7 @@
             @if (form.get('customer.lastName')?.touched && form.get('customer.lastName')?.invalid){
               <div class="error">
                 @if (form.get('customer.lastName')?.errors?.['required']){
-                  <small>Фамилия обязателена</small>
+                  <small> {{ 'errors.required' | transloco }}</small>
                 }
               </div>
             }
@@ -36,9 +34,9 @@
             @if (form.get('customer.email')?.touched && form.get('customer.email')?.invalid) {
               <div class="error">
                 @if (form.get('customer.email')?.errors?.['required']){
-                  <small>Email обязателен</small>
+                  <small>{{ 'errors.required' | transloco }}</small>
                 } @else if (form.get('customer.email')?.errors?.['email']){
-                  <small >Некорректный email</small>
+                  <small>{{ 'errors.invalidEmail' | transloco }}</small>
                 }
               </div>
             }
@@ -50,7 +48,7 @@
           @if (form.get('customer.phone')?.touched && form.get('customer.phone')?.invalid) {
             <div class="error">
               @if (form.get('customer.phone')?.errors?.['required']){
-                <small>Телефон обязателен</small>
+                <small>{{ 'errors.invalidPhone' | transloco }}</small>
               }
             </div>
           }
@@ -65,21 +63,25 @@
         <div class="textarea-group">
           <p class="input-label">{{ 'contactForm.message' | transloco }}</p>
           <textarea name="message" [placeholder]="'contactForm.placeholderMessage' | transloco" formControlName="message"></textarea>
+          @if (form.get('message')?.touched && form.get('message')?.invalid) {
+            <div class="error">
+              @if (form.get('message')?.errors?.['required']){
+                <small> {{ 'errors.invalidMessage' | transloco }}</small>
+              }
+            </div>
+          }
         </div>
 
-        <!-- До отправки -->
-        <button *ngIf="!submissionSuccess()" type="submit" class="submit-button" (click)="saveDictionary()">
-          <div class="tracker"></div>
+        <button type="submit" class="submit-button" (click)="saveDictionary()">
           <span>{{ 'contactForm.sendButton' | transloco }}</span>
-        </button>
 
-        <!-- После отправки -->
-        <button *ngIf="submissionSuccess()" class="submit-button" disabled>
-          <span>{{ 'contactForm.sendButton' | transloco }}</span>
-          <div class="mail-animation">
+          <div class="mail-animation" *ngIf="submissionSuccess()">
             <i class="fas fa-envelope"></i>
           </div>
         </button>
+
+
+
 
       </form>
 
@@ -99,7 +101,7 @@
           <a href="https://www.linkedin.com/company/solterprise" class="social-icon" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://t.me/your_channel_or_username" class="social-icon" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/SolterpriseSupportBot" class="social-icon" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-telegram"></i>
           </a>
         </div>
@@ -110,14 +112,6 @@
           <div class="info-text">
             <h4>{{'contactForm.response'| transloco}}</h4>
             <p [innerHTML]="'contactForm.period'| transloco"></p>
-          </div>
-        </div>
-
-        <div class="urgent-box">
-          <div class="urgent-border"></div>
-          <div class="urgent-content">
-            <h4>{{ 'contactForm.assistance'| transloco }}</h4>
-            <p [innerHTML]="'contactForm.assistance-text'| transloco"></p>
           </div>
         </div>
       </aside>
