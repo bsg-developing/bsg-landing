@@ -3,7 +3,6 @@ import {HeaderComponent} from './layouts/header/header.component';
 import {FooterComponent} from './layouts/footer/footer.component';
 import {RouterOutlet} from '@angular/router';
 import {NgxScrollTopComponent} from 'ngx-scrolltop';
-import {GeoService} from './core/services/geo.service';
 import {ViewportScroller} from '@angular/common';
 
 
