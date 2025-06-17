@@ -24,7 +24,7 @@ export class ContactFormService {
         '',
         [
           Validators.required,
-          Validators.pattern(/^\+?[0-9\s\-()]{10,18}$/)
+          Validators.pattern(/^\+?[0-9\s\-().]{7,20}$/)
         ]
       ],
       companyName: ['']
