@@ -1,12 +1,7 @@
 {
   "careers": "Careers",
   "aboutUs": "About Us",
-  "partnerships": "Partnerships",
   "contactUs": "Contact Us",
-  "development": "Website Development in Moldova",
-  "products": "Projects",
-  "vacancies": "Job openings",
-  "apply": "Apply",
   "more": "Show more",
   "contact": "Contacts",
   "technologies": "Technologies",
@@ -33,9 +28,7 @@
     "sendButton": "Send Message",
     "response": "Response Time",
     "contact-us": "Contact Us",
-    "period": "We typically respond within<br/>24 hour",
-    "assistance": "Looking for immediate assistance?",
-    "assistance-text": "For urgent security matters, please indicate the urgency in your message<br/>and I'll prioritize your request."
+    "period": "We typically respond within<br/>24 hour"
   },
   "activity": "Tools for Digital Growth",
   "close-btn": "Close",
