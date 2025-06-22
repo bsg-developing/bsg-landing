@@ -16,8 +16,6 @@ export class SliderComponent {
     '/assets/pngegg.png',
     '/assets/Open-AI-White-Logo-PNG.png',
     '/assets/images/stack/angular.png',
-    '/assets/html.png',
-    '/assets/css.png',
     '/assets/images/stack/java.png',
     '/assets/images/stack/spring.png',
     '/assets/Jira.png',
