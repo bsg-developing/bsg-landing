@@ -57,7 +57,14 @@
   "stages":"Development Stages",
   "socials": "Socials",
   "contacts": "Contacts",
-  "trust": "Trusted by us"
-
-
+  "trust": "Trusted by us",
+  "notFound": {
+    "ops": "OOPS",
+    "sorry": "We're sorry",
+    "page": "Page not",
+    "found": "found",
+    "something": "Something",
+    "isBroken": "is broken",
+    "goHome": "Go to homepage"
+  }
 }
