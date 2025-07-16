@@ -44,17 +44,9 @@ export class HeaderComponent{
     this.selectedIcon = lang.flag;
     this.dropdownVisible = false;
     localStorage.setItem('lang', lang.code);
-  }
-  navigateToMain(): void {
-    const element = document.getElementById('main');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      this.router.navigate([], {
-        fragment: undefined,
-        skipLocationChange: true,
-        replaceUrl: true
-      });
-    }
+    const segments = this.router.url.split('/');
+    segments[1] = lang.code;
+    this.router.navigate(segments);
   }
 
 

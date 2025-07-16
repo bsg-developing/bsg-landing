@@ -20,7 +20,7 @@ export class ContactFormComponent {
   readonly form = this.formService.contactForm;
   readonly submissionSuccess = this.formService.submissionSuccess;
 
-  saveDictionary(): void {
+  save(): void {
     this.formService.save();
   }
 
