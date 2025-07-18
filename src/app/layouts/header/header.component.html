@@ -1,7 +1,7 @@
 <header class="nav-header">
   <nav class="nav-menu">
     @for (item of menuItems ; track item) {
-      <a (click)="router.navigate(['/'], { fragment: item.fragment })">
+      <a (click)="navigateToFragment(item.fragment)">
         {{ item.labelKey | transloco }}
       </a>
     }

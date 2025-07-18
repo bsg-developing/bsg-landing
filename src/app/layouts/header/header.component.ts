@@ -2,9 +2,10 @@ import {Component, inject} from '@angular/core';
 import {UpperCasePipe} from "@angular/common";
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {Language, LANGUAGES} from '../../core/configs/languages.config';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 import {ClickOutsideDirective} from '../../core/directives/click-outside.directive';
 import {MENU_ITEMS} from '../../core/constants/menu-items';
+import {filter, take} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -36,6 +37,15 @@ export class HeaderComponent{
 
   public toggleLanguageDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
+  }
+
+  navigateToFragment(fragment: string) {
+    const element = document.getElementById(fragment);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    history.replaceState(null, '', this.router.url.split('#')[0]);
   }
 
   public changeLang(lang: Language): void {
