@@ -51,4 +51,10 @@ export class SeoService {
       this.document.documentElement.lang = lang;
     }
   }
+
+  public setNoIndexNoFollow(): void {
+    this.metaService.removeTag("name='robots'");
+
+    this.metaService.addTag({ name: 'robots', content: 'noindex, nofollow' });
+  }
 }
