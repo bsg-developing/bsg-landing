@@ -20,18 +20,18 @@
 
       <input type="radio" name="nav" id="n1" checked />
       <label for="n1" class="icon">
-        <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: '' })"> home </span>
+        <span class="material-icons-outlined" (click)="navigateToFragment('')"> home </span>
       </label>
 
       <input type="radio" name="nav" id="n2" />
       <label for="n2" class="icon">
-        <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: 'activity' })"> info</span>
+        <span class="material-icons-outlined" (click)="navigateToFragment('activity')"> info</span>
       </label>
 
 
       <input type="radio" name="nav" id="n7" />
       <label for="n7" class="icon">
-        <span class="material-icons-outlined" (click)="router.navigate(['/'], { fragment: 'contact-us' })">call</span>
+        <span class="material-icons-outlined"  (click)="navigateToFragment('contact-us')">call</span>
       </label>
       <label for="close" class="close-btn"></label>
     </div>

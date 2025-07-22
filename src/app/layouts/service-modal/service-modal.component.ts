@@ -7,8 +7,8 @@ import {
   MatDialogTitle
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-import {LineBreaksPipe} from '../../line-breaks-pipe';
 import {TranslocoPipe} from '@jsverse/transloco';
+import { LineBreaksPipe } from '../../core/pipes/line-breaks.pipe';
 
 @Component({
   selector: 'app-service-modal',
