@@ -5,9 +5,7 @@ import {ClickOutsideDirective} from '../../core/directives/click-outside.directi
 
 @Component({
   selector: 'app-menu',
-  imports: [
-    ClickOutsideDirective
-  ],
+  imports: [ClickOutsideDirective],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
@@ -21,10 +19,27 @@ export class MenuComponent {
     this.langMenuOpen = !this.langMenuOpen;
   }
 
-  changeLang(lang: string): void {
+  navigateToFragment(fragment: string) {
+    if (!fragment) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    history.replaceState(null, '', this.router.url.split('#')[0]);
+  }
+
+  public changeLang(lang: string): void {
     this.langMenuOpen = false;
     this.transloco.setActiveLang(lang);
-    this.currentLang = lang;
+    localStorage.setItem('lang', lang);
+    const segments = this.router.url.split('/');
+    segments[1] = lang;
+    this.router.navigate(segments);
   }
+
 
 }

@@ -2,6 +2,7 @@ import {inject, Injectable, signal} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {CustomerRequest} from '../interfaces/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -75,19 +76,5 @@ export class ContactFormService {
   createRequest(data: CustomerRequest): Observable<any> {
     return this.http.post(this.apiUrl, data);
   }
-}
-
-
-export interface Customer {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  companyName: string;
-}
-
-export interface CustomerRequest {
-  customer: Customer;
-  message: string;
 }
 

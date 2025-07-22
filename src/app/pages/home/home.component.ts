@@ -145,6 +145,7 @@ export class HomeComponent implements AfterViewInit {
       });
     }
   }
+
   getLabel(stat: typeof this.stats[number]): string {
     const lang = this.currentLang();
     if (lang === 'ro') return stat.label.ro;

@@ -4,6 +4,16 @@ import {NotfoundComponent} from './pages/notfound/notfound.component';
 
 
 export const routes: Routes = [
-  { path: '',component: HomeComponent},
-  { path: '**', component: NotfoundComponent },
+  {
+    path: ':lang',
+    children: [
+      { path: '', component: HomeComponent },
+      { path: '**', component: NotfoundComponent }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: 'ru',
+    pathMatch: 'full'
+  }
 ];
