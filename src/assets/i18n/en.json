@@ -58,6 +58,42 @@
   "socials": "Socials",
   "contacts": "Contacts",
   "trust": "Trusted by us",
+  "ai": {
+    "headline": "Are you running your business — <strong>or is your business running you?</strong>",
+    "subtitle": "Every day you lose time, money, and control to routine tasks that should have been automated long ago. Retail, manufacturing, document workflow — it doesn't matter. The problems are the same.",
+    "points": {
+      "cards": {
+        "pain": "Employees are drowning in manual data entry",
+        "problem": "Filling out cards, documents, reports, translations into a second language — hours of repetitive work every day. Manual entry errors cost money: wrong prices, lost orders, confusion in records.",
+        "solution": "<strong>AI analyzes documents, photos, and data</strong> — and fills in cards, descriptions, and specifications in seconds. In multiple languages. All that's left for a person is to review."
+      },
+      "analytics": {
+        "pain": "\"How's the business doing?\" — and nobody knows for sure",
+        "problem": "To get an answer, you need to open 1C, export to Excel, build formulas, wait for the accountant. By the time the numbers are ready, the decision has already been made by guessing.",
+        "solution": "Ask the system in plain text: <strong>\"What's the margin for November?\"</strong>, \"Which facility costs the most?\", \"Compare performance of two departments.\" The answer comes in 5 seconds, with real numbers from your database."
+      },
+      "sync": {
+        "pain": "Your systems live separately from each other",
+        "problem": "The warehouse doesn't know about the website. Accounting doesn't see production. CRM isn't connected to 1C. Data is entered twice, gets out of sync, and becomes outdated. Manual synchronization always means delays.",
+        "solution": "<strong>All systems are connected in real time.</strong> Data syncs automatically: between warehouse, website, accounting, and CRM. Changed in one place — updated everywhere."
+      },
+      "decisions": {
+        "pain": "Decisions based on gut feeling, not data",
+        "problem": "Which employee is more efficient? Which direction is more profitable? Where's the bottleneck in production? Should you switch suppliers? Without analytics, it's just guessing.",
+        "solution": "<strong>Dashboards with P&L, KPIs, cost analysis, workload,</strong> and trends across any metrics. You see your business in numbers — and make decisions that actually make money."
+      },
+      "onec": {
+        "pain": "\"We have 1C, we don't need anything else\"",
+        "problem": "1C stores data. But it doesn't build dashboards, doesn't answer questions, doesn't connect departments, and doesn't provide AI analytics. 1C is accounting — not a growth tool.",
+        "solution": "<strong>We don't replace 1C — we plug into it.</strong> Data automatically flows into analytics, dashboards, and external systems. Your usual accounting stays the same — with AI and automation on top."
+      }
+    },
+    "cta": {
+      "text": "Your competitors are already automating. The question is not <strong>\"should we\"</strong>, but <strong>\"when\"</strong>.",
+      "subtext": "These solutions are already running in production — in retail, manufacturing, and service companies. Not in a pitch deck, but every single day.",
+      "button": "Discuss your project"
+    }
+  },
   "notFound": {
     "ops": "OOPS",
     "sorry": "We're sorry",

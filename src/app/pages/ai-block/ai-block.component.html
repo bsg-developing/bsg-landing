@@ -1,0 +1,28 @@
+<section class="ai-section">
+  <h2 class="ai-headline" [innerHTML]="'ai.headline' | transloco"></h2>
+  <p class="ai-subtitle">{{'ai.subtitle' | transloco}}</p>
+
+  <div class="pain-cards">
+    @for (point of painPoints; let i = $index; track point.key) {
+      <div class="pain-card delay-{{i + 1}}">
+        <div class="pain-header">
+          <div class="pain-icon">
+            <i [class]="point.icon"></i>
+          </div>
+          <h3 class="pain-title">{{'ai.points.' + point.key + '.pain' | transloco}}</h3>
+        </div>
+        <p class="pain-problem">{{'ai.points.' + point.key + '.problem' | transloco}}</p>
+        <div class="pain-divider"></div>
+        <p class="pain-solution" [innerHTML]="'ai.points.' + point.key + '.solution' | transloco"></p>
+      </div>
+    }
+  </div>
+
+  <div class="ai-cta">
+    <p class="cta-text" [innerHTML]="'ai.cta.text' | transloco"></p>
+    <p class="cta-subtext">{{'ai.cta.subtext' | transloco}}</p>
+    <button class="cta-button" (click)="scrollToContact()">
+      {{'ai.cta.button' | transloco}}
+    </button>
+  </div>
+</section>

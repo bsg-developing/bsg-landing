@@ -12,6 +12,7 @@ import {SliderComponent} from '../../layouts/slider/slider.component';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {AboutUsComponent} from '../about-us/about-us.component';
 import {TrustedCompaniesComponent} from '../trusted-companies/trusted-companies.component';
+import {AiBlockComponent} from '../ai-block/ai-block.component';
 
 @Component({
   standalone: true,
@@ -26,7 +27,8 @@ import {TrustedCompaniesComponent} from '../trusted-companies/trusted-companies.
     MenuComponent,
     SliderComponent,
     AboutUsComponent,
-    TrustedCompaniesComponent
+    TrustedCompaniesComponent,
+    AiBlockComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

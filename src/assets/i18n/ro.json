@@ -58,6 +58,42 @@
   "socials": "Rețele sociale",
   "contacts": "Contacte",
   "trust": "Ne acordă încredere",
+  "ai": {
+    "headline": "Tu conduci afacerea — <strong>sau afacerea te conduce pe tine?</strong>",
+    "subtitle": "În fiecare zi pierzi timp, bani și control din cauza rutinei care de mult trebuia automatizată. Comerț, producție, flux de documente — nu contează. Problemele sunt aceleași.",
+    "points": {
+      "cards": {
+        "pain": "Angajații se îneacă în introducerea manuală a datelor",
+        "problem": "Completarea fișelor, documentelor, rapoartelor, traducerile în a doua limbă — ore de muncă repetitivă în fiecare zi. Erorile de introducere manuală costă bani: prețuri greșite, comenzi pierdute, confuzie în evidențe.",
+        "solution": "<strong>AI analizează documentele, fotografiile și datele</strong> — și completează fișe, descrieri și specificații în câteva secunde. În mai multe limbi. Omul doar verifică."
+      },
+      "analytics": {
+        "pain": "\"Cum merge afacerea?\" — și nimeni nu știe exact",
+        "problem": "Ca să obții un răspuns, trebuie să deschizi 1C, să exporți în Excel, să faci formule, să aștepți contabilul. Până sunt gata cifrele, decizia a fost deja luată la întâmplare.",
+        "solution": "Întreabă sistemul în text simplu: <strong>\"Care e marja pe noiembrie?\"</strong>, \"Ce obiect costă cel mai mult?\", \"Compară rezultatele a două departamente.\" Răspunsul vine în 5 secunde, cu cifre reale din baza ta de date."
+      },
+      "sync": {
+        "pain": "Sistemele tale trăiesc separat unele de altele",
+        "problem": "Depozitul nu știe despre site. Contabilitatea nu vede producția. CRM-ul nu e conectat la 1C. Datele se introduc de două ori, se desincronizează și devin învechite. Sincronizarea manuală înseamnă mereu întârziere.",
+        "solution": "<strong>Toate sistemele sunt conectate în timp real.</strong> Datele se sincronizează automat: între depozit, site, sistemul contabil și CRM. S-a schimbat într-un loc — s-a actualizat peste tot."
+      },
+      "decisions": {
+        "pain": "Decizii pe intuiție, nu pe date",
+        "problem": "Care angajat e mai eficient? Ce direcție e mai profitabilă? Unde e blocajul în producție? Merită să schimbi furnizorul? Fără analiză, e doar ghicit.",
+        "solution": "<strong>Dashboard-uri cu P&L, KPI-uri, analiză a costurilor, încărcare</strong> și tendințe pe orice indicatori. Îți vezi afacerea în cifre — și iei decizii care aduc bani."
+      },
+      "onec": {
+        "pain": "\"Avem 1C, nu avem nevoie de nimic altceva\"",
+        "problem": "1C stochează date. Dar nu construiește dashboard-uri, nu răspunde la întrebări, nu conectează departamentele între ele și nu oferă analiză AI. 1C e contabilitate — nu un instrument de creștere.",
+        "solution": "<strong>Nu înlocuim 1C — ne conectăm la el.</strong> Datele ajung automat în analiză, dashboard-uri și sisteme externe. Contabilitatea obișnuită rămâne, deasupra — AI și automatizare."
+      }
+    },
+    "cta": {
+      "text": "Concurenții tăi deja se automatizează. Întrebarea nu e <strong>\"trebuie?\"</strong>, ci <strong>\"când?\"</strong>.",
+      "subtext": "Aceste soluții funcționează deja în producție — în comerț, la fabrici și în companii de servicii. Nu într-o prezentare, ci în fiecare zi.",
+      "button": "Discută proiectul tău"
+    }
+  },
   "notFound": {
     "ops": "UPS",
     "sorry": "Ne pare rău",
