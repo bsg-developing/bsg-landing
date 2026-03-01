@@ -50,9 +50,14 @@ export class HeaderComponent{
     const element = document.getElementById(fragment);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', this.router.url.split('#')[0]);
+    } else {
+      this.router.navigate([this.selectedLanguage]).then(() => {
+        setTimeout(() => {
+          document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      });
     }
-
-    history.replaceState(null, '', this.router.url.split('#')[0]);
   }
 
   public changeLang(lang: Language): void {

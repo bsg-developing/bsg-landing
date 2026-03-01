@@ -1,5 +1,6 @@
 export const SERVICES = [
   {
+    slug: 'analytics-and-audit',
     icon: "fa-solid fa-chart-pie",
     title: "Аналитика и Аудит",
     titleRo:"Analiză și Audit",
@@ -14,6 +15,7 @@ export const SERVICES = [
 
 
   {
+    slug: '1c-automation',
     icon: "fa-solid fa-gears",
     title: "1С Автоматизация",
     titleRo:"1C Automatizare",
@@ -28,6 +30,7 @@ export const SERVICES = [
 
 
   {
+    slug: 'website-development',
     icon: "fa-solid fa-laptop-code",
     title: "Разработка сайтов",
     titleRo:"Dezvoltare de site-uri",
@@ -41,6 +44,7 @@ export const SERVICES = [
   },
 
   {
+    slug: 'web-design',
     icon: "fa-brands fa-figma",
     title: "Web-Дизайн",
     titleRo:"Design Web",
@@ -54,6 +58,7 @@ export const SERVICES = [
   },
 
   {
+    slug: 'mobile-development',
     icon: "fa-solid fa-mobile-screen-button",
     title: "Мобильная разработка",
     titleRo:"Dezvoltare Mobilă",
@@ -69,6 +74,7 @@ export const SERVICES = [
 
 
   {
+    slug: 'smm-promotion',
     icon: "fa-solid fa-bullhorn",
     title: "SMM Продвижение",
     titleRo:"Promovare SMM",
@@ -82,6 +88,7 @@ export const SERVICES = [
   },
 
   {
+    slug: 'seo-optimization',
     icon: "fa-solid fa-magnifying-glass",
     title: "SEO Оптимизация",
     titleRo:"Optimizare SEO",
@@ -96,10 +103,11 @@ export const SERVICES = [
 
 
   {
+    slug: 'telegram-mini-app',
     icon: 'fa-brands fa-telegram',
     title: 'Telegram Mini App',
     titleEng: 'Telegram Mini App',
-    titleRO: 'Telegram Mini App',
+    titleRo: 'Telegram Mini App',
     description: 'Разрабатываем мини-приложения внутри Telegram: быстрый запуск MVP, кастомная логика, оплата, взаимодействие с ботами.',
     descriptionEng: 'We develop mini-apps within Telegram: fast MVP launch, custom logic, payments, and bot interaction.',
     descriptionFullEng: `Telegram Mini Apps (TMA) are a convenient way to deliver services directly inside the messenger without leaving the chat. We build custom solutions with user authentication, bot integration, payments, and analytics. It's a great tool for fast MVP launch or scaling your existing product.`,
@@ -109,6 +117,7 @@ export const SERVICES = [
   },
 
   {
+    slug: 'integrations-and-automation',
     icon: "fa-solid fa-diagram-project",
     title: "Интеграции и автоматизация",
     titleRo:"Integrări și Automatizare",
@@ -123,6 +132,7 @@ export const SERVICES = [
 
 
   {
+    slug: 'devops-and-infrastructure',
     icon: "fa-solid fa-cloud",
     title: "DevOps и Инфраструктура",
     titleRo:"DevOps și Infrastructură",

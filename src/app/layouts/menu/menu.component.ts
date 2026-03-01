@@ -21,15 +21,26 @@ export class MenuComponent {
 
   navigateToFragment(fragment: string) {
     if (!fragment) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const element = document.getElementById(fragment);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      const isHome = this.router.url === `/${this.currentLang}`;
+      if (isHome) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        this.router.navigate([this.currentLang]);
       }
+      return;
     }
 
-    history.replaceState(null, '', this.router.url.split('#')[0]);
+    const element = document.getElementById(fragment);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', this.router.url.split('#')[0]);
+    } else {
+      this.router.navigate([this.currentLang]).then(() => {
+        setTimeout(() => {
+          document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      });
+    }
   }
 
   public changeLang(lang: string): void {

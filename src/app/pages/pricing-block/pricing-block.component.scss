@@ -1,0 +1,197 @@
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 80px 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-headline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pricing-subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #888;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+// --- Grid ---
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+// --- Card ---
+
+.pricing-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: #0c0c0f;
+  border: 1px solid #1a1a2e;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    border-color: #2a2050;
+  }
+}
+
+@for $i from 1 through 6 {
+  .delay-#{$i} {
+    transition-delay: #{($i * 80)}ms;
+  }
+}
+
+.pricing-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pricing-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b2666, #1e1e2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 1rem;
+    color: #afa7de;
+  }
+}
+
+.pricing-service {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pricing-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+// --- Prices ---
+
+.pricing-prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #1a1a2e;
+}
+
+.pricing-market,
+.pricing-ours {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pricing-label {
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-old {
+  font-size: 1.15rem;
+  color: #555;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.pricing-new {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+// --- Badge ---
+
+.pricing-badge {
+  display: flex;
+  justify-content: center;
+
+  span {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #afa7de;
+    background: rgba(59, 38, 102, 0.3);
+    border: 1px solid rgba(123, 102, 161, 0.25);
+    border-radius: 20px;
+  }
+}
+
+// --- Note ---
+
+.pricing-note {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  max-width: 600px;
+}
+
+// --- Responsive ---
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-headline {
+    font-size: 1.5rem;
+  }
+
+  .pricing-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-section {
+    padding: 60px 16px;
+  }
+
+  .pricing-card {
+    padding: 24px 20px;
+  }
+}

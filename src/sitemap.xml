@@ -1,9 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://solterprise.com</loc>
-    <lastmod>2025-06-19</lastmod>
+    <loc>https://solterprise.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro"/>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/analytics-and-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/analytics-and-audit"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/analytics-and-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/analytics-and-audit"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/analytics-and-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/analytics-and-audit"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/analytics-and-audit"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/1c-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/1c-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/1c-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/1c-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/1c-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/1c-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/1c-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/website-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/website-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/website-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/website-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/website-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/website-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/web-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/web-design"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/web-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/web-design"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/web-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/web-design"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/web-design"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/mobile-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/mobile-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/mobile-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/mobile-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/mobile-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/mobile-development"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/mobile-development"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/smm-promotion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/smm-promotion"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/smm-promotion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/smm-promotion"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/smm-promotion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/smm-promotion"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/smm-promotion"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/seo-optimization</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/seo-optimization"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/seo-optimization</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/seo-optimization"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/seo-optimization</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/seo-optimization"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/seo-optimization"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/telegram-mini-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/telegram-mini-app"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/telegram-mini-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/telegram-mini-app"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/telegram-mini-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/telegram-mini-app"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/telegram-mini-app"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/integrations-and-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/integrations-and-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/integrations-and-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/integrations-and-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/integrations-and-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/integrations-and-automation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/integrations-and-automation"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/en/services/devops-and-infrastructure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/devops-and-infrastructure"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ru/services/devops-and-infrastructure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/devops-and-infrastructure"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solterprise.com/ro/services/devops-and-infrastructure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://solterprise.com/en/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://solterprise.com/ru/services/devops-and-infrastructure"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://solterprise.com/ro/services/devops-and-infrastructure"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

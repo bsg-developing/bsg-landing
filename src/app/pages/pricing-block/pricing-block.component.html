@@ -1,0 +1,33 @@
+<section class="pricing-section">
+  <h2 class="pricing-headline">{{'pricing.title' | transloco}}</h2>
+  <p class="pricing-subtitle">{{'pricing.subtitle' | transloco}}</p>
+
+  <div class="pricing-grid">
+    @for (item of pricingItems; let i = $index; track item.key) {
+      <div class="pricing-card delay-{{i + 1}}">
+        <div class="pricing-card-header">
+          <div class="pricing-icon">
+            <i [class]="item.icon"></i>
+          </div>
+          <h3 class="pricing-service">{{'pricing.items.' + item.key + '.name' | transloco}}</h3>
+        </div>
+        <p class="pricing-desc">{{'pricing.items.' + item.key + '.desc' | transloco}}</p>
+        <div class="pricing-prices">
+          <div class="pricing-market">
+            <span class="pricing-label">{{'pricing.market' | transloco}}</span>
+            <span class="pricing-old">€{{item.marketPrice}}</span>
+          </div>
+          <div class="pricing-ours">
+            <span class="pricing-label">{{'pricing.ours' | transloco}}</span>
+            <span class="pricing-new">€{{item.ourPrice}}</span>
+          </div>
+        </div>
+        <div class="pricing-badge">
+          <span>x{{item.factor}} {{'pricing.cheaper' | transloco}}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <p class="pricing-note">{{'pricing.note' | transloco}}</p>
+</section>

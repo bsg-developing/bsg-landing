@@ -1,4 +1,5 @@
 {
+  "aiNav": "Integrare AI",
   "careers": "Cariere",
   "aboutUs": "Despre noi",
   "contactUs": "Contactează-ne",
@@ -92,6 +93,41 @@
       "text": "Sistemele vechi devin tot mai scumpe în fiecare an — <strong>mentenanța, modificările, munca manuală consumă bugetul</strong>. Cu cât începi mai devreme, cu atât tranziția costă mai puțin.",
       "subtext": "Piața nu așteaptă. Companiile care se automatizează acum deja lucrează mai rapid și cheltuiesc mai puțin.",
       "button": "Discută proiectul tău"
+    }
+  },
+  "pricesNav": "Prețuri",
+  "pricing": {
+    "title": "Cât costă",
+    "subtitle": "Cu instrumente AI și procese optimizate, facem dezvoltarea personalizată mai accesibilă decât majoritatea studiourilor.",
+    "market": "Piața",
+    "ours": "Solterprise",
+    "cheaper": "mai ieftin",
+    "note": "* Prețurile sunt orientative și depind de complexitatea proiectului. Costul exact îl calculăm după discutarea cerințelor.",
+    "items": {
+      "landing": {
+        "name": "Landing Page",
+        "desc": "Site de o pagină cu design unic și layout responsiv"
+      },
+      "corporate": {
+        "name": "Site corporativ",
+        "desc": "Site multi-pagină cu catalog, blog și integrare CRM"
+      },
+      "ecommerce": {
+        "name": "Magazin online",
+        "desc": "E-commerce cu coș, plăți, stoc și cont personal"
+      },
+      "onec": {
+        "name": "Integrare 1C",
+        "desc": "Implementare, configurare schimb de date, sincronizare cu CRM și site"
+      },
+      "ai": {
+        "name": "Soluție AI",
+        "desc": "Integrare GPT, computer vision, analitică AI pentru business"
+      },
+      "mobile": {
+        "name": "Aplicație mobilă",
+        "desc": "Aplicație cross-platform pentru Android și iOS"
+      }
     }
   },
   "notFound": {

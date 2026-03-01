@@ -13,6 +13,7 @@ import {toSignal} from '@angular/core/rxjs-interop';
 import {AboutUsComponent} from '../about-us/about-us.component';
 import {TrustedCompaniesComponent} from '../trusted-companies/trusted-companies.component';
 import {AiBlockComponent} from '../ai-block/ai-block.component';
+import {PricingBlockComponent} from '../pricing-block/pricing-block.component';
 
 @Component({
   standalone: true,
@@ -28,7 +29,8 @@ import {AiBlockComponent} from '../ai-block/ai-block.component';
     SliderComponent,
     AboutUsComponent,
     TrustedCompaniesComponent,
-    AiBlockComponent
+    AiBlockComponent,
+    PricingBlockComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

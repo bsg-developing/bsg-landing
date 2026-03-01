@@ -1,8 +1,7 @@
 import {AfterViewInit, Component, Inject, inject, PLATFORM_ID} from '@angular/core';
 import {TitleComponent} from '../../layouts/title/title.component';
 import {SERVICES} from '../../core/constants/services';
-import {MatDialog} from '@angular/material/dialog';
-import {ServiceModalComponent} from '../../layouts/service-modal/service-modal.component';
+import {Router} from '@angular/router';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {isPlatformBrowser} from '@angular/common';
@@ -16,10 +15,10 @@ import {isPlatformBrowser} from '@angular/common';
 export class ActivityComponent implements AfterViewInit {
   services = SERVICES;
   private translocate = inject(TranslocoService);
+  private router = inject(Router);
   readonly currentLang = toSignal(this.translocate.langChanges$, {
     initialValue: this.translocate.getActiveLang()
   });
-  private dialog = inject(MatDialog);
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   getDescription(service: any): string {
@@ -36,26 +35,8 @@ export class ActivityComponent implements AfterViewInit {
     return service.titleEng ?? service.title;
   }
 
-  openModal(service: any) {
-    const lang = this.currentLang();
-
-    const title = lang === 'ro'
-      ? service.titleRo ?? service.title
-      : lang === 'ru'
-        ? service.title ?? ''
-        : service.titleEng ?? service.title;
-
-    const description = lang === 'ro'
-      ? service.descriptionFullRo ?? service.descriptionFull
-      : lang === 'ru'
-        ? service.descriptionFull ?? ''
-        : service.descriptionFullEng ?? service.descriptionFull;
-
-    this.dialog.open(ServiceModalComponent, {
-      data: { title, description },
-      panelClass: 'custom-dialog-panel',
-      backdropClass: 'custom-dialog-backdrop'
-    });
+  openServicePage(service: any): void {
+    this.router.navigate([this.currentLang(), 'services', service.slug]);
   }
 
   ngAfterViewInit() {

@@ -37,7 +37,6 @@
   <meta name="robots" content="index, follow">
   <base href="/">
   <link rel="canonical" href="https://solterprise.com">
-  <base href="/">
   <link rel="icon" type="image/x-icon" href="/assets/images/img.png">
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
@@ -51,6 +50,117 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://solterprise.com/#organization",
+        "name": "Solterprise",
+        "legalName": "Business Software Group SRL",
+        "url": "https://solterprise.com",
+        "logo": "https://solterprise.com/assets/images/logo.png",
+        "image": "https://solterprise.com/assets/preview.PNG",
+        "telephone": ["+37379294106", "+37360035014"],
+        "sameAs": [
+          "https://www.linkedin.com/company/solterprise"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://solterprise.com/#localbusiness",
+        "name": "Solterprise",
+        "image": "https://solterprise.com/assets/preview.PNG",
+        "url": "https://solterprise.com",
+        "telephone": "+37379294106",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "bd. D. Cantemir, 6",
+          "addressLocality": "Chisinau",
+          "postalCode": "MD 2001",
+          "addressCountry": "MD"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.0105,
+          "longitude": 28.8638
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://solterprise.com/#website",
+        "url": "https://solterprise.com",
+        "name": "Solterprise",
+        "publisher": {"@id": "https://solterprise.com/#organization"},
+        "inLanguage": ["en", "ru", "ro"]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "AI Business Automation",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "AI Solutions & Business Automation",
+        "description": "GPT integration, computer vision, AI analytics, smart data processing, AI-powered content generation"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Website Development",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "Website & Web Application Development",
+        "description": "Custom websites, landing pages, e-commerce, admin panels, CRM integrations. Angular, Node.js, NestJS, PostgreSQL"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "1C Automation",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "1C Integration & Automation",
+        "description": "1C:Enterprise automation, CRM sync, document workflow, data exchange via API, custom 1C modules"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Mobile App Development",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "Mobile Development",
+        "description": "Cross-platform mobile apps for Android and iOS, Telegram Mini Apps, PWA development"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "UX/UI Design",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "Web Design & UX",
+        "description": "UX research, UI design, responsive layouts, prototyping for web and mobile applications"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "SEO",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "SEO Optimization",
+        "description": "Technical SEO audit, keyword analysis, on-page optimization, content strategy for organic growth"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "DevOps",
+        "provider": {"@id": "https://solterprise.com/#organization"},
+        "areaServed": {"@type": "Country", "name": "Moldova"},
+        "name": "DevOps & Infrastructure",
+        "description": "CI/CD automation, cloud infrastructure, Docker, Kubernetes, monitoring, scalable deployments"
+      }
+    ]
+  }
+  </script>
   <app-root></app-root>
 </body>
 </html>

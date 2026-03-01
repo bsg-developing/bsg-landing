@@ -1,0 +1,21 @@
+@if (service) {
+  <div class="service-page">
+    <nav class="breadcrumb">
+      <a [routerLink]="homePath" class="back-link">
+        <span class="material-icons">arrow_back</span>
+        Solterprise
+      </a>
+    </nav>
+
+    <header class="service-header">
+      <i [class]="service.icon"></i>
+      <h1>{{ title }}</h1>
+      <p class="subtitle">{{ shortDescription }}</p>
+    </header>
+
+    <article class="service-content" [innerHTML]="description"></article>
+
+    <app-contact-form id="contact-us"/>
+  </div>
+}
+<app-menu/>

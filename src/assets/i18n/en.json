@@ -1,4 +1,5 @@
 {
+  "aiNav": "AI Integration",
   "careers": "Careers",
   "aboutUs": "About Us",
   "contactUs": "Contact Us",
@@ -92,6 +93,41 @@
       "text": "Legacy systems get more expensive every year — <strong>maintenance, patches, manual work keep eating your budget</strong>. The sooner you start, the cheaper the transition.",
       "subtext": "The market doesn't wait. Companies that automate now are already moving faster and spending less.",
       "button": "Discuss your project"
+    }
+  },
+  "pricesNav": "Prices",
+  "pricing": {
+    "title": "How much does it cost",
+    "subtitle": "With AI tools and optimized workflows, we make custom development more affordable than most studios.",
+    "market": "Market",
+    "ours": "Solterprise",
+    "cheaper": "cheaper",
+    "note": "* Prices are approximate and depend on project complexity. We'll calculate the exact cost after discussing your requirements.",
+    "items": {
+      "landing": {
+        "name": "Landing Page",
+        "desc": "One-page website with custom design and responsive layout"
+      },
+      "corporate": {
+        "name": "Corporate Website",
+        "desc": "Multi-page site with catalog, blog, and CRM integration"
+      },
+      "ecommerce": {
+        "name": "E-commerce Store",
+        "desc": "Online store with cart, payments, inventory, and user accounts"
+      },
+      "onec": {
+        "name": "1C Integration",
+        "desc": "Implementation, data exchange setup, CRM and website sync"
+      },
+      "ai": {
+        "name": "AI Solution",
+        "desc": "GPT integration, computer vision, AI analytics for business"
+      },
+      "mobile": {
+        "name": "Mobile App",
+        "desc": "Cross-platform application for Android and iOS"
+      }
     }
   },
   "notFound": {
