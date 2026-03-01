@@ -60,12 +60,12 @@
   "trust": "Ne acordă încredere",
   "ai": {
     "headline": "Tu conduci afacerea — <strong>sau afacerea te conduce pe tine?</strong>",
-    "subtitle": "În fiecare zi pierzi timp, bani și control din cauza rutinei care de mult trebuia automatizată. Comerț, producție, flux de documente — nu contează. Problemele sunt aceleași.",
+    "subtitle": "În fiecare zi pierzi timp, bani și control pe rutină care de mult trebuia automatizată. Nu contează dacă e comerț, producție sau flux de documente — problemele sunt aceleași.",
     "points": {
       "cards": {
         "pain": "Angajații se îneacă în introducerea manuală a datelor",
         "problem": "Completarea fișelor, documentelor, rapoartelor, traducerile în a doua limbă — ore de muncă repetitivă în fiecare zi. Erorile de introducere manuală costă bani: prețuri greșite, comenzi pierdute, confuzie în evidențe.",
-        "solution": "<strong>AI analizează documentele, fotografiile și datele</strong> — și completează fișe, descrieri și specificații în câteva secunde. În mai multe limbi. Omul doar verifică."
+        "solution": "AI prelucrează documentele, fotografiile și datele — și <strong>completează singur fișe, descrieri și specificații</strong>. În mai multe limbi, în câteva secunde. Omul doar verifică."
       },
       "analytics": {
         "pain": "\"Cum merge afacerea?\" — și nimeni nu știe exact",
@@ -75,22 +75,22 @@
       "sync": {
         "pain": "Sistemele tale trăiesc separat unele de altele",
         "problem": "Depozitul nu știe despre site. Contabilitatea nu vede producția. CRM-ul nu e conectat la 1C. Datele se introduc de două ori, se desincronizează și devin învechite. Sincronizarea manuală înseamnă mereu întârziere.",
-        "solution": "<strong>Toate sistemele sunt conectate în timp real.</strong> Datele se sincronizează automat: între depozit, site, sistemul contabil și CRM. S-a schimbat într-un loc — s-a actualizat peste tot."
+        "solution": "Conectăm toate sistemele în timp real. Depozit, site, sistem contabil, CRM — datele se sincronizează automat. <strong>S-a schimbat într-un loc — s-a actualizat peste tot.</strong>"
       },
       "decisions": {
         "pain": "Decizii pe intuiție, nu pe date",
         "problem": "Care angajat e mai eficient? Ce direcție e mai profitabilă? Unde e blocajul în producție? Merită să schimbi furnizorul? Fără analiză, e doar ghicit.",
-        "solution": "<strong>Dashboard-uri cu P&L, KPI-uri, analiză a costurilor, încărcare</strong> și tendințe pe orice indicatori. Îți vezi afacerea în cifre — și iei decizii care aduc bani."
+        "solution": "Dashboard-uri cu P&L, KPI-uri, analiză a costurilor, încărcare și tendințe — <strong>pe orice indicatori care contează pentru tine</strong>. Afacerea ta devine vizibilă în cifre, nu în presupuneri."
       },
       "onec": {
         "pain": "\"Avem 1C, nu avem nevoie de nimic altceva\"",
         "problem": "1C stochează date. Dar nu construiește dashboard-uri, nu răspunde la întrebări, nu conectează departamentele între ele și nu oferă analiză AI. 1C e contabilitate — nu un instrument de creștere.",
-        "solution": "<strong>Nu înlocuim 1C — ne conectăm la el.</strong> Datele ajung automat în analiză, dashboard-uri și sisteme externe. Contabilitatea obișnuită rămâne, deasupra — AI și automatizare."
+        "solution": "Nu înlocuim 1C — <strong>ne conectăm la el</strong>. Datele ajung automat în analiză, dashboard-uri și sisteme externe. Contabilitatea obișnuită rămâne la locul ei, iar deasupra — AI și automatizare."
       }
     },
     "cta": {
-      "text": "Concurenții tăi deja se automatizează. Întrebarea nu e <strong>\"trebuie?\"</strong>, ci <strong>\"când?\"</strong>.",
-      "subtext": "Aceste soluții funcționează deja în producție — în comerț, la fabrici și în companii de servicii. Nu într-o prezentare, ci în fiecare zi.",
+      "text": "Sistemele vechi devin tot mai scumpe în fiecare an — <strong>mentenanța, modificările, munca manuală consumă bugetul</strong>. Cu cât începi mai devreme, cu atât tranziția costă mai puțin.",
+      "subtext": "Piața nu așteaptă. Companiile care se automatizează acum deja lucrează mai rapid și cheltuiesc mai puțin.",
       "button": "Discută proiectul tău"
     }
   },

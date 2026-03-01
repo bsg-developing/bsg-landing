@@ -1,4 +1,43 @@
+:host {
+  position: relative;
+  display: block;
+}
+
+.ai-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ai-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.12;
+
+  &--top {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, #7c66a1, #3b2666 70%, transparent);
+  }
+
+  &--bottom {
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    right: -100px;
+    background: radial-gradient(circle, #4a90e2, #1a1a4e 70%, transparent);
+  }
+}
+
 .ai-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
