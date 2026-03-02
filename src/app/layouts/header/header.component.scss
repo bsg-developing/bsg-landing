@@ -6,11 +6,13 @@
   z-index: 1000;
   width: fit-content;
   padding: 0;
+  max-width: 1200px!important;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   justify-content: space-between;
   gap: 20px;
   padding: 10px 24px;
@@ -19,9 +21,13 @@
   border-radius: 9999px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   width: fit-content;
+  max-width: 95vw;
 }
 
 .nav-menu a {
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
   cursor: pointer;
   padding: 0.5rem 1rem;
   color: var(--text-secondary-color);
