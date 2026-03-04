@@ -71,6 +71,12 @@ export class SeoService {
       link.href = `https://solterprise.com/${l}`;
       this.document.head.appendChild(link);
     }
+    // x-default points to Russian version (primary market)
+    const xDefault = this.document.createElement('link');
+    xDefault.rel = 'alternate';
+    xDefault.hreflang = 'x-default';
+    xDefault.href = 'https://solterprise.com/ru';
+    this.document.head.appendChild(xDefault);
   }
 
   private updateCanonicalUrl(url: string): void {
@@ -136,6 +142,12 @@ export class SeoService {
       link.href = `https://solterprise.com/${l}/services/${slug}`;
       this.document.head.appendChild(link);
     }
+    // x-default points to Russian version (primary market)
+    const xDefault = this.document.createElement('link');
+    xDefault.rel = 'alternate';
+    xDefault.hreflang = 'x-default';
+    xDefault.href = `https://solterprise.com/ru/services/${slug}`;
+    this.document.head.appendChild(xDefault);
   }
 
   public setNoIndexNoFollow(): void {

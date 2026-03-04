@@ -25,13 +25,20 @@ const commonEngine = new CommonEngine();
  */
 
 /**
+ * Server-side 301 redirect: root → /ru (prevents duplicate content with /ru)
+ */
+app.get('/', (req, res) => {
+  res.redirect(301, '/ru');
+});
+
+/**
  * Serve static files from /browser
  */
 app.get(
   '**',
   express.static(browserDistFolder, {
     maxAge: '1y',
-    index: 'index.html'
+    index: false,
   }),
 );
 
