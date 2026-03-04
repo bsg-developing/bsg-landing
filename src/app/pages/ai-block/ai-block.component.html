@@ -26,8 +26,11 @@
   <div class="ai-cta">
     <p class="cta-text" [innerHTML]="'ai.cta.text' | transloco"></p>
     <p class="cta-subtext">{{'ai.cta.subtext' | transloco}}</p>
-    <button class="cta-button" (click)="scrollToContact()">
-      {{'ai.cta.button' | transloco}}
-    </button>
+    <div class="cta-buttons">
+      <button class="cta-button" (click)="scrollToContact()">
+        {{'ai.cta.button' | transloco}}
+      </button>
+      <a class="cta-link" [routerLink]="aiServiceLink">{{'aiNav' | transloco}} →</a>
+    </div>
   </div>
 </section>

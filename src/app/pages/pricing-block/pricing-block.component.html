@@ -4,7 +4,7 @@
 
   <div class="pricing-grid">
     @for (item of pricingItems; let i = $index; track item.key) {
-      <div class="pricing-card delay-{{i + 1}}">
+      <a class="pricing-card delay-{{i + 1}}" [routerLink]="getServiceLink(item)">
         <div class="pricing-card-header">
           <div class="pricing-icon">
             <i [class]="item.icon"></i>
@@ -25,7 +25,7 @@
         <div class="pricing-badge">
           <span>x{{item.factor}} {{'pricing.cheaper' | transloco}}</span>
         </div>
-      </div>
+      </a>
     }
   </div>
 
