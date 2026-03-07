@@ -6,9 +6,9 @@
       <i [class]="service.icon"></i>
       <div class="title">{{ getTitle(service) }}</div>
       <div class="description">{{ getDescription(service) }}</div>
-      <button class="details-btn" (click)="openServicePage(service)">
+      <a class="details-btn" [routerLink]="['/' + currentLang(), 'services', service.slug]">
         {{'more'| transloco}}
-      </button>
+      </a>
     </div>
   }
 </div>

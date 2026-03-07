@@ -1,21 +1,20 @@
 import {AfterViewInit, Component, Inject, inject, PLATFORM_ID} from '@angular/core';
 import {TitleComponent} from '../../layouts/title/title.component';
 import {SERVICES} from '../../core/constants/services';
-import {Router} from '@angular/router';
+import {RouterLink} from '@angular/router';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'activity',
-  imports: [TitleComponent, TranslocoPipe],
+  imports: [TitleComponent, TranslocoPipe, RouterLink],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.scss'
 })
 export class ActivityComponent implements AfterViewInit {
   services = SERVICES;
   private translocate = inject(TranslocoService);
-  private router = inject(Router);
   readonly currentLang = toSignal(this.translocate.langChanges$, {
     initialValue: this.translocate.getActiveLang()
   });
@@ -33,10 +32,6 @@ export class ActivityComponent implements AfterViewInit {
     if (lang === 'ro') return service.titleRo ?? service.title;
     if (lang === 'ru') return service.title ?? '';
     return service.titleEng ?? service.title;
-  }
-
-  openServicePage(service: any): void {
-    this.router.navigate([this.currentLang(), 'services', service.slug]);
   }
 
   ngAfterViewInit() {

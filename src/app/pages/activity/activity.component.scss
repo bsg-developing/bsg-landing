@@ -70,6 +70,7 @@
 
 .details-btn {
   margin-top: auto;
+  display: inline-block;
   background: transparent;
   border: 1px solid #7c66a1;
   color: #fff;
@@ -77,6 +78,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
