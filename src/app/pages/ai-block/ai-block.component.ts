@@ -30,7 +30,9 @@ export class AiBlockComponent implements AfterViewInit, OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.addFaqJsonLd();
+    if (!isPlatformBrowser(this.platformId)) {
+      this.addFaqJsonLd();
+    }
   }
 
   ngOnDestroy(): void {

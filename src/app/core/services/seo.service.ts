@@ -102,7 +102,12 @@ export class SeoService {
         ? service.description
         : (service.descriptionEng ?? service.description);
 
-    const pageTitle = `${title} | Solterprise`;
+    const locationSuffix: Record<string, string> = {
+      ru: 'в Молдове',
+      en: 'in Moldova',
+      ro: 'în Moldova'
+    };
+    const pageTitle = `${title} ${locationSuffix[currentLang]} | Solterprise`;
     const canonicalUrl = `https://solterprise.com/${currentLang}/services/${service.slug}`;
 
     const locationKeywords: Record<string, string> = {
