@@ -1,6 +1,6 @@
 @if (service) {
   <div class="service-page">
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <a [routerLink]="homePath" class="back-link">
         <span class="material-icons">arrow_back</span>
         Solterprise
@@ -14,6 +14,31 @@
     </header>
 
     <article class="service-content" [innerHTML]="description"></article>
+
+    @if (faqItems.length > 0) {
+      <section class="service-faq">
+        <h2>{{ faqTitle }}</h2>
+        @for (item of faqItems; track item.q) {
+          <details class="faq-item">
+            <summary>{{ item.q }}</summary>
+            <p>{{ item.a }}</p>
+          </details>
+        }
+      </section>
+    }
+
+    @if (relatedServices.length > 0) {
+      <section class="related-services">
+        <h2>{{ relatedTitle }}</h2>
+        <div class="related-grid">
+          @for (rs of relatedServices; track rs.slug) {
+            <a [routerLink]="['/' + currentLang(), 'services', rs.slug]" class="related-card">
+              {{ rs.title }}
+            </a>
+          }
+        </div>
+      </section>
+    }
 
     <app-contact-form id="contact-us"/>
   </div>

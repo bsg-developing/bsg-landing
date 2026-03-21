@@ -48,6 +48,7 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:title', content: title });
     this.metaService.updateTag({ property: 'og:description', content: description });
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
+    this.updateOgLocale(lang);
 
     this.metaService.updateTag({ name: 'twitter:title', content: title });
     this.metaService.updateTag({ name: 'twitter:description', content: description });
@@ -89,33 +90,42 @@ export class SeoService {
 
   public setServiceMeta(lang: string, service: any): void {
     const currentLang = (['ru', 'en', 'ro'].includes(lang)) ? lang : 'en';
+    const customMeta = service.meta?.[currentLang];
 
-    const title = currentLang === 'ro'
-      ? (service.titleRo ?? service.title)
-      : currentLang === 'ru'
-        ? service.title
-        : (service.titleEng ?? service.title);
+    let pageTitle: string;
+    let description: string;
+    let keywords: string;
 
-    const description = currentLang === 'ro'
-      ? (service.descriptionRo ?? service.description)
-      : currentLang === 'ru'
-        ? service.description
-        : (service.descriptionEng ?? service.description);
+    if (customMeta) {
+      pageTitle = customMeta.title;
+      description = customMeta.description;
+      keywords = customMeta.keywords;
+    } else {
+      const title = currentLang === 'ro'
+        ? (service.titleRo ?? service.title)
+        : currentLang === 'ru'
+          ? service.title
+          : (service.titleEng ?? service.title);
 
-    const locationSuffix: Record<string, string> = {
-      ru: 'в Молдове',
-      en: 'in Moldova',
-      ro: 'în Moldova'
-    };
-    const pageTitle = `${title} ${locationSuffix[currentLang]} | Solterprise`;
+      const desc = currentLang === 'ro'
+        ? (service.descriptionRo ?? service.description)
+        : currentLang === 'ru'
+          ? service.description
+          : (service.descriptionEng ?? service.description);
+
+      const locationSuffix: Record<string, string> = {
+        ru: 'в Молдове', en: 'in Moldova', ro: 'în Moldova'
+      };
+      pageTitle = `${title} ${locationSuffix[currentLang]} | Solterprise`;
+      description = desc;
+
+      const locationKeywords: Record<string, string> = {
+        ru: 'Молдова, Кишинёв', en: 'Moldova, Chisinau', ro: 'Moldova, Chișinău'
+      };
+      keywords = `${title}, Solterprise, ${locationKeywords[currentLang]}`;
+    }
+
     const canonicalUrl = `https://solterprise.com/${currentLang}/services/${service.slug}`;
-
-    const locationKeywords: Record<string, string> = {
-      ru: 'Молдова, Кишинёв',
-      en: 'Moldova, Chisinau',
-      ro: 'Moldova, Chișinău'
-    };
-    const keywords = `${title}, Solterprise, ${locationKeywords[currentLang]}`;
 
     this.titleService.setTitle(pageTitle);
     this.metaService.updateTag({ name: 'description', content: description });
@@ -124,6 +134,7 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:title', content: pageTitle });
     this.metaService.updateTag({ property: 'og:description', content: description });
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
+    this.updateOgLocale(currentLang);
 
     this.metaService.updateTag({ name: 'twitter:title', content: pageTitle });
     this.metaService.updateTag({ name: 'twitter:description', content: description });
@@ -153,6 +164,21 @@ export class SeoService {
     xDefault.hreflang = 'x-default';
     xDefault.href = `https://solterprise.com/ru/services/${slug}`;
     this.document.head.appendChild(xDefault);
+  }
+
+  private updateOgLocale(lang: string): void {
+    const localeMap: Record<string, string> = { en: 'en_US', ru: 'ru_RU', ro: 'ro_MD' };
+    const alternates: Record<string, string[]> = {
+      en: ['ru_RU', 'ro_MD'],
+      ru: ['en_US', 'ro_MD'],
+      ro: ['en_US', 'ru_RU']
+    };
+    this.metaService.updateTag({ property: 'og:locale', content: localeMap[lang] || 'en_US' });
+    // Remove old alternate tags and re-add
+    this.metaService.removeTag("property='og:locale:alternate'");
+    for (const alt of alternates[lang] || []) {
+      this.metaService.addTag({ property: 'og:locale:alternate', content: alt });
+    }
   }
 
   public setNoIndexNoFollow(): void {
