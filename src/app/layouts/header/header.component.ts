@@ -46,12 +46,14 @@ export class HeaderComponent{
   public toggleLanguageDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
   }
-  navigateToFragment(fragment: string) {
+  onNavClick(event: Event, fragment: string) {
     const element = document.getElementById(fragment);
     if (element) {
+      event.preventDefault();
       element.scrollIntoView({ behavior: 'smooth' });
       history.replaceState(null, '', this.router.url.split('#')[0]);
     } else {
+      event.preventDefault();
       this.router.navigate([this.selectedLanguage]).then(() => {
         setTimeout(() => {
           document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });

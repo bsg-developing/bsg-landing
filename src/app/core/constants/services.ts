@@ -27,6 +27,23 @@ export const SERVICES = [
         description: 'Analiză IT profesională și audit digital în Moldova. Analiză UX, audit tehnic, cercetare competitori, optimizare conversii. Solterprise, Chișinău.',
         keywords: 'audit IT Moldova, analiză digitală Moldova, audit UX Chișinău, audit tehnic, analiză site Moldova, audit business, optimizare conversii, Solterprise'
       }
+    },
+    faq: {
+      en: [
+        { q: 'What does a digital audit include at Solterprise?', a: 'Our digital audit covers technical performance, UX/UI analysis, competitor research, conversion funnel review, and SEO health check. You receive a detailed report with actionable recommendations and a prioritized roadmap.' },
+        { q: 'How long does an IT audit take?', a: 'A standard audit takes 1-2 weeks depending on project complexity. Express audits for specific areas (UX, technical, SEO) can be completed in 3-5 business days.' },
+        { q: 'Who needs a digital audit in Moldova?', a: 'Any business with a website or digital product — especially before a redesign, relaunch, or investment round. Also ideal if you have traffic but low conversions, or if something feels wrong but you cannot pinpoint the issue.' }
+      ],
+      ru: [
+        { q: 'Что включает цифровой аудит в Solterprise?', a: 'Наш аудит охватывает техническую производительность, анализ UX/UI, исследование конкурентов, анализ воронки конверсии и проверку SEO. Вы получаете подробный отчёт с рекомендациями и приоритетным планом действий.' },
+        { q: 'Сколько времени занимает IT-аудит?', a: 'Стандартный аудит занимает 1-2 недели в зависимости от сложности проекта. Экспресс-аудит по отдельным направлениям (UX, техника, SEO) выполняется за 3-5 рабочих дней.' },
+        { q: 'Кому нужен цифровой аудит в Молдове?', a: 'Любому бизнесу с сайтом или цифровым продуктом — особенно перед редизайном, перезапуском или раундом инвестиций. Также идеально, если есть трафик, но мало продаж, или что-то не так, но непонятно что именно.' }
+      ],
+      ro: [
+        { q: 'Ce include auditul digital la Solterprise?', a: 'Auditul nostru acoperă performanța tehnică, analiza UX/UI, cercetarea competitorilor, analiza pâlniei de conversie și verificarea SEO. Primești un raport detaliat cu recomandări și un plan de acțiune prioritizat.' },
+        { q: 'Cât durează un audit IT?', a: 'Un audit standard durează 1-2 săptămâni, în funcție de complexitatea proiectului. Auditul express pe domenii specifice (UX, tehnic, SEO) poate fi finalizat în 3-5 zile lucrătoare.' },
+        { q: 'Cine are nevoie de audit digital în Moldova?', a: 'Orice afacere cu un site sau produs digital — mai ales înainte de redesign, relansare sau rundă de investiții. Ideal și dacă ai trafic dar conversii slabe, sau dacă simți că ceva nu funcționează dar nu poți identifica exact ce.' }
+      ]
     }
   },
 
@@ -144,6 +161,23 @@ export const SERVICES = [
       en: { title: 'Web Design & UX/UI in Moldova | Prototyping, Responsive, Figma | Solterprise', description: 'Professional web design and UX/UI in Moldova. Custom interfaces, responsive layouts, prototyping in Figma. No templates — design tailored to your business. Solterprise, Chisinau.', keywords: 'web design Moldova, UX design Chisinau, UI design Moldova, Figma design, responsive design Moldova, prototype Moldova, interface design, Solterprise' },
       ru: { title: 'Веб-дизайн и UX/UI в Молдове | Прототипирование, адаптив, Figma | Solterprise', description: 'Профессиональный веб-дизайн и UX/UI в Молдове. Кастомные интерфейсы, адаптивные макеты, прототипирование в Figma. Без шаблонов — дизайн под ваш бизнес. Solterprise, Кишинёв.', keywords: 'веб-дизайн Молдова, UX дизайн Кишинёв, UI дизайн Молдова, Figma дизайн, адаптивный дизайн, прототип Молдова, дизайн интерфейсов, Solterprise' },
       ro: { title: 'Design Web & UX/UI în Moldova | Prototipare, Responsive, Figma | Solterprise', description: 'Design web profesional și UX/UI în Moldova. Interfețe personalizate, machete responsive, prototipare Figma. Fără șabloane — design adaptat afacerii tale. Solterprise, Chișinău.', keywords: 'design web Moldova, UX design Chișinău, UI design Moldova, Figma design, design responsive, prototip Moldova, design interfețe, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'What is included in web design services at Solterprise?', a: 'We deliver complete UX/UI design: user research, wireframes, visual design, responsive layouts for all devices, and clickable prototypes in Figma — ready for development. Every design is custom-built, no templates.' },
+        { q: 'How much does web design cost in Moldova?', a: 'Web design pricing depends on project complexity. A landing page design starts from €300, a multi-page site from €600. We discuss your needs first and provide a transparent estimate.' },
+        { q: 'Do you design for mobile devices?', a: 'Yes, all our designs are fully responsive — optimized for desktop, tablet, and mobile. We follow mobile-first principles and test on real devices to ensure a smooth user experience.' }
+      ],
+      ru: [
+        { q: 'Что входит в услуги веб-дизайна в Solterprise?', a: 'Мы создаём полный UX/UI дизайн: исследование пользователей, вайрфреймы, визуальный дизайн, адаптивные макеты под все устройства и кликабельные прототипы в Figma — готовые к разработке. Каждый дизайн уникален, без шаблонов.' },
+        { q: 'Сколько стоит веб-дизайн в Молдове?', a: 'Стоимость зависит от сложности проекта. Дизайн лендинга — от €300, многостраничного сайта — от €600. Сначала обсуждаем задачу, затем даём прозрачную оценку.' },
+        { q: 'Вы делаете дизайн для мобильных устройств?', a: 'Да, все наши дизайны полностью адаптивны — оптимизированы для десктопа, планшета и мобильных. Мы следуем принципу mobile-first и тестируем на реальных устройствах.' }
+      ],
+      ro: [
+        { q: 'Ce include serviciul de design web la Solterprise?', a: 'Livrăm design UX/UI complet: cercetare utilizatori, wireframe-uri, design vizual, machete responsive pentru toate dispozitivele și prototipuri interactive în Figma — gata pentru dezvoltare. Fiecare design este unic, fără șabloane.' },
+        { q: 'Cât costă designul web în Moldova?', a: 'Prețul depinde de complexitatea proiectului. Designul unui landing page începe de la €300, al unui site multi-pagină de la €600. Discutăm mai întâi cerințele și oferim o estimare transparentă.' },
+        { q: 'Realizați design și pentru dispozitive mobile?', a: 'Da, toate design-urile noastre sunt complet responsive — optimizate pentru desktop, tabletă și mobil. Urmăm principiile mobile-first și testăm pe dispozitive reale.' }
+      ]
     }
   },
 
@@ -201,6 +235,23 @@ export const SERVICES = [
       en: { title: 'SMM Promotion in Moldova | Instagram, TikTok, Facebook, LinkedIn | Solterprise', description: 'SMM promotion in Moldova. Strategy, content creation, targeted ads on Instagram, TikTok, Facebook, LinkedIn, Telegram. Audience engagement and lead generation. Solterprise, Chisinau.', keywords: 'SMM Moldova, social media marketing Moldova, Instagram promotion Moldova, TikTok Moldova, Facebook ads Moldova, LinkedIn Moldova, SMM Chisinau, Solterprise' },
       ru: { title: 'SMM продвижение в Молдове | Instagram, TikTok, Facebook, LinkedIn | Solterprise', description: 'SMM продвижение в Молдове. Стратегия, создание контента, таргетированная реклама в Instagram, TikTok, Facebook, LinkedIn, Telegram. Solterprise, Кишинёв.', keywords: 'SMM Молдова, продвижение в соцсетях Молдова, Instagram Молдова, TikTok Молдова, Facebook реклама Молдова, LinkedIn, SMM Кишинёв, Solterprise' },
       ro: { title: 'Promovare SMM în Moldova | Instagram, TikTok, Facebook, LinkedIn | Solterprise', description: 'Promovare SMM în Moldova. Strategie, creare conținut, reclame targetate pe Instagram, TikTok, Facebook, LinkedIn, Telegram. Solterprise, Chișinău.', keywords: 'SMM Moldova, promovare social media Moldova, Instagram Moldova, TikTok Moldova, Facebook reclame Moldova, LinkedIn, SMM Chișinău, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'What SMM services does Solterprise offer in Moldova?', a: 'We offer full SMM management: strategy development, content creation (text, visuals, video), regular posting, targeted advertising on Instagram, TikTok, Facebook, LinkedIn, and Telegram. Everything is tailored to your brand and audience.' },
+        { q: 'Which social media platforms work best for business in Moldova?', a: 'It depends on your audience. For B2C in Moldova, Instagram and TikTok work great. For B2B, LinkedIn and Facebook are more effective. We analyze your market and recommend the optimal platform mix.' },
+        { q: 'How do you measure SMM results?', a: 'We track reach, engagement rate, clicks, leads, and conversions. Monthly reports show what works and what needs adjustment. Our goal is measurable business results, not just likes.' }
+      ],
+      ru: [
+        { q: 'Какие услуги SMM предлагает Solterprise в Молдове?', a: 'Мы предлагаем полное ведение SMM: разработка стратегии, создание контента (тексты, визуал, видео), регулярный постинг, таргетированная реклама в Instagram, TikTok, Facebook, LinkedIn и Telegram. Всё адаптировано под ваш бренд и аудиторию.' },
+        { q: 'Какие соцсети лучше работают для бизнеса в Молдове?', a: 'Зависит от аудитории. Для B2C в Молдове отлично работают Instagram и TikTok. Для B2B — LinkedIn и Facebook. Мы анализируем ваш рынок и рекомендуем оптимальный набор платформ.' },
+        { q: 'Как вы измеряете результаты SMM?', a: 'Мы отслеживаем охваты, вовлечённость, клики, лиды и конверсии. Ежемесячные отчёты показывают, что работает и что нужно корректировать. Наша цель — измеримые бизнес-результаты, а не просто лайки.' }
+      ],
+      ro: [
+        { q: 'Ce servicii SMM oferă Solterprise în Moldova?', a: 'Oferim management SMM complet: dezvoltare strategie, creare conținut (text, vizual, video), postare regulată, publicitate targetată pe Instagram, TikTok, Facebook, LinkedIn și Telegram. Totul este adaptat pentru brandul și audiența ta.' },
+        { q: 'Ce rețele sociale funcționează cel mai bine pentru afaceri în Moldova?', a: 'Depinde de publicul tău. Pentru B2C în Moldova, Instagram și TikTok funcționează excelent. Pentru B2B, LinkedIn și Facebook sunt mai eficiente. Analizăm piața ta și recomandăm mixul optim de platforme.' },
+        { q: 'Cum măsurați rezultatele SMM?', a: 'Urmărim reach-ul, rata de engagement, click-uri, lead-uri și conversii. Rapoartele lunare arată ce funcționează și ce trebuie ajustat. Scopul nostru sunt rezultate de business măsurabile, nu doar like-uri.' }
+      ]
     }
   },
 
@@ -220,6 +271,23 @@ export const SERVICES = [
       en: { title: 'SEO Optimization in Moldova | Technical SEO, Content, Analytics | Solterprise', description: 'SEO optimization in Moldova. Technical audit, keyword analysis, content strategy, link building, Google Analytics. Organic traffic growth for your business. Solterprise, Chisinau.', keywords: 'SEO Moldova, SEO optimization Chisinau, search engine optimization Moldova, technical SEO, keyword analysis, content strategy Moldova, Google ranking Moldova, Solterprise' },
       ru: { title: 'SEO оптимизация в Молдове | Техническое SEO, контент, аналитика | Solterprise', description: 'SEO оптимизация в Молдове. Технический аудит, анализ ключевых слов, контент-стратегия, линкбилдинг, Google Analytics. Рост органического трафика. Solterprise, Кишинёв.', keywords: 'SEO Молдова, SEO оптимизация Кишинёв, поисковое продвижение Молдова, техническое SEO, анализ ключевых слов, контент-стратегия, Google ранжирование, Solterprise' },
       ro: { title: 'Optimizare SEO în Moldova | SEO Tehnic, Conținut, Analiză | Solterprise', description: 'Optimizare SEO în Moldova. Audit tehnic, analiză cuvinte cheie, strategie conținut, link building, Google Analytics. Creșterea traficului organic. Solterprise, Chișinău.', keywords: 'SEO Moldova, optimizare SEO Chișinău, promovare căutare Moldova, SEO tehnic, analiză keywords, strategie conținut, ranking Google Moldova, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'How long does it take to see SEO results in Moldova?', a: 'SEO is a long-term strategy. First improvements in rankings typically appear within 2-3 months. Significant organic traffic growth usually takes 4-6 months depending on competition level and current site state.' },
+        { q: 'What does SEO optimization include at Solterprise?', a: 'Our SEO covers technical audit (speed, mobile, indexing), keyword research, on-page optimization (meta tags, headings, content), internal linking, content strategy, and ongoing monitoring with transparent reporting.' },
+        { q: 'Is SEO worth investing in for a small business in Moldova?', a: 'Absolutely. SEO brings organic traffic without constant ad spend. For local businesses in Moldova, local SEO can drive targeted customers who are actively searching for your services in Chisinau and nationwide.' }
+      ],
+      ru: [
+        { q: 'Через сколько времени видны результаты SEO в Молдове?', a: 'SEO — это долгосрочная стратегия. Первые улучшения в позициях обычно видны через 2-3 месяца. Значительный рост органического трафика — через 4-6 месяцев в зависимости от конкуренции и текущего состояния сайта.' },
+        { q: 'Что включает SEO-оптимизация в Solterprise?', a: 'Наше SEO включает технический аудит (скорость, мобильность, индексация), подбор ключевых слов, on-page оптимизацию (мета-теги, заголовки, контент), внутреннюю перелинковку, контент-стратегию и постоянный мониторинг с прозрачной отчётностью.' },
+        { q: 'Стоит ли инвестировать в SEO для малого бизнеса в Молдове?', a: 'Однозначно да. SEO приносит органический трафик без постоянных затрат на рекламу. Для местного бизнеса в Молдове локальное SEO привлекает целевых клиентов, которые активно ищут ваши услуги в Кишинёве и по стране.' }
+      ],
+      ro: [
+        { q: 'Cât durează până apar rezultatele SEO în Moldova?', a: 'SEO este o strategie pe termen lung. Primele îmbunătățiri în clasament apar de obicei în 2-3 luni. Creșterea semnificativă a traficului organic durează 4-6 luni, în funcție de nivelul concurenței și starea curentă a site-ului.' },
+        { q: 'Ce include optimizarea SEO la Solterprise?', a: 'SEO-ul nostru include audit tehnic (viteză, mobil, indexare), cercetare cuvinte cheie, optimizare on-page (meta tag-uri, titluri, conținut), linking intern, strategie de conținut și monitorizare continuă cu raportare transparentă.' },
+        { q: 'Merită să investești în SEO pentru o afacere mică în Moldova?', a: 'Cu siguranță. SEO aduce trafic organic fără costuri continue de publicitate. Pentru afaceri locale din Moldova, SEO-ul local atrage clienți țintă care caută activ serviciile tale în Chișinău și la nivel național.' }
+      ]
     }
   },
 
@@ -240,6 +308,23 @@ export const SERVICES = [
       en: { title: 'Telegram Mini App Development in Moldova | TMA, Bots, Payments | Solterprise', description: 'Telegram Mini App development in Moldova. Custom TMA with authentication, bot integration, payments, analytics. Fast MVP launch. Solterprise, Chisinau.', keywords: 'Telegram Mini App Moldova, TMA development, Telegram bot Moldova, Telegram app Chisinau, mini app development, MVP Moldova, Solterprise' },
       ru: { title: 'Разработка Telegram Mini App в Молдове | TMA, боты, оплата | Solterprise', description: 'Разработка Telegram Mini App в Молдове. Кастомные TMA с авторизацией, интеграцией ботов, оплатой и аналитикой. Быстрый запуск MVP. Solterprise, Кишинёв.', keywords: 'Telegram Mini App Молдова, разработка TMA, Telegram бот Молдова, Telegram приложение Кишинёв, мини-приложение, MVP Молдова, Solterprise' },
       ro: { title: 'Dezvoltare Telegram Mini App în Moldova | TMA, Boți, Plăți | Solterprise', description: 'Dezvoltare Telegram Mini App în Moldova. TMA personalizat cu autentificare, integrare boți, plăți, analitică. Lansare rapidă MVP. Solterprise, Chișinău.', keywords: 'Telegram Mini App Moldova, dezvoltare TMA, Telegram bot Moldova, Telegram app Chișinău, mini app, MVP Moldova, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'What is a Telegram Mini App and how can it help my business?', a: 'A Telegram Mini App (TMA) is a web application that runs inside Telegram — no need to install anything. It is great for e-commerce, bookings, loyalty programs, and customer support. Users interact with your service without leaving the messenger.' },
+        { q: 'How long does it take to build a Telegram Mini App?', a: 'A basic MVP can be launched in 2-4 weeks. More complex apps with payments, bot integration, and analytics take 4-8 weeks. We focus on fast iteration so you can start testing with real users quickly.' },
+        { q: 'Can a Telegram Mini App accept payments?', a: 'Yes, Telegram supports built-in payments via Stripe, and we can also integrate custom payment gateways. Users can pay directly inside the mini app without switching to external sites.' }
+      ],
+      ru: [
+        { q: 'Что такое Telegram Mini App и как это поможет бизнесу?', a: 'Telegram Mini App (TMA) — это веб-приложение, которое работает прямо внутри Telegram, без установки. Идеально для e-commerce, бронирований, программ лояльности и поддержки клиентов. Пользователи взаимодействуют с вашим сервисом, не выходя из мессенджера.' },
+        { q: 'Сколько времени занимает разработка Telegram Mini App?', a: 'Базовый MVP можно запустить за 2-4 недели. Более сложные приложения с оплатой, интеграцией ботов и аналитикой — 4-8 недель. Мы делаем упор на быструю итерацию, чтобы вы могли начать тестировать с реальными пользователями.' },
+        { q: 'Может ли Telegram Mini App принимать оплату?', a: 'Да, Telegram поддерживает встроенные платежи через Stripe, а мы также можем интегрировать другие платёжные шлюзы. Пользователи оплачивают прямо внутри мини-приложения без перехода на внешние сайты.' }
+      ],
+      ro: [
+        { q: 'Ce este un Telegram Mini App și cum poate ajuta afacerea mea?', a: 'Un Telegram Mini App (TMA) este o aplicație web care rulează direct în Telegram — fără instalare. Ideal pentru e-commerce, rezervări, programe de fidelizare și suport clienți. Utilizatorii interacționează cu serviciul tău fără a părăsi mesagerul.' },
+        { q: 'Cât durează dezvoltarea unui Telegram Mini App?', a: 'Un MVP de bază poate fi lansat în 2-4 săptămâni. Aplicațiile mai complexe cu plăți, integrare boți și analitică durează 4-8 săptămâni. Ne concentrăm pe iterație rapidă pentru a testa cu utilizatori reali cât mai repede.' },
+        { q: 'Poate un Telegram Mini App să accepte plăți?', a: 'Da, Telegram suportă plăți integrate prin Stripe, iar noi putem integra și alte gateway-uri de plată. Utilizatorii plătesc direct în mini app fără a naviga la site-uri externe.' }
+      ]
     }
   },
 
@@ -307,6 +392,23 @@ export const SERVICES = [
       en: { title: 'System Integrations & Business Automation in Moldova | API, CRM, ERP | Solterprise', description: 'System integrations and business automation in Moldova. CRM, ERP, 1C sync, API connectors, automated workflows. Eliminate manual operations. Solterprise, Chisinau.', keywords: 'system integration Moldova, business automation Moldova, API integration Chisinau, CRM integration, ERP sync, 1C integration, workflow automation Moldova, Solterprise' },
       ru: { title: 'Интеграции и автоматизация бизнеса в Молдове | API, CRM, ERP | Solterprise', description: 'Системные интеграции и автоматизация бизнеса в Молдове. CRM, ERP, 1С синхронизация, API-коннекторы, автоматические процессы. Solterprise, Кишинёв.', keywords: 'системная интеграция Молдова, автоматизация бизнеса Молдова, API интеграция, CRM интеграция, ERP синхронизация, 1С интеграция, автоматизация процессов, Solterprise' },
       ro: { title: 'Integrări și Automatizare Business în Moldova | API, CRM, ERP | Solterprise', description: 'Integrări de sisteme și automatizare business în Moldova. CRM, ERP, sincronizare 1C, conectori API, fluxuri automatizate. Solterprise, Chișinău.', keywords: 'integrare sisteme Moldova, automatizare business Moldova, integrare API, integrare CRM, sincronizare ERP, integrare 1C, automatizare procese, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'What systems can Solterprise integrate?', a: 'We integrate CRMs (Bitrix24, amoCRM), ERPs, 1C, e-commerce platforms, payment gateways, accounting software, warehouse systems, and marketing tools. If an API exists, we can connect it.' },
+        { q: 'How does business automation reduce costs?', a: 'Automation eliminates manual data entry, reduces human errors, speeds up order processing, and frees your team to focus on growth tasks. Businesses typically save 20-40% on operational costs after automation.' },
+        { q: 'Do you build custom API connectors?', a: 'Yes, when standard integrations are not available, we develop custom API connectors tailored to your specific workflow. We also handle data mapping, error logging, and monitoring to ensure reliability.' }
+      ],
+      ru: [
+        { q: 'Какие системы может интегрировать Solterprise?', a: 'Мы интегрируем CRM (Bitrix24, amoCRM), ERP, 1С, интернет-магазины, платёжные шлюзы, бухгалтерские системы, складские программы и маркетинговые инструменты. Если есть API — мы подключим.' },
+        { q: 'Как автоматизация бизнеса снижает расходы?', a: 'Автоматизация устраняет ручной ввод данных, снижает ошибки, ускоряет обработку заказов и освобождает команду для задач роста. Бизнес обычно экономит 20-40% операционных расходов после автоматизации.' },
+        { q: 'Вы разрабатываете кастомные API-коннекторы?', a: 'Да, когда стандартные интеграции недоступны, мы разрабатываем кастомные API-коннекторы под ваш рабочий процесс. Мы также настраиваем маппинг данных, логирование ошибок и мониторинг для обеспечения надёжности.' }
+      ],
+      ro: [
+        { q: 'Ce sisteme poate integra Solterprise?', a: 'Integrăm CRM-uri (Bitrix24, amoCRM), ERP-uri, 1C, platforme e-commerce, gateway-uri de plată, sisteme contabile, programe de depozit și instrumente de marketing. Dacă există un API, îl putem conecta.' },
+        { q: 'Cum reduce automatizarea costurile afacerii?', a: 'Automatizarea elimină introducerea manuală a datelor, reduce erorile umane, accelerează procesarea comenzilor și eliberează echipa pentru sarcini de creștere. Afacerile economisesc de obicei 20-40% din costurile operaționale după automatizare.' },
+        { q: 'Dezvoltați conectori API personalizați?', a: 'Da, când integrările standard nu sunt disponibile, dezvoltăm conectori API personalizați adaptați fluxului dvs. de lucru. Configurăm și maparea datelor, înregistrarea erorilor și monitorizarea pentru a asigura fiabilitatea.' }
+      ]
     }
   },
 
@@ -327,6 +429,23 @@ export const SERVICES = [
       en: { title: 'DevOps & Cloud Infrastructure in Moldova | CI/CD, Docker, Kubernetes | Solterprise', description: 'DevOps and cloud infrastructure in Moldova. CI/CD automation, Docker, Kubernetes, AWS, GCP, monitoring, IaC with Ansible and Terraform. Solterprise, Chisinau.', keywords: 'DevOps Moldova, cloud infrastructure Moldova, CI/CD Moldova, Docker Moldova, Kubernetes Chisinau, AWS Moldova, GCP, infrastructure as code, Terraform, Ansible, Solterprise' },
       ru: { title: 'DevOps и облачная инфраструктура в Молдове | CI/CD, Docker, Kubernetes | Solterprise', description: 'DevOps и облачная инфраструктура в Молдове. Автоматизация CI/CD, Docker, Kubernetes, AWS, GCP, мониторинг, IaC с Ansible и Terraform. Solterprise, Кишинёв.', keywords: 'DevOps Молдова, облачная инфраструктура Молдова, CI/CD Молдова, Docker Молдова, Kubernetes Кишинёв, AWS, GCP, инфраструктура как код, Terraform, Ansible, Solterprise' },
       ro: { title: 'DevOps și Infrastructură Cloud în Moldova | CI/CD, Docker, Kubernetes | Solterprise', description: 'DevOps și infrastructură cloud în Moldova. Automatizare CI/CD, Docker, Kubernetes, AWS, GCP, monitorizare, IaC cu Ansible și Terraform. Solterprise, Chișinău.', keywords: 'DevOps Moldova, infrastructură cloud Moldova, CI/CD Moldova, Docker Moldova, Kubernetes Chișinău, AWS, GCP, infrastructure as code, Terraform, Ansible, Solterprise' }
+    },
+    faq: {
+      en: [
+        { q: 'What DevOps services does Solterprise provide in Moldova?', a: 'We offer CI/CD automation, cloud infrastructure setup (AWS, GCP, Hetzner), Docker and Kubernetes containerization, monitoring and alerting, backup strategies, and Infrastructure-as-Code with Ansible and Terraform.' },
+        { q: 'Which cloud providers do you work with?', a: 'We work with AWS, Google Cloud Platform, Hetzner, and DigitalOcean. We help choose the optimal provider based on your budget, performance needs, and compliance requirements.' },
+        { q: 'Can you set up DevOps for an existing project?', a: 'Yes, we regularly onboard existing projects. We audit your current infrastructure, identify bottlenecks, and implement CI/CD pipelines, monitoring, and automation step by step — without disrupting your current operations.' }
+      ],
+      ru: [
+        { q: 'Какие DevOps-услуги предоставляет Solterprise в Молдове?', a: 'Мы предлагаем автоматизацию CI/CD, настройку облачной инфраструктуры (AWS, GCP, Hetzner), контейнеризацию Docker и Kubernetes, мониторинг и алертинг, стратегии бэкапов и IaC с Ansible и Terraform.' },
+        { q: 'С какими облачными провайдерами вы работаете?', a: 'Мы работаем с AWS, Google Cloud Platform, Hetzner и DigitalOcean. Помогаем выбрать оптимального провайдера исходя из бюджета, требований к производительности и комплаенса.' },
+        { q: 'Можете ли вы настроить DevOps для существующего проекта?', a: 'Да, мы регулярно подключаемся к существующим проектам. Проводим аудит текущей инфраструктуры, выявляем узкие места и внедряем CI/CD, мониторинг и автоматизацию поэтапно — без нарушения текущих процессов.' }
+      ],
+      ro: [
+        { q: 'Ce servicii DevOps oferă Solterprise în Moldova?', a: 'Oferim automatizare CI/CD, configurare infrastructură cloud (AWS, GCP, Hetzner), containerizare Docker și Kubernetes, monitorizare și alertare, strategii de backup și IaC cu Ansible și Terraform.' },
+        { q: 'Cu ce furnizori cloud lucrați?', a: 'Lucrăm cu AWS, Google Cloud Platform, Hetzner și DigitalOcean. Te ajutăm să alegi furnizorul optim în funcție de buget, cerințe de performanță și conformitate.' },
+        { q: 'Puteți configura DevOps pentru un proiect existent?', a: 'Da, lucrăm frecvent cu proiecte existente. Audităm infrastructura curentă, identificăm blocajele și implementăm CI/CD, monitorizare și automatizare pas cu pas — fără a perturba operațiunile curente.' }
+      ]
     }
   }
 ];

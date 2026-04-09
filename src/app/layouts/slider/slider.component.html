@@ -1,11 +1,11 @@
 <custom-title text="{{'technologies'| transloco}}"/>
 <div class="slider">
   <div class="logos">
-    @for (logo of logos; track logo) {
-      <img [src]="logo" alt="" />
+    @for (logo of logos; track logo.src) {
+      <img [src]="logo.src" [alt]="logo.alt" />
     }
-    @for (logo of logos; track logo) {
-      <img [src]="logo" alt="" />
+    @for (logo of logos; track logo.src) {
+      <img [src]="logo.src" [alt]="logo.alt" />
     }
   </div>
 </div>

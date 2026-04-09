@@ -177,7 +177,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
             '@type': 'ListItem',
             position: 2,
             name: servicesLabel[lang] || 'Services',
-            item: `https://solterprise.com/${lang}#Approach`
+            item: `https://solterprise.com/${lang}`
           },
           {
             '@type': 'ListItem',

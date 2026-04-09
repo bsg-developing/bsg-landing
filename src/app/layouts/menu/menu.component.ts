@@ -19,7 +19,8 @@ export class MenuComponent {
     this.langMenuOpen = !this.langMenuOpen;
   }
 
-  navigateToFragment(fragment: string) {
+  onNavClick(event: Event, fragment: string) {
+    event.preventDefault();
     if (!fragment) {
       const isHome = this.router.url === `/${this.currentLang}`;
       if (isHome) {

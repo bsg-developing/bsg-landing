@@ -12,15 +12,15 @@ import {TranslocoPipe} from '@jsverse/transloco';
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
-  logos: string[] = [
-    '/assets/pngegg.png',
-    '/assets/Open-AI-White-Logo-PNG.png',
-    '/assets/images/stack/angular.png',
-    '/assets/images/stack/java.png',
-    '/assets/images/stack/spring.png',
-    '/assets/Jira.png',
-    '/assets/gitHub.png',
-    '/assets/images/stack/Flutter.png',
-    '/assets/images/stack/1C.png'
+  logos = [
+    { src: '/assets/pngegg.png', alt: 'PostgreSQL' },
+    { src: '/assets/Open-AI-White-Logo-PNG.png', alt: 'OpenAI' },
+    { src: '/assets/images/stack/angular.png', alt: 'Angular' },
+    { src: '/assets/images/stack/java.png', alt: 'Java' },
+    { src: '/assets/images/stack/spring.png', alt: 'Spring Boot' },
+    { src: '/assets/Jira.png', alt: 'Jira' },
+    { src: '/assets/gitHub.png', alt: 'GitHub' },
+    { src: '/assets/images/stack/Flutter.png', alt: 'Flutter' },
+    { src: '/assets/images/stack/1C.png', alt: '1C Enterprise' },
   ];
 }

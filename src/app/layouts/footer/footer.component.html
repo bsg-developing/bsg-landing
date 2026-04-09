@@ -5,22 +5,23 @@
     <div class="footer-container">
       <div class="footer-grid three-columns">
         <div class="footer-block">
-          <a class="footer-link">
-            Business Software Group SRL<br>
-            MD 2001, mun. Chisinau,<br>
-            bd. D. Cantemir, 6
-          </a>
+          <div class="footer-title">{{'activity'| transloco}}</div>
+          @for (service of footerServices; track service.slug) {
+            <a class="footer-link" [routerLink]="['/' + currentLang(), 'services', service.slug]">
+              {{ getServiceTitle(service) }}
+            </a>
+          }
         </div>
 
         <div class="footer-block">
           <div class="footer-title">{{'socials'| transloco}}</div>
-          <a class="footer-link" href="https://www.linkedin.com/company/solterprise" target="_blank">
+          <a class="footer-link" href="https://www.linkedin.com/company/solterprise" target="_blank" rel="noopener noreferrer nofollow">
             <i class="ri-linkedin-box-line"></i> LinkedIn
           </a>
-          <a class="footer-link" href="https://t.me/SolterpriseSupportBot" target="_blank">
+          <a class="footer-link" href="https://t.me/SolterpriseSupportBot" target="_blank" rel="noopener noreferrer nofollow">
             <i class="ri-telegram-line"></i> Telegram
           </a>
-          <a class="footer-link" href="https://wa.me/message/3BWFY3BN2PMLO1" target="_blank">
+          <a class="footer-link" href="https://wa.me/message/3BWFY3BN2PMLO1" target="_blank" rel="noopener noreferrer nofollow">
             <i class="ri-whatsapp-line"></i> WhatsApp
           </a>
         </div>
@@ -29,6 +30,11 @@
           <div class="footer-title">{{'contacts'| transloco}}</div>
           <a class="footer-link tel" href="tel:+37379294106">+(373) 79 294 106</a>
           <a class="footer-link tel" href="tel:+37360035014">+(373) 60 0350 14</a>
+          <span class="footer-link">
+            Business Software Group SRL<br>
+            MD 2001, mun. Chisinau,<br>
+            bd. D. Cantemir, 6
+          </span>
         </div>
       </div>
 

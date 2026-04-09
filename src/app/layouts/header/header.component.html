@@ -1,7 +1,8 @@
 <header class="nav-header">
   <nav class="nav-menu">
     @for (item of menuItems ; track item) {
-      <a (click)="navigateToFragment(item.fragment)">
+      <a [href]="'/' + selectedLanguage + '#' + item.fragment"
+         (click)="onNavClick($event, item.fragment)">
         {{ item.labelKey | transloco }}
       </a>
     }
