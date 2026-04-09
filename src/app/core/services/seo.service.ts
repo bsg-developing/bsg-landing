@@ -72,20 +72,23 @@ export class SeoService {
       link.href = `https://solterprise.com/${l}`;
       this.document.head.appendChild(link);
     }
-    // x-default points to Russian version (primary market)
+    // x-default points to Romanian version (primary market)
     const xDefault = this.document.createElement('link');
     xDefault.rel = 'alternate';
     xDefault.hreflang = 'x-default';
-    xDefault.href = 'https://solterprise.com/ru';
+    xDefault.href = 'https://solterprise.com/ro';
     this.document.head.appendChild(xDefault);
   }
 
   private updateCanonicalUrl(url: string): void {
     if (!this.document) return;
     let link = this.document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (link) {
-      link.href = url;
+    if (!link) {
+      link = this.document.createElement('link');
+      link.rel = 'canonical';
+      this.document.head.appendChild(link);
     }
+    link.href = url;
   }
 
   public setServiceMeta(lang: string, service: any): void {
@@ -158,11 +161,11 @@ export class SeoService {
       link.href = `https://solterprise.com/${l}/services/${slug}`;
       this.document.head.appendChild(link);
     }
-    // x-default points to Russian version (primary market)
+    // x-default points to Romanian version (primary market)
     const xDefault = this.document.createElement('link');
     xDefault.rel = 'alternate';
     xDefault.hreflang = 'x-default';
-    xDefault.href = `https://solterprise.com/ru/services/${slug}`;
+    xDefault.href = `https://solterprise.com/ro/services/${slug}`;
     this.document.head.appendChild(xDefault);
   }
 

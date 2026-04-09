@@ -19,7 +19,7 @@
              (clickOutside)="dropdownVisible = false">
           @for (language of languages; track $index){
             <button (click)="changeLang(language)">
-              <img [src]="language.flag"   alt="{{ language.name }}" class="flag-icon"/>
+              <img [src]="language.flag" alt="{{ language.name }}" class="flag-icon" width="20" height="15"/>
               {{ language.name }}
             </button>
           }

@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'ru',
+    redirectTo: 'ro',
     pathMatch: 'full'
   }
 ];

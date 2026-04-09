@@ -63,12 +63,12 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     this.service = SERVICES.find(s => s.slug === slug);
 
     if (!this.service) {
-      this.router.navigate([lang || 'ru'], {replaceUrl: true});
+      this.router.navigate([lang || 'ro'], {replaceUrl: true});
       return;
     }
 
-    this.seoService.setServiceMeta(lang || 'ru', this.service);
-    this.addJsonLd(lang || 'ru');
+    this.seoService.setServiceMeta(lang || 'ro', this.service);
+    this.addJsonLd(lang || 'ro');
   }
 
   ngOnDestroy(): void {
@@ -176,12 +176,6 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
           {
             '@type': 'ListItem',
             position: 2,
-            name: servicesLabel[lang] || 'Services',
-            item: `https://solterprise.com/${lang}`
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
             name: title
           }
         ]
@@ -191,6 +185,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     const serviceSchema: any = {
       '@type': 'Service',
       '@id': `https://solterprise.com/${lang}/services/${this.service.slug}#service`,
+      serviceType: title,
       name: title,
       description: desc,
       url: `https://solterprise.com/${lang}/services/${this.service.slug}`,

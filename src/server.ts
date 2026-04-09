@@ -28,7 +28,7 @@ const commonEngine = new CommonEngine();
  * Server-side 301 redirect: root → /ru (prevents duplicate content with /ru)
  */
 app.get('/', (req, res) => {
-  res.redirect(301, '/ru');
+  res.redirect(301, '/ro');
 });
 
 /**
@@ -75,7 +75,11 @@ app.get('**', (req, res, next) => {
       ],
 
     })
-    .then((html) => res.send(html))
+    .then((html) => {
+      // If Angular set 404 status (e.g. NotfoundComponent), preserve it
+      const status = res.statusCode !== 200 ? res.statusCode : 200;
+      res.status(status).send(html);
+    })
     .catch((err) => next(err));
 });
 
