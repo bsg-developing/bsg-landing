@@ -79,9 +79,9 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
 
   get title(): string {
     const lang = this.currentLang();
-    if (lang === 'ro') return this.service?.titleRo ?? this.service?.title;
-    if (lang === 'ru') return this.service?.title ?? '';
-    return this.service?.titleEng ?? this.service?.title;
+    if (lang === 'ro') return this.service?.h1Ro ?? this.service?.titleRo ?? this.service?.title;
+    if (lang === 'ru') return this.service?.h1 ?? this.service?.title ?? '';
+    return this.service?.h1Eng ?? this.service?.titleEng ?? this.service?.title;
   }
 
   get description(): string {
