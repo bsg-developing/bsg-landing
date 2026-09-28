@@ -217,8 +217,12 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
 
     const faqData = this.service.faq?.[lang];
     if (faqData && faqData.length > 0) {
+      const pageUrl = `https://solterprise.com/${lang}/services/${this.service.slug}`;
       graph.push({
         '@type': 'FAQPage',
+        '@id': `${pageUrl}#faq`,
+        mainEntityOfPage: pageUrl,
+        inLanguage: lang,
         mainEntity: faqData.map((item: any) => ({
           '@type': 'Question',
           name: item.q,
